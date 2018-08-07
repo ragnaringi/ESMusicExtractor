@@ -1,0 +1,9 @@
+[submodule "libs/essentia"]
+	path = libs/essentia
+	url = https://github.com/MTG/essentia
+[submodule "libs/samplerate"]
+	path = libs/samplerate
+	url = https://github.com/ragnaringi/samplerate
+[submodule "libs/ffmpeg-ios-static-libs"]
+	path = libs/ffmpeg-ios-static-libs
+	url = https://github.com/chrisballinger/ffmpeg-ios-static-libs
