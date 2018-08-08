@@ -592,6 +592,229 @@
 		C013813C211A060C0046020A /* tnt_vec.h in Headers */ = {isa = PBXBuildFile; fileRef = C0137A35211A06090046020A /* tnt_vec.h */; };
 		C013813D211A060C0046020A /* tnt_version.h in Headers */ = {isa = PBXBuildFile; fileRef = C0137A36211A06090046020A /* tnt_version.h */; };
 		C0138403211A06BD0046020A /* ESMusicExtractor.h in Headers */ = {isa = PBXBuildFile; fileRef = C0138401211A06BD0046020A /* ESMusicExtractor.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C088C619211B54C3009ED9DB /* taglib_config.h in Headers */ = {isa = PBXBuildFile; fileRef = C088C618211B54C3009ED9DB /* taglib_config.h */; };
+		C088CB10211B561C009ED9DB /* checked.h in Headers */ = {isa = PBXBuildFile; fileRef = C088C961211B561C009ED9DB /* checked.h */; };
+		C088CB11211B561C009ED9DB /* core.h in Headers */ = {isa = PBXBuildFile; fileRef = C088C962211B561C009ED9DB /* core.h */; };
+		C088CB30211B561C009ED9DB /* ape-tag-format.txt in Resources */ = {isa = PBXBuildFile; fileRef = C088C989211B561C009ED9DB /* ape-tag-format.txt */; };
+		C088CB31211B561C009ED9DB /* apefile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C088C98A211B561C009ED9DB /* apefile.cpp */; };
+		C088CB32211B561C009ED9DB /* apefile.h in Headers */ = {isa = PBXBuildFile; fileRef = C088C98B211B561C009ED9DB /* apefile.h */; };
+		C088CB33211B561C009ED9DB /* apefooter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C088C98C211B561C009ED9DB /* apefooter.cpp */; };
+		C088CB34211B561C009ED9DB /* apefooter.h in Headers */ = {isa = PBXBuildFile; fileRef = C088C98D211B561C009ED9DB /* apefooter.h */; };
+		C088CB35211B561C009ED9DB /* apeitem.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C088C98E211B561C009ED9DB /* apeitem.cpp */; };
+		C088CB36211B561C009ED9DB /* apeitem.h in Headers */ = {isa = PBXBuildFile; fileRef = C088C98F211B561C009ED9DB /* apeitem.h */; };
+		C088CB37211B561C009ED9DB /* apeproperties.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C088C990211B561C009ED9DB /* apeproperties.cpp */; };
+		C088CB38211B561C009ED9DB /* apeproperties.h in Headers */ = {isa = PBXBuildFile; fileRef = C088C991211B561C009ED9DB /* apeproperties.h */; };
+		C088CB39211B561C009ED9DB /* apetag.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C088C992211B561C009ED9DB /* apetag.cpp */; };
+		C088CB3A211B561C009ED9DB /* apetag.h in Headers */ = {isa = PBXBuildFile; fileRef = C088C993211B561C009ED9DB /* apetag.h */; };
+		C088CB3B211B561C009ED9DB /* asfattribute.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C088C995211B561C009ED9DB /* asfattribute.cpp */; };
+		C088CB3C211B561C009ED9DB /* asfattribute.h in Headers */ = {isa = PBXBuildFile; fileRef = C088C996211B561C009ED9DB /* asfattribute.h */; };
+		C088CB3D211B561C009ED9DB /* asffile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C088C997211B561C009ED9DB /* asffile.cpp */; };
+		C088CB3E211B561C009ED9DB /* asffile.h in Headers */ = {isa = PBXBuildFile; fileRef = C088C998211B561C009ED9DB /* asffile.h */; };
+		C088CB3F211B561C009ED9DB /* asfpicture.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C088C999211B561C009ED9DB /* asfpicture.cpp */; };
+		C088CB40211B561C009ED9DB /* asfpicture.h in Headers */ = {isa = PBXBuildFile; fileRef = C088C99A211B561C009ED9DB /* asfpicture.h */; };
+		C088CB41211B561C009ED9DB /* asfproperties.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C088C99B211B561C009ED9DB /* asfproperties.cpp */; };
+		C088CB42211B561C009ED9DB /* asfproperties.h in Headers */ = {isa = PBXBuildFile; fileRef = C088C99C211B561C009ED9DB /* asfproperties.h */; };
+		C088CB43211B561C009ED9DB /* asftag.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C088C99D211B561C009ED9DB /* asftag.cpp */; };
+		C088CB44211B561C009ED9DB /* asftag.h in Headers */ = {isa = PBXBuildFile; fileRef = C088C99E211B561C009ED9DB /* asftag.h */; };
+		C088CB45211B561C009ED9DB /* asfutils.h in Headers */ = {isa = PBXBuildFile; fileRef = C088C99F211B561C009ED9DB /* asfutils.h */; };
+		C088CB46211B561C009ED9DB /* audioproperties.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C088C9A0211B561C009ED9DB /* audioproperties.cpp */; };
+		C088CB47211B561C009ED9DB /* audioproperties.h in Headers */ = {isa = PBXBuildFile; fileRef = C088C9A1211B561C009ED9DB /* audioproperties.h */; };
+		C088CB49211B561C009ED9DB /* fileref.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C088C9A3211B561C009ED9DB /* fileref.cpp */; };
+		C088CB4A211B561C009ED9DB /* fileref.h in Headers */ = {isa = PBXBuildFile; fileRef = C088C9A4211B561C009ED9DB /* fileref.h */; };
+		C088CB4B211B561C009ED9DB /* flacfile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C088C9A6211B561C009ED9DB /* flacfile.cpp */; };
+		C088CB4C211B561C009ED9DB /* flacfile.h in Headers */ = {isa = PBXBuildFile; fileRef = C088C9A7211B561C009ED9DB /* flacfile.h */; };
+		C088CB4D211B561C009ED9DB /* flacmetadatablock.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C088C9A8211B561C009ED9DB /* flacmetadatablock.cpp */; };
+		C088CB4E211B561C009ED9DB /* flacmetadatablock.h in Headers */ = {isa = PBXBuildFile; fileRef = C088C9A9211B561C009ED9DB /* flacmetadatablock.h */; };
+		C088CB4F211B561C009ED9DB /* flacpicture.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C088C9AA211B561C009ED9DB /* flacpicture.cpp */; };
+		C088CB50211B561C009ED9DB /* flacpicture.h in Headers */ = {isa = PBXBuildFile; fileRef = C088C9AB211B561C009ED9DB /* flacpicture.h */; };
+		C088CB51211B561C009ED9DB /* flacproperties.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C088C9AC211B561C009ED9DB /* flacproperties.cpp */; };
+		C088CB52211B561C009ED9DB /* flacproperties.h in Headers */ = {isa = PBXBuildFile; fileRef = C088C9AD211B561C009ED9DB /* flacproperties.h */; };
+		C088CB53211B561C009ED9DB /* flacunknownmetadatablock.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C088C9AE211B561C009ED9DB /* flacunknownmetadatablock.cpp */; };
+		C088CB54211B561C009ED9DB /* flacunknownmetadatablock.h in Headers */ = {isa = PBXBuildFile; fileRef = C088C9AF211B561C009ED9DB /* flacunknownmetadatablock.h */; };
+		C088CB55211B561C009ED9DB /* itfile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C088C9B1211B561C009ED9DB /* itfile.cpp */; };
+		C088CB56211B561C009ED9DB /* itfile.h in Headers */ = {isa = PBXBuildFile; fileRef = C088C9B2211B561C009ED9DB /* itfile.h */; };
+		C088CB57211B561C009ED9DB /* itproperties.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C088C9B3211B561C009ED9DB /* itproperties.cpp */; };
+		C088CB58211B561C009ED9DB /* itproperties.h in Headers */ = {isa = PBXBuildFile; fileRef = C088C9B4211B561C009ED9DB /* itproperties.h */; };
+		C088CB59211B561D009ED9DB /* modfile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C088C9B6211B561C009ED9DB /* modfile.cpp */; };
+		C088CB5A211B561D009ED9DB /* modfile.h in Headers */ = {isa = PBXBuildFile; fileRef = C088C9B7211B561C009ED9DB /* modfile.h */; };
+		C088CB5B211B561D009ED9DB /* modfilebase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C088C9B8211B561C009ED9DB /* modfilebase.cpp */; };
+		C088CB5C211B561D009ED9DB /* modfilebase.h in Headers */ = {isa = PBXBuildFile; fileRef = C088C9B9211B561C009ED9DB /* modfilebase.h */; };
+		C088CB5D211B561D009ED9DB /* modfileprivate.h in Headers */ = {isa = PBXBuildFile; fileRef = C088C9BA211B561C009ED9DB /* modfileprivate.h */; };
+		C088CB5E211B561D009ED9DB /* modproperties.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C088C9BB211B561C009ED9DB /* modproperties.cpp */; };
+		C088CB5F211B561D009ED9DB /* modproperties.h in Headers */ = {isa = PBXBuildFile; fileRef = C088C9BC211B561C009ED9DB /* modproperties.h */; };
+		C088CB60211B561D009ED9DB /* modtag.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C088C9BD211B561C009ED9DB /* modtag.cpp */; };
+		C088CB61211B561D009ED9DB /* modtag.h in Headers */ = {isa = PBXBuildFile; fileRef = C088C9BE211B561C009ED9DB /* modtag.h */; };
+		C088CB62211B561D009ED9DB /* mp4atom.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C088C9C0211B561C009ED9DB /* mp4atom.cpp */; };
+		C088CB63211B561D009ED9DB /* mp4atom.h in Headers */ = {isa = PBXBuildFile; fileRef = C088C9C1211B561C009ED9DB /* mp4atom.h */; };
+		C088CB64211B561D009ED9DB /* mp4coverart.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C088C9C2211B561C009ED9DB /* mp4coverart.cpp */; };
+		C088CB65211B561D009ED9DB /* mp4coverart.h in Headers */ = {isa = PBXBuildFile; fileRef = C088C9C3211B561C009ED9DB /* mp4coverart.h */; };
+		C088CB66211B561D009ED9DB /* mp4file.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C088C9C4211B561C009ED9DB /* mp4file.cpp */; };
+		C088CB67211B561D009ED9DB /* mp4file.h in Headers */ = {isa = PBXBuildFile; fileRef = C088C9C5211B561C009ED9DB /* mp4file.h */; };
+		C088CB68211B561D009ED9DB /* mp4item.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C088C9C6211B561C009ED9DB /* mp4item.cpp */; };
+		C088CB69211B561D009ED9DB /* mp4item.h in Headers */ = {isa = PBXBuildFile; fileRef = C088C9C7211B561C009ED9DB /* mp4item.h */; };
+		C088CB6A211B561D009ED9DB /* mp4properties.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C088C9C8211B561C009ED9DB /* mp4properties.cpp */; };
+		C088CB6B211B561D009ED9DB /* mp4properties.h in Headers */ = {isa = PBXBuildFile; fileRef = C088C9C9211B561C009ED9DB /* mp4properties.h */; };
+		C088CB6C211B561D009ED9DB /* mp4tag.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C088C9CA211B561C009ED9DB /* mp4tag.cpp */; };
+		C088CB6D211B561D009ED9DB /* mp4tag.h in Headers */ = {isa = PBXBuildFile; fileRef = C088C9CB211B561C009ED9DB /* mp4tag.h */; };
+		C088CB6E211B561D009ED9DB /* mpcfile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C088C9CD211B561C009ED9DB /* mpcfile.cpp */; };
+		C088CB6F211B561D009ED9DB /* mpcfile.h in Headers */ = {isa = PBXBuildFile; fileRef = C088C9CE211B561C009ED9DB /* mpcfile.h */; };
+		C088CB70211B561D009ED9DB /* mpcproperties.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C088C9CF211B561C009ED9DB /* mpcproperties.cpp */; };
+		C088CB71211B561D009ED9DB /* mpcproperties.h in Headers */ = {isa = PBXBuildFile; fileRef = C088C9D0211B561C009ED9DB /* mpcproperties.h */; };
+		C088CB72211B561D009ED9DB /* id3v1genres.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C088C9D3211B561C009ED9DB /* id3v1genres.cpp */; };
+		C088CB73211B561D009ED9DB /* id3v1genres.h in Headers */ = {isa = PBXBuildFile; fileRef = C088C9D4211B561C009ED9DB /* id3v1genres.h */; };
+		C088CB74211B561D009ED9DB /* id3v1tag.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C088C9D5211B561C009ED9DB /* id3v1tag.cpp */; };
+		C088CB75211B561D009ED9DB /* id3v1tag.h in Headers */ = {isa = PBXBuildFile; fileRef = C088C9D6211B561C009ED9DB /* id3v1tag.h */; };
+		C088CB76211B561D009ED9DB /* attachedpictureframe.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C088C9D9211B561C009ED9DB /* attachedpictureframe.cpp */; };
+		C088CB77211B561D009ED9DB /* attachedpictureframe.h in Headers */ = {isa = PBXBuildFile; fileRef = C088C9DA211B561C009ED9DB /* attachedpictureframe.h */; };
+		C088CB78211B561D009ED9DB /* chapterframe.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C088C9DB211B561C009ED9DB /* chapterframe.cpp */; };
+		C088CB79211B561D009ED9DB /* chapterframe.h in Headers */ = {isa = PBXBuildFile; fileRef = C088C9DC211B561C009ED9DB /* chapterframe.h */; };
+		C088CB7A211B561D009ED9DB /* commentsframe.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C088C9DD211B561C009ED9DB /* commentsframe.cpp */; };
+		C088CB7B211B561D009ED9DB /* commentsframe.h in Headers */ = {isa = PBXBuildFile; fileRef = C088C9DE211B561C009ED9DB /* commentsframe.h */; };
+		C088CB7C211B561D009ED9DB /* eventtimingcodesframe.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C088C9DF211B561C009ED9DB /* eventtimingcodesframe.cpp */; };
+		C088CB7D211B561D009ED9DB /* eventtimingcodesframe.h in Headers */ = {isa = PBXBuildFile; fileRef = C088C9E0211B561C009ED9DB /* eventtimingcodesframe.h */; };
+		C088CB7E211B561D009ED9DB /* generalencapsulatedobjectframe.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C088C9E1211B561C009ED9DB /* generalencapsulatedobjectframe.cpp */; };
+		C088CB7F211B561D009ED9DB /* generalencapsulatedobjectframe.h in Headers */ = {isa = PBXBuildFile; fileRef = C088C9E2211B561C009ED9DB /* generalencapsulatedobjectframe.h */; };
+		C088CB80211B561D009ED9DB /* ownershipframe.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C088C9E3211B561C009ED9DB /* ownershipframe.cpp */; };
+		C088CB81211B561D009ED9DB /* ownershipframe.h in Headers */ = {isa = PBXBuildFile; fileRef = C088C9E4211B561C009ED9DB /* ownershipframe.h */; };
+		C088CB82211B561D009ED9DB /* podcastframe.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C088C9E5211B561C009ED9DB /* podcastframe.cpp */; };
+		C088CB83211B561D009ED9DB /* podcastframe.h in Headers */ = {isa = PBXBuildFile; fileRef = C088C9E6211B561C009ED9DB /* podcastframe.h */; };
+		C088CB84211B561D009ED9DB /* popularimeterframe.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C088C9E7211B561C009ED9DB /* popularimeterframe.cpp */; };
+		C088CB85211B561D009ED9DB /* popularimeterframe.h in Headers */ = {isa = PBXBuildFile; fileRef = C088C9E8211B561C009ED9DB /* popularimeterframe.h */; };
+		C088CB86211B561D009ED9DB /* privateframe.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C088C9E9211B561C009ED9DB /* privateframe.cpp */; };
+		C088CB87211B561D009ED9DB /* privateframe.h in Headers */ = {isa = PBXBuildFile; fileRef = C088C9EA211B561C009ED9DB /* privateframe.h */; };
+		C088CB88211B561D009ED9DB /* relativevolumeframe.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C088C9EB211B561C009ED9DB /* relativevolumeframe.cpp */; };
+		C088CB89211B561D009ED9DB /* relativevolumeframe.h in Headers */ = {isa = PBXBuildFile; fileRef = C088C9EC211B561C009ED9DB /* relativevolumeframe.h */; };
+		C088CB8A211B561D009ED9DB /* synchronizedlyricsframe.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C088C9ED211B561C009ED9DB /* synchronizedlyricsframe.cpp */; };
+		C088CB8B211B561D009ED9DB /* synchronizedlyricsframe.h in Headers */ = {isa = PBXBuildFile; fileRef = C088C9EE211B561C009ED9DB /* synchronizedlyricsframe.h */; };
+		C088CB8C211B561D009ED9DB /* tableofcontentsframe.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C088C9EF211B561C009ED9DB /* tableofcontentsframe.cpp */; };
+		C088CB8D211B561D009ED9DB /* tableofcontentsframe.h in Headers */ = {isa = PBXBuildFile; fileRef = C088C9F0211B561C009ED9DB /* tableofcontentsframe.h */; };
+		C088CB8E211B561D009ED9DB /* textidentificationframe.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C088C9F1211B561C009ED9DB /* textidentificationframe.cpp */; };
+		C088CB8F211B561D009ED9DB /* textidentificationframe.h in Headers */ = {isa = PBXBuildFile; fileRef = C088C9F2211B561C009ED9DB /* textidentificationframe.h */; };
+		C088CB90211B561D009ED9DB /* uniquefileidentifierframe.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C088C9F3211B561C009ED9DB /* uniquefileidentifierframe.cpp */; };
+		C088CB91211B561D009ED9DB /* uniquefileidentifierframe.h in Headers */ = {isa = PBXBuildFile; fileRef = C088C9F4211B561C009ED9DB /* uniquefileidentifierframe.h */; };
+		C088CB92211B561D009ED9DB /* unknownframe.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C088C9F5211B561C009ED9DB /* unknownframe.cpp */; };
+		C088CB93211B561D009ED9DB /* unknownframe.h in Headers */ = {isa = PBXBuildFile; fileRef = C088C9F6211B561C009ED9DB /* unknownframe.h */; };
+		C088CB94211B561D009ED9DB /* unsynchronizedlyricsframe.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C088C9F7211B561C009ED9DB /* unsynchronizedlyricsframe.cpp */; };
+		C088CB95211B561D009ED9DB /* unsynchronizedlyricsframe.h in Headers */ = {isa = PBXBuildFile; fileRef = C088C9F8211B561C009ED9DB /* unsynchronizedlyricsframe.h */; };
+		C088CB96211B561D009ED9DB /* urllinkframe.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C088C9F9211B561C009ED9DB /* urllinkframe.cpp */; };
+		C088CB97211B561D009ED9DB /* urllinkframe.h in Headers */ = {isa = PBXBuildFile; fileRef = C088C9FA211B561C009ED9DB /* urllinkframe.h */; };
+		C088CB98211B561D009ED9DB /* id3v2.2.0.txt in Resources */ = {isa = PBXBuildFile; fileRef = C088C9FB211B561C009ED9DB /* id3v2.2.0.txt */; };
+		C088CB99211B561D009ED9DB /* id3v2.3.0.txt in Resources */ = {isa = PBXBuildFile; fileRef = C088C9FC211B561C009ED9DB /* id3v2.3.0.txt */; };
+		C088CB9A211B561D009ED9DB /* id3v2.4.0-frames.txt in Resources */ = {isa = PBXBuildFile; fileRef = C088C9FD211B561C009ED9DB /* id3v2.4.0-frames.txt */; };
+		C088CB9B211B561D009ED9DB /* id3v2.4.0-structure.txt in Resources */ = {isa = PBXBuildFile; fileRef = C088C9FE211B561C009ED9DB /* id3v2.4.0-structure.txt */; };
+		C088CB9C211B561D009ED9DB /* id3v2extendedheader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C088C9FF211B561C009ED9DB /* id3v2extendedheader.cpp */; };
+		C088CB9D211B561D009ED9DB /* id3v2extendedheader.h in Headers */ = {isa = PBXBuildFile; fileRef = C088CA00211B561C009ED9DB /* id3v2extendedheader.h */; };
+		C088CB9E211B561D009ED9DB /* id3v2footer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C088CA01211B561C009ED9DB /* id3v2footer.cpp */; };
+		C088CB9F211B561D009ED9DB /* id3v2footer.h in Headers */ = {isa = PBXBuildFile; fileRef = C088CA02211B561C009ED9DB /* id3v2footer.h */; };
+		C088CBA0211B561D009ED9DB /* id3v2frame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C088CA03211B561C009ED9DB /* id3v2frame.cpp */; };
+		C088CBA1211B561D009ED9DB /* id3v2frame.h in Headers */ = {isa = PBXBuildFile; fileRef = C088CA04211B561C009ED9DB /* id3v2frame.h */; };
+		C088CBA2211B561D009ED9DB /* id3v2framefactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C088CA05211B561C009ED9DB /* id3v2framefactory.cpp */; };
+		C088CBA3211B561D009ED9DB /* id3v2framefactory.h in Headers */ = {isa = PBXBuildFile; fileRef = C088CA06211B561C009ED9DB /* id3v2framefactory.h */; };
+		C088CBA4211B561D009ED9DB /* id3v2header.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C088CA07211B561C009ED9DB /* id3v2header.cpp */; };
+		C088CBA5211B561D009ED9DB /* id3v2header.h in Headers */ = {isa = PBXBuildFile; fileRef = C088CA08211B561C009ED9DB /* id3v2header.h */; };
+		C088CBA6211B561D009ED9DB /* id3v2synchdata.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C088CA09211B561C009ED9DB /* id3v2synchdata.cpp */; };
+		C088CBA7211B561D009ED9DB /* id3v2synchdata.h in Headers */ = {isa = PBXBuildFile; fileRef = C088CA0A211B561C009ED9DB /* id3v2synchdata.h */; };
+		C088CBA8211B561D009ED9DB /* id3v2tag.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C088CA0B211B561C009ED9DB /* id3v2tag.cpp */; };
+		C088CBA9211B561D009ED9DB /* id3v2tag.h in Headers */ = {isa = PBXBuildFile; fileRef = C088CA0C211B561C009ED9DB /* id3v2tag.h */; };
+		C088CBAA211B561D009ED9DB /* mpegfile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C088CA0D211B561C009ED9DB /* mpegfile.cpp */; };
+		C088CBAB211B561D009ED9DB /* mpegfile.h in Headers */ = {isa = PBXBuildFile; fileRef = C088CA0E211B561C009ED9DB /* mpegfile.h */; };
+		C088CBAC211B561D009ED9DB /* mpegheader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C088CA0F211B561C009ED9DB /* mpegheader.cpp */; };
+		C088CBAD211B561D009ED9DB /* mpegheader.h in Headers */ = {isa = PBXBuildFile; fileRef = C088CA10211B561C009ED9DB /* mpegheader.h */; };
+		C088CBAE211B561D009ED9DB /* mpegproperties.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C088CA11211B561C009ED9DB /* mpegproperties.cpp */; };
+		C088CBAF211B561D009ED9DB /* mpegproperties.h in Headers */ = {isa = PBXBuildFile; fileRef = C088CA12211B561C009ED9DB /* mpegproperties.h */; };
+		C088CBB0211B561D009ED9DB /* mpegutils.h in Headers */ = {isa = PBXBuildFile; fileRef = C088CA13211B561C009ED9DB /* mpegutils.h */; };
+		C088CBB1211B561D009ED9DB /* xingheader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C088CA14211B561C009ED9DB /* xingheader.cpp */; };
+		C088CBB2211B561D009ED9DB /* xingheader.h in Headers */ = {isa = PBXBuildFile; fileRef = C088CA15211B561C009ED9DB /* xingheader.h */; };
+		C088CBB3211B561D009ED9DB /* oggflacfile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C088CA18211B561C009ED9DB /* oggflacfile.cpp */; };
+		C088CBB4211B561D009ED9DB /* oggflacfile.h in Headers */ = {isa = PBXBuildFile; fileRef = C088CA19211B561C009ED9DB /* oggflacfile.h */; };
+		C088CBB5211B561D009ED9DB /* oggfile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C088CA1A211B561C009ED9DB /* oggfile.cpp */; };
+		C088CBB6211B561D009ED9DB /* oggfile.h in Headers */ = {isa = PBXBuildFile; fileRef = C088CA1B211B561C009ED9DB /* oggfile.h */; };
+		C088CBB7211B561D009ED9DB /* oggpage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C088CA1C211B561C009ED9DB /* oggpage.cpp */; };
+		C088CBB8211B561D009ED9DB /* oggpage.h in Headers */ = {isa = PBXBuildFile; fileRef = C088CA1D211B561C009ED9DB /* oggpage.h */; };
+		C088CBB9211B561D009ED9DB /* oggpageheader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C088CA1E211B561C009ED9DB /* oggpageheader.cpp */; };
+		C088CBBA211B561D009ED9DB /* oggpageheader.h in Headers */ = {isa = PBXBuildFile; fileRef = C088CA1F211B561C009ED9DB /* oggpageheader.h */; };
+		C088CBBB211B561D009ED9DB /* opusfile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C088CA21211B561C009ED9DB /* opusfile.cpp */; };
+		C088CBBC211B561D009ED9DB /* opusfile.h in Headers */ = {isa = PBXBuildFile; fileRef = C088CA22211B561C009ED9DB /* opusfile.h */; };
+		C088CBBD211B561D009ED9DB /* opusproperties.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C088CA23211B561C009ED9DB /* opusproperties.cpp */; };
+		C088CBBE211B561D009ED9DB /* opusproperties.h in Headers */ = {isa = PBXBuildFile; fileRef = C088CA24211B561C009ED9DB /* opusproperties.h */; };
+		C088CBBF211B561D009ED9DB /* speexfile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C088CA26211B561C009ED9DB /* speexfile.cpp */; };
+		C088CBC0211B561D009ED9DB /* speexfile.h in Headers */ = {isa = PBXBuildFile; fileRef = C088CA27211B561C009ED9DB /* speexfile.h */; };
+		C088CBC1211B561D009ED9DB /* speexproperties.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C088CA28211B561C009ED9DB /* speexproperties.cpp */; };
+		C088CBC2211B561D009ED9DB /* speexproperties.h in Headers */ = {isa = PBXBuildFile; fileRef = C088CA29211B561C009ED9DB /* speexproperties.h */; };
+		C088CBC3211B561D009ED9DB /* vorbisfile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C088CA2B211B561C009ED9DB /* vorbisfile.cpp */; };
+		C088CBC4211B561D009ED9DB /* vorbisfile.h in Headers */ = {isa = PBXBuildFile; fileRef = C088CA2C211B561C009ED9DB /* vorbisfile.h */; };
+		C088CBC5211B561D009ED9DB /* vorbisproperties.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C088CA2D211B561C009ED9DB /* vorbisproperties.cpp */; };
+		C088CBC6211B561D009ED9DB /* vorbisproperties.h in Headers */ = {isa = PBXBuildFile; fileRef = C088CA2E211B561C009ED9DB /* vorbisproperties.h */; };
+		C088CBC7211B561D009ED9DB /* xiphcomment.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C088CA2F211B561C009ED9DB /* xiphcomment.cpp */; };
+		C088CBC8211B561D009ED9DB /* xiphcomment.h in Headers */ = {isa = PBXBuildFile; fileRef = C088CA30211B561C009ED9DB /* xiphcomment.h */; };
+		C088CBC9211B561D009ED9DB /* aifffile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C088CA33211B561C009ED9DB /* aifffile.cpp */; };
+		C088CBCA211B561D009ED9DB /* aifffile.h in Headers */ = {isa = PBXBuildFile; fileRef = C088CA34211B561C009ED9DB /* aifffile.h */; };
+		C088CBCB211B561D009ED9DB /* aiffproperties.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C088CA35211B561C009ED9DB /* aiffproperties.cpp */; };
+		C088CBCC211B561D009ED9DB /* aiffproperties.h in Headers */ = {isa = PBXBuildFile; fileRef = C088CA36211B561C009ED9DB /* aiffproperties.h */; };
+		C088CBCD211B561D009ED9DB /* rifffile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C088CA37211B561C009ED9DB /* rifffile.cpp */; };
+		C088CBCE211B561D009ED9DB /* rifffile.h in Headers */ = {isa = PBXBuildFile; fileRef = C088CA38211B561C009ED9DB /* rifffile.h */; };
+		C088CBCF211B561D009ED9DB /* riffutils.h in Headers */ = {isa = PBXBuildFile; fileRef = C088CA39211B561C009ED9DB /* riffutils.h */; };
+		C088CBD0211B561D009ED9DB /* infotag.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C088CA3B211B561C009ED9DB /* infotag.cpp */; };
+		C088CBD1211B561D009ED9DB /* infotag.h in Headers */ = {isa = PBXBuildFile; fileRef = C088CA3C211B561C009ED9DB /* infotag.h */; };
+		C088CBD2211B561D009ED9DB /* wavfile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C088CA3D211B561C009ED9DB /* wavfile.cpp */; };
+		C088CBD3211B561D009ED9DB /* wavfile.h in Headers */ = {isa = PBXBuildFile; fileRef = C088CA3E211B561C009ED9DB /* wavfile.h */; };
+		C088CBD4211B561D009ED9DB /* wavproperties.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C088CA3F211B561C009ED9DB /* wavproperties.cpp */; };
+		C088CBD5211B561D009ED9DB /* wavproperties.h in Headers */ = {isa = PBXBuildFile; fileRef = C088CA40211B561C009ED9DB /* wavproperties.h */; };
+		C088CBD6211B561D009ED9DB /* s3mfile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C088CA42211B561C009ED9DB /* s3mfile.cpp */; };
+		C088CBD7211B561D009ED9DB /* s3mfile.h in Headers */ = {isa = PBXBuildFile; fileRef = C088CA43211B561C009ED9DB /* s3mfile.h */; };
+		C088CBD8211B561D009ED9DB /* s3mproperties.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C088CA44211B561C009ED9DB /* s3mproperties.cpp */; };
+		C088CBD9211B561D009ED9DB /* s3mproperties.h in Headers */ = {isa = PBXBuildFile; fileRef = C088CA45211B561C009ED9DB /* s3mproperties.h */; };
+		C088CBDA211B561D009ED9DB /* tag.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C088CA46211B561C009ED9DB /* tag.cpp */; };
+		C088CBDB211B561D009ED9DB /* tag.h in Headers */ = {isa = PBXBuildFile; fileRef = C088CA47211B561C009ED9DB /* tag.h */; };
+		C088CBDD211B561D009ED9DB /* taglib_export.h in Headers */ = {isa = PBXBuildFile; fileRef = C088CA49211B561C009ED9DB /* taglib_export.h */; };
+		C088CBDE211B561D009ED9DB /* tagunion.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C088CA4A211B561C009ED9DB /* tagunion.cpp */; };
+		C088CBDF211B561D009ED9DB /* tagunion.h in Headers */ = {isa = PBXBuildFile; fileRef = C088CA4B211B561C009ED9DB /* tagunion.h */; };
+		C088CBE0211B561D009ED9DB /* tagutils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C088CA4C211B561C009ED9DB /* tagutils.cpp */; };
+		C088CBE1211B561D009ED9DB /* tagutils.h in Headers */ = {isa = PBXBuildFile; fileRef = C088CA4D211B561C009ED9DB /* tagutils.h */; };
+		C088CBE2211B561D009ED9DB /* taglib.h in Headers */ = {isa = PBXBuildFile; fileRef = C088CA4F211B561C009ED9DB /* taglib.h */; };
+		C088CBE3211B561D009ED9DB /* tbytevector.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C088CA50211B561C009ED9DB /* tbytevector.cpp */; };
+		C088CBE4211B561D009ED9DB /* tbytevector.h in Headers */ = {isa = PBXBuildFile; fileRef = C088CA51211B561C009ED9DB /* tbytevector.h */; };
+		C088CBE5211B561D009ED9DB /* tbytevectorlist.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C088CA52211B561C009ED9DB /* tbytevectorlist.cpp */; };
+		C088CBE6211B561D009ED9DB /* tbytevectorlist.h in Headers */ = {isa = PBXBuildFile; fileRef = C088CA53211B561C009ED9DB /* tbytevectorlist.h */; };
+		C088CBE7211B561D009ED9DB /* tbytevectorstream.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C088CA54211B561C009ED9DB /* tbytevectorstream.cpp */; };
+		C088CBE8211B561D009ED9DB /* tbytevectorstream.h in Headers */ = {isa = PBXBuildFile; fileRef = C088CA55211B561C009ED9DB /* tbytevectorstream.h */; };
+		C088CBE9211B561D009ED9DB /* tdebug.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C088CA56211B561C009ED9DB /* tdebug.cpp */; };
+		C088CBEA211B561D009ED9DB /* tdebug.h in Headers */ = {isa = PBXBuildFile; fileRef = C088CA57211B561C009ED9DB /* tdebug.h */; };
+		C088CBEB211B561D009ED9DB /* tdebuglistener.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C088CA58211B561C009ED9DB /* tdebuglistener.cpp */; };
+		C088CBEC211B561D009ED9DB /* tdebuglistener.h in Headers */ = {isa = PBXBuildFile; fileRef = C088CA59211B561C009ED9DB /* tdebuglistener.h */; };
+		C088CBED211B561D009ED9DB /* tfile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C088CA5A211B561C009ED9DB /* tfile.cpp */; };
+		C088CBEE211B561D009ED9DB /* tfile.h in Headers */ = {isa = PBXBuildFile; fileRef = C088CA5B211B561C009ED9DB /* tfile.h */; };
+		C088CBEF211B561D009ED9DB /* tfilestream.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C088CA5C211B561C009ED9DB /* tfilestream.cpp */; };
+		C088CBF0211B561D009ED9DB /* tfilestream.h in Headers */ = {isa = PBXBuildFile; fileRef = C088CA5D211B561C009ED9DB /* tfilestream.h */; };
+		C088CBF1211B561D009ED9DB /* tiostream.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C088CA5E211B561C009ED9DB /* tiostream.cpp */; };
+		C088CBF2211B561D009ED9DB /* tiostream.h in Headers */ = {isa = PBXBuildFile; fileRef = C088CA5F211B561C009ED9DB /* tiostream.h */; };
+		C088CBF3211B561D009ED9DB /* tlist.h in Headers */ = {isa = PBXBuildFile; fileRef = C088CA60211B561C009ED9DB /* tlist.h */; };
+		C088CBF5211B561D009ED9DB /* tmap.h in Headers */ = {isa = PBXBuildFile; fileRef = C088CA62211B561C009ED9DB /* tmap.h */; };
+		C088CBF7211B561D009ED9DB /* tpropertymap.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C088CA64211B561C009ED9DB /* tpropertymap.cpp */; };
+		C088CBF8211B561D009ED9DB /* tpropertymap.h in Headers */ = {isa = PBXBuildFile; fileRef = C088CA65211B561C009ED9DB /* tpropertymap.h */; };
+		C088CBF9211B561D009ED9DB /* trefcounter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C088CA66211B561C009ED9DB /* trefcounter.cpp */; };
+		C088CBFA211B561D009ED9DB /* trefcounter.h in Headers */ = {isa = PBXBuildFile; fileRef = C088CA67211B561C009ED9DB /* trefcounter.h */; };
+		C088CBFB211B561D009ED9DB /* tstring.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C088CA68211B561C009ED9DB /* tstring.cpp */; };
+		C088CBFC211B561D009ED9DB /* tstring.h in Headers */ = {isa = PBXBuildFile; fileRef = C088CA69211B561C009ED9DB /* tstring.h */; };
+		C088CBFD211B561D009ED9DB /* tstringlist.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C088CA6A211B561C009ED9DB /* tstringlist.cpp */; };
+		C088CBFE211B561D009ED9DB /* tstringlist.h in Headers */ = {isa = PBXBuildFile; fileRef = C088CA6B211B561C009ED9DB /* tstringlist.h */; };
+		C088CBFF211B561D009ED9DB /* tutils.h in Headers */ = {isa = PBXBuildFile; fileRef = C088CA6C211B561C009ED9DB /* tutils.h */; };
+		C088CC00211B561D009ED9DB /* tzlib.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C088CA6D211B561C009ED9DB /* tzlib.cpp */; };
+		C088CC01211B561D009ED9DB /* tzlib.h in Headers */ = {isa = PBXBuildFile; fileRef = C088CA6E211B561C009ED9DB /* tzlib.h */; };
+		C088CC02211B561D009ED9DB /* trueaudiofile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C088CA70211B561C009ED9DB /* trueaudiofile.cpp */; };
+		C088CC03211B561D009ED9DB /* trueaudiofile.h in Headers */ = {isa = PBXBuildFile; fileRef = C088CA71211B561C009ED9DB /* trueaudiofile.h */; };
+		C088CC04211B561D009ED9DB /* trueaudioproperties.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C088CA72211B561C009ED9DB /* trueaudioproperties.cpp */; };
+		C088CC05211B561D009ED9DB /* trueaudioproperties.h in Headers */ = {isa = PBXBuildFile; fileRef = C088CA73211B561C009ED9DB /* trueaudioproperties.h */; };
+		C088CC06211B561D009ED9DB /* wavpackfile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C088CA75211B561C009ED9DB /* wavpackfile.cpp */; };
+		C088CC07211B561D009ED9DB /* wavpackfile.h in Headers */ = {isa = PBXBuildFile; fileRef = C088CA76211B561C009ED9DB /* wavpackfile.h */; };
+		C088CC08211B561D009ED9DB /* wavpackproperties.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C088CA77211B561C009ED9DB /* wavpackproperties.cpp */; };
+		C088CC09211B561D009ED9DB /* wavpackproperties.h in Headers */ = {isa = PBXBuildFile; fileRef = C088CA78211B561C009ED9DB /* wavpackproperties.h */; };
+		C088CC0A211B561D009ED9DB /* xmfile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C088CA7A211B561C009ED9DB /* xmfile.cpp */; };
+		C088CC0B211B561D009ED9DB /* xmfile.h in Headers */ = {isa = PBXBuildFile; fileRef = C088CA7B211B561C009ED9DB /* xmfile.h */; };
+		C088CC0C211B561D009ED9DB /* xmproperties.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C088CA7C211B561C009ED9DB /* xmproperties.cpp */; };
+		C088CC0D211B561D009ED9DB /* xmproperties.h in Headers */ = {isa = PBXBuildFile; fileRef = C088CA7D211B561C009ED9DB /* xmproperties.h */; };
+		C088CC9C211B57F1009ED9DB /* metadatareader.h in Headers */ = {isa = PBXBuildFile; fileRef = C088CC9A211B57F0009ED9DB /* metadatareader.h */; };
+		C088CC9D211B57F1009ED9DB /* metadatareader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C088CC9B211B57F1009ED9DB /* metadatareader.cpp */; };
 		C0B559EB211B2079007817F6 /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = C0B559EA211B2079007817F6 /* libiconv.tbd */; };
 		C0B559ED211B20A2007817F6 /* libbz2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = C0B559EC211B20A2007817F6 /* libbz2.tbd */; };
 		C0B559EF211B20A9007817F6 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = C0B559EE211B20A9007817F6 /* libz.tbd */; };
@@ -1222,6 +1445,229 @@
 		C0137A36211A06090046020A /* tnt_version.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tnt_version.h; sourceTree = "<group>"; };
 		C0138400211A06BD0046020A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C0138401211A06BD0046020A /* ESMusicExtractor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESMusicExtractor.h; sourceTree = "<group>"; };
+		C088C618211B54C3009ED9DB /* taglib_config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = taglib_config.h; sourceTree = "<group>"; };
+		C088C961211B561C009ED9DB /* checked.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = checked.h; sourceTree = "<group>"; };
+		C088C962211B561C009ED9DB /* core.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = core.h; sourceTree = "<group>"; };
+		C088C989211B561C009ED9DB /* ape-tag-format.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "ape-tag-format.txt"; sourceTree = "<group>"; };
+		C088C98A211B561C009ED9DB /* apefile.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = apefile.cpp; sourceTree = "<group>"; };
+		C088C98B211B561C009ED9DB /* apefile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = apefile.h; sourceTree = "<group>"; };
+		C088C98C211B561C009ED9DB /* apefooter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = apefooter.cpp; sourceTree = "<group>"; };
+		C088C98D211B561C009ED9DB /* apefooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = apefooter.h; sourceTree = "<group>"; };
+		C088C98E211B561C009ED9DB /* apeitem.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = apeitem.cpp; sourceTree = "<group>"; };
+		C088C98F211B561C009ED9DB /* apeitem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = apeitem.h; sourceTree = "<group>"; };
+		C088C990211B561C009ED9DB /* apeproperties.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = apeproperties.cpp; sourceTree = "<group>"; };
+		C088C991211B561C009ED9DB /* apeproperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = apeproperties.h; sourceTree = "<group>"; };
+		C088C992211B561C009ED9DB /* apetag.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = apetag.cpp; sourceTree = "<group>"; };
+		C088C993211B561C009ED9DB /* apetag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = apetag.h; sourceTree = "<group>"; };
+		C088C995211B561C009ED9DB /* asfattribute.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = asfattribute.cpp; sourceTree = "<group>"; };
+		C088C996211B561C009ED9DB /* asfattribute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = asfattribute.h; sourceTree = "<group>"; };
+		C088C997211B561C009ED9DB /* asffile.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = asffile.cpp; sourceTree = "<group>"; };
+		C088C998211B561C009ED9DB /* asffile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = asffile.h; sourceTree = "<group>"; };
+		C088C999211B561C009ED9DB /* asfpicture.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = asfpicture.cpp; sourceTree = "<group>"; };
+		C088C99A211B561C009ED9DB /* asfpicture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = asfpicture.h; sourceTree = "<group>"; };
+		C088C99B211B561C009ED9DB /* asfproperties.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = asfproperties.cpp; sourceTree = "<group>"; };
+		C088C99C211B561C009ED9DB /* asfproperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = asfproperties.h; sourceTree = "<group>"; };
+		C088C99D211B561C009ED9DB /* asftag.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = asftag.cpp; sourceTree = "<group>"; };
+		C088C99E211B561C009ED9DB /* asftag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = asftag.h; sourceTree = "<group>"; };
+		C088C99F211B561C009ED9DB /* asfutils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = asfutils.h; sourceTree = "<group>"; };
+		C088C9A0211B561C009ED9DB /* audioproperties.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = audioproperties.cpp; sourceTree = "<group>"; };
+		C088C9A1211B561C009ED9DB /* audioproperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = audioproperties.h; sourceTree = "<group>"; };
+		C088C9A3211B561C009ED9DB /* fileref.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = fileref.cpp; sourceTree = "<group>"; };
+		C088C9A4211B561C009ED9DB /* fileref.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = fileref.h; sourceTree = "<group>"; };
+		C088C9A6211B561C009ED9DB /* flacfile.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = flacfile.cpp; sourceTree = "<group>"; };
+		C088C9A7211B561C009ED9DB /* flacfile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = flacfile.h; sourceTree = "<group>"; };
+		C088C9A8211B561C009ED9DB /* flacmetadatablock.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = flacmetadatablock.cpp; sourceTree = "<group>"; };
+		C088C9A9211B561C009ED9DB /* flacmetadatablock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = flacmetadatablock.h; sourceTree = "<group>"; };
+		C088C9AA211B561C009ED9DB /* flacpicture.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = flacpicture.cpp; sourceTree = "<group>"; };
+		C088C9AB211B561C009ED9DB /* flacpicture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = flacpicture.h; sourceTree = "<group>"; };
+		C088C9AC211B561C009ED9DB /* flacproperties.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = flacproperties.cpp; sourceTree = "<group>"; };
+		C088C9AD211B561C009ED9DB /* flacproperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = flacproperties.h; sourceTree = "<group>"; };
+		C088C9AE211B561C009ED9DB /* flacunknownmetadatablock.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = flacunknownmetadatablock.cpp; sourceTree = "<group>"; };
+		C088C9AF211B561C009ED9DB /* flacunknownmetadatablock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = flacunknownmetadatablock.h; sourceTree = "<group>"; };
+		C088C9B1211B561C009ED9DB /* itfile.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = itfile.cpp; sourceTree = "<group>"; };
+		C088C9B2211B561C009ED9DB /* itfile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = itfile.h; sourceTree = "<group>"; };
+		C088C9B3211B561C009ED9DB /* itproperties.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = itproperties.cpp; sourceTree = "<group>"; };
+		C088C9B4211B561C009ED9DB /* itproperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = itproperties.h; sourceTree = "<group>"; };
+		C088C9B6211B561C009ED9DB /* modfile.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = modfile.cpp; sourceTree = "<group>"; };
+		C088C9B7211B561C009ED9DB /* modfile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = modfile.h; sourceTree = "<group>"; };
+		C088C9B8211B561C009ED9DB /* modfilebase.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = modfilebase.cpp; sourceTree = "<group>"; };
+		C088C9B9211B561C009ED9DB /* modfilebase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = modfilebase.h; sourceTree = "<group>"; };
+		C088C9BA211B561C009ED9DB /* modfileprivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = modfileprivate.h; sourceTree = "<group>"; };
+		C088C9BB211B561C009ED9DB /* modproperties.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = modproperties.cpp; sourceTree = "<group>"; };
+		C088C9BC211B561C009ED9DB /* modproperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = modproperties.h; sourceTree = "<group>"; };
+		C088C9BD211B561C009ED9DB /* modtag.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = modtag.cpp; sourceTree = "<group>"; };
+		C088C9BE211B561C009ED9DB /* modtag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = modtag.h; sourceTree = "<group>"; };
+		C088C9C0211B561C009ED9DB /* mp4atom.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = mp4atom.cpp; sourceTree = "<group>"; };
+		C088C9C1211B561C009ED9DB /* mp4atom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mp4atom.h; sourceTree = "<group>"; };
+		C088C9C2211B561C009ED9DB /* mp4coverart.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = mp4coverart.cpp; sourceTree = "<group>"; };
+		C088C9C3211B561C009ED9DB /* mp4coverart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mp4coverart.h; sourceTree = "<group>"; };
+		C088C9C4211B561C009ED9DB /* mp4file.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = mp4file.cpp; sourceTree = "<group>"; };
+		C088C9C5211B561C009ED9DB /* mp4file.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mp4file.h; sourceTree = "<group>"; };
+		C088C9C6211B561C009ED9DB /* mp4item.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = mp4item.cpp; sourceTree = "<group>"; };
+		C088C9C7211B561C009ED9DB /* mp4item.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mp4item.h; sourceTree = "<group>"; };
+		C088C9C8211B561C009ED9DB /* mp4properties.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = mp4properties.cpp; sourceTree = "<group>"; };
+		C088C9C9211B561C009ED9DB /* mp4properties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mp4properties.h; sourceTree = "<group>"; };
+		C088C9CA211B561C009ED9DB /* mp4tag.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = mp4tag.cpp; sourceTree = "<group>"; };
+		C088C9CB211B561C009ED9DB /* mp4tag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mp4tag.h; sourceTree = "<group>"; };
+		C088C9CD211B561C009ED9DB /* mpcfile.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = mpcfile.cpp; sourceTree = "<group>"; };
+		C088C9CE211B561C009ED9DB /* mpcfile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mpcfile.h; sourceTree = "<group>"; };
+		C088C9CF211B561C009ED9DB /* mpcproperties.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = mpcproperties.cpp; sourceTree = "<group>"; };
+		C088C9D0211B561C009ED9DB /* mpcproperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mpcproperties.h; sourceTree = "<group>"; };
+		C088C9D3211B561C009ED9DB /* id3v1genres.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = id3v1genres.cpp; sourceTree = "<group>"; };
+		C088C9D4211B561C009ED9DB /* id3v1genres.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = id3v1genres.h; sourceTree = "<group>"; };
+		C088C9D5211B561C009ED9DB /* id3v1tag.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = id3v1tag.cpp; sourceTree = "<group>"; };
+		C088C9D6211B561C009ED9DB /* id3v1tag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = id3v1tag.h; sourceTree = "<group>"; };
+		C088C9D9211B561C009ED9DB /* attachedpictureframe.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = attachedpictureframe.cpp; sourceTree = "<group>"; };
+		C088C9DA211B561C009ED9DB /* attachedpictureframe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = attachedpictureframe.h; sourceTree = "<group>"; };
+		C088C9DB211B561C009ED9DB /* chapterframe.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = chapterframe.cpp; sourceTree = "<group>"; };
+		C088C9DC211B561C009ED9DB /* chapterframe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = chapterframe.h; sourceTree = "<group>"; };
+		C088C9DD211B561C009ED9DB /* commentsframe.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = commentsframe.cpp; sourceTree = "<group>"; };
+		C088C9DE211B561C009ED9DB /* commentsframe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = commentsframe.h; sourceTree = "<group>"; };
+		C088C9DF211B561C009ED9DB /* eventtimingcodesframe.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = eventtimingcodesframe.cpp; sourceTree = "<group>"; };
+		C088C9E0211B561C009ED9DB /* eventtimingcodesframe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = eventtimingcodesframe.h; sourceTree = "<group>"; };
+		C088C9E1211B561C009ED9DB /* generalencapsulatedobjectframe.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = generalencapsulatedobjectframe.cpp; sourceTree = "<group>"; };
+		C088C9E2211B561C009ED9DB /* generalencapsulatedobjectframe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = generalencapsulatedobjectframe.h; sourceTree = "<group>"; };
+		C088C9E3211B561C009ED9DB /* ownershipframe.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ownershipframe.cpp; sourceTree = "<group>"; };
+		C088C9E4211B561C009ED9DB /* ownershipframe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ownershipframe.h; sourceTree = "<group>"; };
+		C088C9E5211B561C009ED9DB /* podcastframe.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = podcastframe.cpp; sourceTree = "<group>"; };
+		C088C9E6211B561C009ED9DB /* podcastframe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = podcastframe.h; sourceTree = "<group>"; };
+		C088C9E7211B561C009ED9DB /* popularimeterframe.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = popularimeterframe.cpp; sourceTree = "<group>"; };
+		C088C9E8211B561C009ED9DB /* popularimeterframe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = popularimeterframe.h; sourceTree = "<group>"; };
+		C088C9E9211B561C009ED9DB /* privateframe.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = privateframe.cpp; sourceTree = "<group>"; };
+		C088C9EA211B561C009ED9DB /* privateframe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = privateframe.h; sourceTree = "<group>"; };
+		C088C9EB211B561C009ED9DB /* relativevolumeframe.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = relativevolumeframe.cpp; sourceTree = "<group>"; };
+		C088C9EC211B561C009ED9DB /* relativevolumeframe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = relativevolumeframe.h; sourceTree = "<group>"; };
+		C088C9ED211B561C009ED9DB /* synchronizedlyricsframe.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = synchronizedlyricsframe.cpp; sourceTree = "<group>"; };
+		C088C9EE211B561C009ED9DB /* synchronizedlyricsframe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = synchronizedlyricsframe.h; sourceTree = "<group>"; };
+		C088C9EF211B561C009ED9DB /* tableofcontentsframe.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = tableofcontentsframe.cpp; sourceTree = "<group>"; };
+		C088C9F0211B561C009ED9DB /* tableofcontentsframe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tableofcontentsframe.h; sourceTree = "<group>"; };
+		C088C9F1211B561C009ED9DB /* textidentificationframe.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = textidentificationframe.cpp; sourceTree = "<group>"; };
+		C088C9F2211B561C009ED9DB /* textidentificationframe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = textidentificationframe.h; sourceTree = "<group>"; };
+		C088C9F3211B561C009ED9DB /* uniquefileidentifierframe.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = uniquefileidentifierframe.cpp; sourceTree = "<group>"; };
+		C088C9F4211B561C009ED9DB /* uniquefileidentifierframe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = uniquefileidentifierframe.h; sourceTree = "<group>"; };
+		C088C9F5211B561C009ED9DB /* unknownframe.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = unknownframe.cpp; sourceTree = "<group>"; };
+		C088C9F6211B561C009ED9DB /* unknownframe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = unknownframe.h; sourceTree = "<group>"; };
+		C088C9F7211B561C009ED9DB /* unsynchronizedlyricsframe.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = unsynchronizedlyricsframe.cpp; sourceTree = "<group>"; };
+		C088C9F8211B561C009ED9DB /* unsynchronizedlyricsframe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = unsynchronizedlyricsframe.h; sourceTree = "<group>"; };
+		C088C9F9211B561C009ED9DB /* urllinkframe.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = urllinkframe.cpp; sourceTree = "<group>"; };
+		C088C9FA211B561C009ED9DB /* urllinkframe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = urllinkframe.h; sourceTree = "<group>"; };
+		C088C9FB211B561C009ED9DB /* id3v2.2.0.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = id3v2.2.0.txt; sourceTree = "<group>"; };
+		C088C9FC211B561C009ED9DB /* id3v2.3.0.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = id3v2.3.0.txt; sourceTree = "<group>"; };
+		C088C9FD211B561C009ED9DB /* id3v2.4.0-frames.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "id3v2.4.0-frames.txt"; sourceTree = "<group>"; };
+		C088C9FE211B561C009ED9DB /* id3v2.4.0-structure.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "id3v2.4.0-structure.txt"; sourceTree = "<group>"; };
+		C088C9FF211B561C009ED9DB /* id3v2extendedheader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = id3v2extendedheader.cpp; sourceTree = "<group>"; };
+		C088CA00211B561C009ED9DB /* id3v2extendedheader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = id3v2extendedheader.h; sourceTree = "<group>"; };
+		C088CA01211B561C009ED9DB /* id3v2footer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = id3v2footer.cpp; sourceTree = "<group>"; };
+		C088CA02211B561C009ED9DB /* id3v2footer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = id3v2footer.h; sourceTree = "<group>"; };
+		C088CA03211B561C009ED9DB /* id3v2frame.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = id3v2frame.cpp; sourceTree = "<group>"; };
+		C088CA04211B561C009ED9DB /* id3v2frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = id3v2frame.h; sourceTree = "<group>"; };
+		C088CA05211B561C009ED9DB /* id3v2framefactory.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = id3v2framefactory.cpp; sourceTree = "<group>"; };
+		C088CA06211B561C009ED9DB /* id3v2framefactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = id3v2framefactory.h; sourceTree = "<group>"; };
+		C088CA07211B561C009ED9DB /* id3v2header.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = id3v2header.cpp; sourceTree = "<group>"; };
+		C088CA08211B561C009ED9DB /* id3v2header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = id3v2header.h; sourceTree = "<group>"; };
+		C088CA09211B561C009ED9DB /* id3v2synchdata.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = id3v2synchdata.cpp; sourceTree = "<group>"; };
+		C088CA0A211B561C009ED9DB /* id3v2synchdata.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = id3v2synchdata.h; sourceTree = "<group>"; };
+		C088CA0B211B561C009ED9DB /* id3v2tag.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = id3v2tag.cpp; sourceTree = "<group>"; };
+		C088CA0C211B561C009ED9DB /* id3v2tag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = id3v2tag.h; sourceTree = "<group>"; };
+		C088CA0D211B561C009ED9DB /* mpegfile.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = mpegfile.cpp; sourceTree = "<group>"; };
+		C088CA0E211B561C009ED9DB /* mpegfile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mpegfile.h; sourceTree = "<group>"; };
+		C088CA0F211B561C009ED9DB /* mpegheader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = mpegheader.cpp; sourceTree = "<group>"; };
+		C088CA10211B561C009ED9DB /* mpegheader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mpegheader.h; sourceTree = "<group>"; };
+		C088CA11211B561C009ED9DB /* mpegproperties.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = mpegproperties.cpp; sourceTree = "<group>"; };
+		C088CA12211B561C009ED9DB /* mpegproperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mpegproperties.h; sourceTree = "<group>"; };
+		C088CA13211B561C009ED9DB /* mpegutils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mpegutils.h; sourceTree = "<group>"; };
+		C088CA14211B561C009ED9DB /* xingheader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = xingheader.cpp; sourceTree = "<group>"; };
+		C088CA15211B561C009ED9DB /* xingheader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = xingheader.h; sourceTree = "<group>"; };
+		C088CA18211B561C009ED9DB /* oggflacfile.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = oggflacfile.cpp; sourceTree = "<group>"; };
+		C088CA19211B561C009ED9DB /* oggflacfile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = oggflacfile.h; sourceTree = "<group>"; };
+		C088CA1A211B561C009ED9DB /* oggfile.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = oggfile.cpp; sourceTree = "<group>"; };
+		C088CA1B211B561C009ED9DB /* oggfile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = oggfile.h; sourceTree = "<group>"; };
+		C088CA1C211B561C009ED9DB /* oggpage.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = oggpage.cpp; sourceTree = "<group>"; };
+		C088CA1D211B561C009ED9DB /* oggpage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = oggpage.h; sourceTree = "<group>"; };
+		C088CA1E211B561C009ED9DB /* oggpageheader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = oggpageheader.cpp; sourceTree = "<group>"; };
+		C088CA1F211B561C009ED9DB /* oggpageheader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = oggpageheader.h; sourceTree = "<group>"; };
+		C088CA21211B561C009ED9DB /* opusfile.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = opusfile.cpp; sourceTree = "<group>"; };
+		C088CA22211B561C009ED9DB /* opusfile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = opusfile.h; sourceTree = "<group>"; };
+		C088CA23211B561C009ED9DB /* opusproperties.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = opusproperties.cpp; sourceTree = "<group>"; };
+		C088CA24211B561C009ED9DB /* opusproperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = opusproperties.h; sourceTree = "<group>"; };
+		C088CA26211B561C009ED9DB /* speexfile.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = speexfile.cpp; sourceTree = "<group>"; };
+		C088CA27211B561C009ED9DB /* speexfile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = speexfile.h; sourceTree = "<group>"; };
+		C088CA28211B561C009ED9DB /* speexproperties.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = speexproperties.cpp; sourceTree = "<group>"; };
+		C088CA29211B561C009ED9DB /* speexproperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = speexproperties.h; sourceTree = "<group>"; };
+		C088CA2B211B561C009ED9DB /* vorbisfile.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = vorbisfile.cpp; sourceTree = "<group>"; };
+		C088CA2C211B561C009ED9DB /* vorbisfile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vorbisfile.h; sourceTree = "<group>"; };
+		C088CA2D211B561C009ED9DB /* vorbisproperties.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = vorbisproperties.cpp; sourceTree = "<group>"; };
+		C088CA2E211B561C009ED9DB /* vorbisproperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vorbisproperties.h; sourceTree = "<group>"; };
+		C088CA2F211B561C009ED9DB /* xiphcomment.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = xiphcomment.cpp; sourceTree = "<group>"; };
+		C088CA30211B561C009ED9DB /* xiphcomment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = xiphcomment.h; sourceTree = "<group>"; };
+		C088CA33211B561C009ED9DB /* aifffile.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = aifffile.cpp; sourceTree = "<group>"; };
+		C088CA34211B561C009ED9DB /* aifffile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = aifffile.h; sourceTree = "<group>"; };
+		C088CA35211B561C009ED9DB /* aiffproperties.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = aiffproperties.cpp; sourceTree = "<group>"; };
+		C088CA36211B561C009ED9DB /* aiffproperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = aiffproperties.h; sourceTree = "<group>"; };
+		C088CA37211B561C009ED9DB /* rifffile.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = rifffile.cpp; sourceTree = "<group>"; };
+		C088CA38211B561C009ED9DB /* rifffile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = rifffile.h; sourceTree = "<group>"; };
+		C088CA39211B561C009ED9DB /* riffutils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = riffutils.h; sourceTree = "<group>"; };
+		C088CA3B211B561C009ED9DB /* infotag.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = infotag.cpp; sourceTree = "<group>"; };
+		C088CA3C211B561C009ED9DB /* infotag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = infotag.h; sourceTree = "<group>"; };
+		C088CA3D211B561C009ED9DB /* wavfile.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = wavfile.cpp; sourceTree = "<group>"; };
+		C088CA3E211B561C009ED9DB /* wavfile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = wavfile.h; sourceTree = "<group>"; };
+		C088CA3F211B561C009ED9DB /* wavproperties.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = wavproperties.cpp; sourceTree = "<group>"; };
+		C088CA40211B561C009ED9DB /* wavproperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = wavproperties.h; sourceTree = "<group>"; };
+		C088CA42211B561C009ED9DB /* s3mfile.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = s3mfile.cpp; sourceTree = "<group>"; };
+		C088CA43211B561C009ED9DB /* s3mfile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = s3mfile.h; sourceTree = "<group>"; };
+		C088CA44211B561C009ED9DB /* s3mproperties.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = s3mproperties.cpp; sourceTree = "<group>"; };
+		C088CA45211B561C009ED9DB /* s3mproperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = s3mproperties.h; sourceTree = "<group>"; };
+		C088CA46211B561C009ED9DB /* tag.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = tag.cpp; sourceTree = "<group>"; };
+		C088CA47211B561C009ED9DB /* tag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tag.h; sourceTree = "<group>"; };
+		C088CA49211B561C009ED9DB /* taglib_export.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = taglib_export.h; sourceTree = "<group>"; };
+		C088CA4A211B561C009ED9DB /* tagunion.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = tagunion.cpp; sourceTree = "<group>"; };
+		C088CA4B211B561C009ED9DB /* tagunion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tagunion.h; sourceTree = "<group>"; };
+		C088CA4C211B561C009ED9DB /* tagutils.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = tagutils.cpp; sourceTree = "<group>"; };
+		C088CA4D211B561C009ED9DB /* tagutils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tagutils.h; sourceTree = "<group>"; };
+		C088CA4F211B561C009ED9DB /* taglib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = taglib.h; sourceTree = "<group>"; };
+		C088CA50211B561C009ED9DB /* tbytevector.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = tbytevector.cpp; sourceTree = "<group>"; };
+		C088CA51211B561C009ED9DB /* tbytevector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tbytevector.h; sourceTree = "<group>"; };
+		C088CA52211B561C009ED9DB /* tbytevectorlist.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = tbytevectorlist.cpp; sourceTree = "<group>"; };
+		C088CA53211B561C009ED9DB /* tbytevectorlist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tbytevectorlist.h; sourceTree = "<group>"; };
+		C088CA54211B561C009ED9DB /* tbytevectorstream.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = tbytevectorstream.cpp; sourceTree = "<group>"; };
+		C088CA55211B561C009ED9DB /* tbytevectorstream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tbytevectorstream.h; sourceTree = "<group>"; };
+		C088CA56211B561C009ED9DB /* tdebug.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = tdebug.cpp; sourceTree = "<group>"; };
+		C088CA57211B561C009ED9DB /* tdebug.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tdebug.h; sourceTree = "<group>"; };
+		C088CA58211B561C009ED9DB /* tdebuglistener.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = tdebuglistener.cpp; sourceTree = "<group>"; };
+		C088CA59211B561C009ED9DB /* tdebuglistener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tdebuglistener.h; sourceTree = "<group>"; };
+		C088CA5A211B561C009ED9DB /* tfile.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = tfile.cpp; sourceTree = "<group>"; };
+		C088CA5B211B561C009ED9DB /* tfile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tfile.h; sourceTree = "<group>"; };
+		C088CA5C211B561C009ED9DB /* tfilestream.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = tfilestream.cpp; sourceTree = "<group>"; };
+		C088CA5D211B561C009ED9DB /* tfilestream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tfilestream.h; sourceTree = "<group>"; };
+		C088CA5E211B561C009ED9DB /* tiostream.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = tiostream.cpp; sourceTree = "<group>"; };
+		C088CA5F211B561C009ED9DB /* tiostream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tiostream.h; sourceTree = "<group>"; };
+		C088CA60211B561C009ED9DB /* tlist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tlist.h; sourceTree = "<group>"; };
+		C088CA62211B561C009ED9DB /* tmap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tmap.h; sourceTree = "<group>"; };
+		C088CA64211B561C009ED9DB /* tpropertymap.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = tpropertymap.cpp; sourceTree = "<group>"; };
+		C088CA65211B561C009ED9DB /* tpropertymap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tpropertymap.h; sourceTree = "<group>"; };
+		C088CA66211B561C009ED9DB /* trefcounter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = trefcounter.cpp; sourceTree = "<group>"; };
+		C088CA67211B561C009ED9DB /* trefcounter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = trefcounter.h; sourceTree = "<group>"; };
+		C088CA68211B561C009ED9DB /* tstring.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = tstring.cpp; sourceTree = "<group>"; };
+		C088CA69211B561C009ED9DB /* tstring.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tstring.h; sourceTree = "<group>"; };
+		C088CA6A211B561C009ED9DB /* tstringlist.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = tstringlist.cpp; sourceTree = "<group>"; };
+		C088CA6B211B561C009ED9DB /* tstringlist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tstringlist.h; sourceTree = "<group>"; };
+		C088CA6C211B561C009ED9DB /* tutils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tutils.h; sourceTree = "<group>"; };
+		C088CA6D211B561C009ED9DB /* tzlib.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = tzlib.cpp; sourceTree = "<group>"; };
+		C088CA6E211B561C009ED9DB /* tzlib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tzlib.h; sourceTree = "<group>"; };
+		C088CA70211B561C009ED9DB /* trueaudiofile.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = trueaudiofile.cpp; sourceTree = "<group>"; };
+		C088CA71211B561C009ED9DB /* trueaudiofile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = trueaudiofile.h; sourceTree = "<group>"; };
+		C088CA72211B561C009ED9DB /* trueaudioproperties.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = trueaudioproperties.cpp; sourceTree = "<group>"; };
+		C088CA73211B561C009ED9DB /* trueaudioproperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = trueaudioproperties.h; sourceTree = "<group>"; };
+		C088CA75211B561C009ED9DB /* wavpackfile.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = wavpackfile.cpp; sourceTree = "<group>"; };
+		C088CA76211B561C009ED9DB /* wavpackfile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = wavpackfile.h; sourceTree = "<group>"; };
+		C088CA77211B561C009ED9DB /* wavpackproperties.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = wavpackproperties.cpp; sourceTree = "<group>"; };
+		C088CA78211B561C009ED9DB /* wavpackproperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = wavpackproperties.h; sourceTree = "<group>"; };
+		C088CA7A211B561C009ED9DB /* xmfile.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = xmfile.cpp; sourceTree = "<group>"; };
+		C088CA7B211B561C009ED9DB /* xmfile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = xmfile.h; sourceTree = "<group>"; };
+		C088CA7C211B561C009ED9DB /* xmproperties.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = xmproperties.cpp; sourceTree = "<group>"; };
+		C088CA7D211B561C009ED9DB /* xmproperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = xmproperties.h; sourceTree = "<group>"; };
+		C088CC9A211B57F0009ED9DB /* metadatareader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = metadatareader.h; sourceTree = "<group>"; };
+		C088CC9B211B57F1009ED9DB /* metadatareader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = metadatareader.cpp; sourceTree = "<group>"; };
 		C0B559EA211B2079007817F6 /* libiconv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.tbd; path = usr/lib/libiconv.tbd; sourceTree = SDKROOT; };
 		C0B559EC211B20A2007817F6 /* libbz2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libbz2.tbd; path = usr/lib/libbz2.tbd; sourceTree = SDKROOT; };
 		C0B559EE211B20A9007817F6 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
@@ -1294,6 +1740,7 @@
 		C0137604211A06080046020A /* libs */ = {
 			isa = PBXGroup;
 			children = (
+				C088C95A211B561C009ED9DB /* taglib */,
 				C0F3BE87211B0EED00073488 /* samplerate.xcodeproj */,
 				C0E7A139211A2F6600711656 /* ffmpeg-ios-static-libs */,
 				C0137605211A06080046020A /* essentia */,
@@ -1497,6 +1944,8 @@
 				C013781F211A06090046020A /* eqloudloader.h */,
 				C0137820211A06090046020A /* fileoutputproxy.cpp */,
 				C0137821211A06090046020A /* fileoutputproxy.h */,
+				C088CC9B211B57F1009ED9DB /* metadatareader.cpp */,
+				C088CC9A211B57F0009ED9DB /* metadatareader.h */,
 				C0137824211A06090046020A /* monoloader.cpp */,
 				C0137825211A06090046020A /* monoloader.h */,
 				C013782A211A06090046020A /* yamloutput.cpp */,
@@ -2118,9 +2567,453 @@
 			path = tnt;
 			sourceTree = "<group>";
 		};
+		C088C95A211B561C009ED9DB /* taglib */ = {
+			isa = PBXGroup;
+			children = (
+				C088C95F211B561C009ED9DB /* 3rdparty */,
+				C088C987211B561C009ED9DB /* taglib */,
+			);
+			path = taglib;
+			sourceTree = "<group>";
+		};
+		C088C95F211B561C009ED9DB /* 3rdparty */ = {
+			isa = PBXGroup;
+			children = (
+				C088C960211B561C009ED9DB /* utf8-cpp */,
+			);
+			path = 3rdparty;
+			sourceTree = "<group>";
+		};
+		C088C960211B561C009ED9DB /* utf8-cpp */ = {
+			isa = PBXGroup;
+			children = (
+				C088C961211B561C009ED9DB /* checked.h */,
+				C088C962211B561C009ED9DB /* core.h */,
+			);
+			path = "utf8-cpp";
+			sourceTree = "<group>";
+		};
+		C088C987211B561C009ED9DB /* taglib */ = {
+			isa = PBXGroup;
+			children = (
+				C088C988211B561C009ED9DB /* ape */,
+				C088C994211B561C009ED9DB /* asf */,
+				C088C9A0211B561C009ED9DB /* audioproperties.cpp */,
+				C088C9A1211B561C009ED9DB /* audioproperties.h */,
+				C088C9A3211B561C009ED9DB /* fileref.cpp */,
+				C088C9A4211B561C009ED9DB /* fileref.h */,
+				C088C9A5211B561C009ED9DB /* flac */,
+				C088C9B0211B561C009ED9DB /* it */,
+				C088C9B5211B561C009ED9DB /* mod */,
+				C088C9BF211B561C009ED9DB /* mp4 */,
+				C088C9CC211B561C009ED9DB /* mpc */,
+				C088C9D1211B561C009ED9DB /* mpeg */,
+				C088CA16211B561C009ED9DB /* ogg */,
+				C088CA31211B561C009ED9DB /* riff */,
+				C088CA41211B561C009ED9DB /* s3m */,
+				C088CA46211B561C009ED9DB /* tag.cpp */,
+				C088CA47211B561C009ED9DB /* tag.h */,
+				C088CA49211B561C009ED9DB /* taglib_export.h */,
+				C088CA4A211B561C009ED9DB /* tagunion.cpp */,
+				C088CA4B211B561C009ED9DB /* tagunion.h */,
+				C088CA4C211B561C009ED9DB /* tagutils.cpp */,
+				C088CA4D211B561C009ED9DB /* tagutils.h */,
+				C088CA4E211B561C009ED9DB /* toolkit */,
+				C088CA6F211B561C009ED9DB /* trueaudio */,
+				C088CA74211B561C009ED9DB /* wavpack */,
+				C088CA79211B561C009ED9DB /* xm */,
+			);
+			path = taglib;
+			sourceTree = "<group>";
+		};
+		C088C988211B561C009ED9DB /* ape */ = {
+			isa = PBXGroup;
+			children = (
+				C088C989211B561C009ED9DB /* ape-tag-format.txt */,
+				C088C98A211B561C009ED9DB /* apefile.cpp */,
+				C088C98B211B561C009ED9DB /* apefile.h */,
+				C088C98C211B561C009ED9DB /* apefooter.cpp */,
+				C088C98D211B561C009ED9DB /* apefooter.h */,
+				C088C98E211B561C009ED9DB /* apeitem.cpp */,
+				C088C98F211B561C009ED9DB /* apeitem.h */,
+				C088C990211B561C009ED9DB /* apeproperties.cpp */,
+				C088C991211B561C009ED9DB /* apeproperties.h */,
+				C088C992211B561C009ED9DB /* apetag.cpp */,
+				C088C993211B561C009ED9DB /* apetag.h */,
+			);
+			path = ape;
+			sourceTree = "<group>";
+		};
+		C088C994211B561C009ED9DB /* asf */ = {
+			isa = PBXGroup;
+			children = (
+				C088C995211B561C009ED9DB /* asfattribute.cpp */,
+				C088C996211B561C009ED9DB /* asfattribute.h */,
+				C088C997211B561C009ED9DB /* asffile.cpp */,
+				C088C998211B561C009ED9DB /* asffile.h */,
+				C088C999211B561C009ED9DB /* asfpicture.cpp */,
+				C088C99A211B561C009ED9DB /* asfpicture.h */,
+				C088C99B211B561C009ED9DB /* asfproperties.cpp */,
+				C088C99C211B561C009ED9DB /* asfproperties.h */,
+				C088C99D211B561C009ED9DB /* asftag.cpp */,
+				C088C99E211B561C009ED9DB /* asftag.h */,
+				C088C99F211B561C009ED9DB /* asfutils.h */,
+			);
+			path = asf;
+			sourceTree = "<group>";
+		};
+		C088C9A5211B561C009ED9DB /* flac */ = {
+			isa = PBXGroup;
+			children = (
+				C088C9A6211B561C009ED9DB /* flacfile.cpp */,
+				C088C9A7211B561C009ED9DB /* flacfile.h */,
+				C088C9A8211B561C009ED9DB /* flacmetadatablock.cpp */,
+				C088C9A9211B561C009ED9DB /* flacmetadatablock.h */,
+				C088C9AA211B561C009ED9DB /* flacpicture.cpp */,
+				C088C9AB211B561C009ED9DB /* flacpicture.h */,
+				C088C9AC211B561C009ED9DB /* flacproperties.cpp */,
+				C088C9AD211B561C009ED9DB /* flacproperties.h */,
+				C088C9AE211B561C009ED9DB /* flacunknownmetadatablock.cpp */,
+				C088C9AF211B561C009ED9DB /* flacunknownmetadatablock.h */,
+			);
+			path = flac;
+			sourceTree = "<group>";
+		};
+		C088C9B0211B561C009ED9DB /* it */ = {
+			isa = PBXGroup;
+			children = (
+				C088C9B1211B561C009ED9DB /* itfile.cpp */,
+				C088C9B2211B561C009ED9DB /* itfile.h */,
+				C088C9B3211B561C009ED9DB /* itproperties.cpp */,
+				C088C9B4211B561C009ED9DB /* itproperties.h */,
+			);
+			path = it;
+			sourceTree = "<group>";
+		};
+		C088C9B5211B561C009ED9DB /* mod */ = {
+			isa = PBXGroup;
+			children = (
+				C088C9B6211B561C009ED9DB /* modfile.cpp */,
+				C088C9B7211B561C009ED9DB /* modfile.h */,
+				C088C9B8211B561C009ED9DB /* modfilebase.cpp */,
+				C088C9B9211B561C009ED9DB /* modfilebase.h */,
+				C088C9BA211B561C009ED9DB /* modfileprivate.h */,
+				C088C9BB211B561C009ED9DB /* modproperties.cpp */,
+				C088C9BC211B561C009ED9DB /* modproperties.h */,
+				C088C9BD211B561C009ED9DB /* modtag.cpp */,
+				C088C9BE211B561C009ED9DB /* modtag.h */,
+			);
+			path = mod;
+			sourceTree = "<group>";
+		};
+		C088C9BF211B561C009ED9DB /* mp4 */ = {
+			isa = PBXGroup;
+			children = (
+				C088C9C0211B561C009ED9DB /* mp4atom.cpp */,
+				C088C9C1211B561C009ED9DB /* mp4atom.h */,
+				C088C9C2211B561C009ED9DB /* mp4coverart.cpp */,
+				C088C9C3211B561C009ED9DB /* mp4coverart.h */,
+				C088C9C4211B561C009ED9DB /* mp4file.cpp */,
+				C088C9C5211B561C009ED9DB /* mp4file.h */,
+				C088C9C6211B561C009ED9DB /* mp4item.cpp */,
+				C088C9C7211B561C009ED9DB /* mp4item.h */,
+				C088C9C8211B561C009ED9DB /* mp4properties.cpp */,
+				C088C9C9211B561C009ED9DB /* mp4properties.h */,
+				C088C9CA211B561C009ED9DB /* mp4tag.cpp */,
+				C088C9CB211B561C009ED9DB /* mp4tag.h */,
+			);
+			path = mp4;
+			sourceTree = "<group>";
+		};
+		C088C9CC211B561C009ED9DB /* mpc */ = {
+			isa = PBXGroup;
+			children = (
+				C088C9CD211B561C009ED9DB /* mpcfile.cpp */,
+				C088C9CE211B561C009ED9DB /* mpcfile.h */,
+				C088C9CF211B561C009ED9DB /* mpcproperties.cpp */,
+				C088C9D0211B561C009ED9DB /* mpcproperties.h */,
+			);
+			path = mpc;
+			sourceTree = "<group>";
+		};
+		C088C9D1211B561C009ED9DB /* mpeg */ = {
+			isa = PBXGroup;
+			children = (
+				C088C9D2211B561C009ED9DB /* id3v1 */,
+				C088C9D7211B561C009ED9DB /* id3v2 */,
+				C088CA0D211B561C009ED9DB /* mpegfile.cpp */,
+				C088CA0E211B561C009ED9DB /* mpegfile.h */,
+				C088CA0F211B561C009ED9DB /* mpegheader.cpp */,
+				C088CA10211B561C009ED9DB /* mpegheader.h */,
+				C088CA11211B561C009ED9DB /* mpegproperties.cpp */,
+				C088CA12211B561C009ED9DB /* mpegproperties.h */,
+				C088CA13211B561C009ED9DB /* mpegutils.h */,
+				C088CA14211B561C009ED9DB /* xingheader.cpp */,
+				C088CA15211B561C009ED9DB /* xingheader.h */,
+			);
+			path = mpeg;
+			sourceTree = "<group>";
+		};
+		C088C9D2211B561C009ED9DB /* id3v1 */ = {
+			isa = PBXGroup;
+			children = (
+				C088C9D3211B561C009ED9DB /* id3v1genres.cpp */,
+				C088C9D4211B561C009ED9DB /* id3v1genres.h */,
+				C088C9D5211B561C009ED9DB /* id3v1tag.cpp */,
+				C088C9D6211B561C009ED9DB /* id3v1tag.h */,
+			);
+			path = id3v1;
+			sourceTree = "<group>";
+		};
+		C088C9D7211B561C009ED9DB /* id3v2 */ = {
+			isa = PBXGroup;
+			children = (
+				C088C9D8211B561C009ED9DB /* frames */,
+				C088C9FB211B561C009ED9DB /* id3v2.2.0.txt */,
+				C088C9FC211B561C009ED9DB /* id3v2.3.0.txt */,
+				C088C9FD211B561C009ED9DB /* id3v2.4.0-frames.txt */,
+				C088C9FE211B561C009ED9DB /* id3v2.4.0-structure.txt */,
+				C088C9FF211B561C009ED9DB /* id3v2extendedheader.cpp */,
+				C088CA00211B561C009ED9DB /* id3v2extendedheader.h */,
+				C088CA01211B561C009ED9DB /* id3v2footer.cpp */,
+				C088CA02211B561C009ED9DB /* id3v2footer.h */,
+				C088CA03211B561C009ED9DB /* id3v2frame.cpp */,
+				C088CA04211B561C009ED9DB /* id3v2frame.h */,
+				C088CA05211B561C009ED9DB /* id3v2framefactory.cpp */,
+				C088CA06211B561C009ED9DB /* id3v2framefactory.h */,
+				C088CA07211B561C009ED9DB /* id3v2header.cpp */,
+				C088CA08211B561C009ED9DB /* id3v2header.h */,
+				C088CA09211B561C009ED9DB /* id3v2synchdata.cpp */,
+				C088CA0A211B561C009ED9DB /* id3v2synchdata.h */,
+				C088CA0B211B561C009ED9DB /* id3v2tag.cpp */,
+				C088CA0C211B561C009ED9DB /* id3v2tag.h */,
+			);
+			path = id3v2;
+			sourceTree = "<group>";
+		};
+		C088C9D8211B561C009ED9DB /* frames */ = {
+			isa = PBXGroup;
+			children = (
+				C088C9D9211B561C009ED9DB /* attachedpictureframe.cpp */,
+				C088C9DA211B561C009ED9DB /* attachedpictureframe.h */,
+				C088C9DB211B561C009ED9DB /* chapterframe.cpp */,
+				C088C9DC211B561C009ED9DB /* chapterframe.h */,
+				C088C9DD211B561C009ED9DB /* commentsframe.cpp */,
+				C088C9DE211B561C009ED9DB /* commentsframe.h */,
+				C088C9DF211B561C009ED9DB /* eventtimingcodesframe.cpp */,
+				C088C9E0211B561C009ED9DB /* eventtimingcodesframe.h */,
+				C088C9E1211B561C009ED9DB /* generalencapsulatedobjectframe.cpp */,
+				C088C9E2211B561C009ED9DB /* generalencapsulatedobjectframe.h */,
+				C088C9E3211B561C009ED9DB /* ownershipframe.cpp */,
+				C088C9E4211B561C009ED9DB /* ownershipframe.h */,
+				C088C9E5211B561C009ED9DB /* podcastframe.cpp */,
+				C088C9E6211B561C009ED9DB /* podcastframe.h */,
+				C088C9E7211B561C009ED9DB /* popularimeterframe.cpp */,
+				C088C9E8211B561C009ED9DB /* popularimeterframe.h */,
+				C088C9E9211B561C009ED9DB /* privateframe.cpp */,
+				C088C9EA211B561C009ED9DB /* privateframe.h */,
+				C088C9EB211B561C009ED9DB /* relativevolumeframe.cpp */,
+				C088C9EC211B561C009ED9DB /* relativevolumeframe.h */,
+				C088C9ED211B561C009ED9DB /* synchronizedlyricsframe.cpp */,
+				C088C9EE211B561C009ED9DB /* synchronizedlyricsframe.h */,
+				C088C9EF211B561C009ED9DB /* tableofcontentsframe.cpp */,
+				C088C9F0211B561C009ED9DB /* tableofcontentsframe.h */,
+				C088C9F1211B561C009ED9DB /* textidentificationframe.cpp */,
+				C088C9F2211B561C009ED9DB /* textidentificationframe.h */,
+				C088C9F3211B561C009ED9DB /* uniquefileidentifierframe.cpp */,
+				C088C9F4211B561C009ED9DB /* uniquefileidentifierframe.h */,
+				C088C9F5211B561C009ED9DB /* unknownframe.cpp */,
+				C088C9F6211B561C009ED9DB /* unknownframe.h */,
+				C088C9F7211B561C009ED9DB /* unsynchronizedlyricsframe.cpp */,
+				C088C9F8211B561C009ED9DB /* unsynchronizedlyricsframe.h */,
+				C088C9F9211B561C009ED9DB /* urllinkframe.cpp */,
+				C088C9FA211B561C009ED9DB /* urllinkframe.h */,
+			);
+			path = frames;
+			sourceTree = "<group>";
+		};
+		C088CA16211B561C009ED9DB /* ogg */ = {
+			isa = PBXGroup;
+			children = (
+				C088CA17211B561C009ED9DB /* flac */,
+				C088CA1A211B561C009ED9DB /* oggfile.cpp */,
+				C088CA1B211B561C009ED9DB /* oggfile.h */,
+				C088CA1C211B561C009ED9DB /* oggpage.cpp */,
+				C088CA1D211B561C009ED9DB /* oggpage.h */,
+				C088CA1E211B561C009ED9DB /* oggpageheader.cpp */,
+				C088CA1F211B561C009ED9DB /* oggpageheader.h */,
+				C088CA20211B561C009ED9DB /* opus */,
+				C088CA25211B561C009ED9DB /* speex */,
+				C088CA2A211B561C009ED9DB /* vorbis */,
+				C088CA2F211B561C009ED9DB /* xiphcomment.cpp */,
+				C088CA30211B561C009ED9DB /* xiphcomment.h */,
+			);
+			path = ogg;
+			sourceTree = "<group>";
+		};
+		C088CA17211B561C009ED9DB /* flac */ = {
+			isa = PBXGroup;
+			children = (
+				C088CA18211B561C009ED9DB /* oggflacfile.cpp */,
+				C088CA19211B561C009ED9DB /* oggflacfile.h */,
+			);
+			path = flac;
+			sourceTree = "<group>";
+		};
+		C088CA20211B561C009ED9DB /* opus */ = {
+			isa = PBXGroup;
+			children = (
+				C088CA21211B561C009ED9DB /* opusfile.cpp */,
+				C088CA22211B561C009ED9DB /* opusfile.h */,
+				C088CA23211B561C009ED9DB /* opusproperties.cpp */,
+				C088CA24211B561C009ED9DB /* opusproperties.h */,
+			);
+			path = opus;
+			sourceTree = "<group>";
+		};
+		C088CA25211B561C009ED9DB /* speex */ = {
+			isa = PBXGroup;
+			children = (
+				C088CA26211B561C009ED9DB /* speexfile.cpp */,
+				C088CA27211B561C009ED9DB /* speexfile.h */,
+				C088CA28211B561C009ED9DB /* speexproperties.cpp */,
+				C088CA29211B561C009ED9DB /* speexproperties.h */,
+			);
+			path = speex;
+			sourceTree = "<group>";
+		};
+		C088CA2A211B561C009ED9DB /* vorbis */ = {
+			isa = PBXGroup;
+			children = (
+				C088CA2B211B561C009ED9DB /* vorbisfile.cpp */,
+				C088CA2C211B561C009ED9DB /* vorbisfile.h */,
+				C088CA2D211B561C009ED9DB /* vorbisproperties.cpp */,
+				C088CA2E211B561C009ED9DB /* vorbisproperties.h */,
+			);
+			path = vorbis;
+			sourceTree = "<group>";
+		};
+		C088CA31211B561C009ED9DB /* riff */ = {
+			isa = PBXGroup;
+			children = (
+				C088CA32211B561C009ED9DB /* aiff */,
+				C088CA37211B561C009ED9DB /* rifffile.cpp */,
+				C088CA38211B561C009ED9DB /* rifffile.h */,
+				C088CA39211B561C009ED9DB /* riffutils.h */,
+				C088CA3A211B561C009ED9DB /* wav */,
+			);
+			path = riff;
+			sourceTree = "<group>";
+		};
+		C088CA32211B561C009ED9DB /* aiff */ = {
+			isa = PBXGroup;
+			children = (
+				C088CA33211B561C009ED9DB /* aifffile.cpp */,
+				C088CA34211B561C009ED9DB /* aifffile.h */,
+				C088CA35211B561C009ED9DB /* aiffproperties.cpp */,
+				C088CA36211B561C009ED9DB /* aiffproperties.h */,
+			);
+			path = aiff;
+			sourceTree = "<group>";
+		};
+		C088CA3A211B561C009ED9DB /* wav */ = {
+			isa = PBXGroup;
+			children = (
+				C088CA3B211B561C009ED9DB /* infotag.cpp */,
+				C088CA3C211B561C009ED9DB /* infotag.h */,
+				C088CA3D211B561C009ED9DB /* wavfile.cpp */,
+				C088CA3E211B561C009ED9DB /* wavfile.h */,
+				C088CA3F211B561C009ED9DB /* wavproperties.cpp */,
+				C088CA40211B561C009ED9DB /* wavproperties.h */,
+			);
+			path = wav;
+			sourceTree = "<group>";
+		};
+		C088CA41211B561C009ED9DB /* s3m */ = {
+			isa = PBXGroup;
+			children = (
+				C088CA42211B561C009ED9DB /* s3mfile.cpp */,
+				C088CA43211B561C009ED9DB /* s3mfile.h */,
+				C088CA44211B561C009ED9DB /* s3mproperties.cpp */,
+				C088CA45211B561C009ED9DB /* s3mproperties.h */,
+			);
+			path = s3m;
+			sourceTree = "<group>";
+		};
+		C088CA4E211B561C009ED9DB /* toolkit */ = {
+			isa = PBXGroup;
+			children = (
+				C088CA4F211B561C009ED9DB /* taglib.h */,
+				C088CA50211B561C009ED9DB /* tbytevector.cpp */,
+				C088CA51211B561C009ED9DB /* tbytevector.h */,
+				C088CA52211B561C009ED9DB /* tbytevectorlist.cpp */,
+				C088CA53211B561C009ED9DB /* tbytevectorlist.h */,
+				C088CA54211B561C009ED9DB /* tbytevectorstream.cpp */,
+				C088CA55211B561C009ED9DB /* tbytevectorstream.h */,
+				C088CA56211B561C009ED9DB /* tdebug.cpp */,
+				C088CA57211B561C009ED9DB /* tdebug.h */,
+				C088CA58211B561C009ED9DB /* tdebuglistener.cpp */,
+				C088CA59211B561C009ED9DB /* tdebuglistener.h */,
+				C088CA5A211B561C009ED9DB /* tfile.cpp */,
+				C088CA5B211B561C009ED9DB /* tfile.h */,
+				C088CA5C211B561C009ED9DB /* tfilestream.cpp */,
+				C088CA5D211B561C009ED9DB /* tfilestream.h */,
+				C088CA5E211B561C009ED9DB /* tiostream.cpp */,
+				C088CA5F211B561C009ED9DB /* tiostream.h */,
+				C088CA60211B561C009ED9DB /* tlist.h */,
+				C088CA62211B561C009ED9DB /* tmap.h */,
+				C088CA64211B561C009ED9DB /* tpropertymap.cpp */,
+				C088CA65211B561C009ED9DB /* tpropertymap.h */,
+				C088CA66211B561C009ED9DB /* trefcounter.cpp */,
+				C088CA67211B561C009ED9DB /* trefcounter.h */,
+				C088CA68211B561C009ED9DB /* tstring.cpp */,
+				C088CA69211B561C009ED9DB /* tstring.h */,
+				C088CA6A211B561C009ED9DB /* tstringlist.cpp */,
+				C088CA6B211B561C009ED9DB /* tstringlist.h */,
+				C088CA6C211B561C009ED9DB /* tutils.h */,
+				C088CA6D211B561C009ED9DB /* tzlib.cpp */,
+				C088CA6E211B561C009ED9DB /* tzlib.h */,
+			);
+			path = toolkit;
+			sourceTree = "<group>";
+		};
+		C088CA6F211B561C009ED9DB /* trueaudio */ = {
+			isa = PBXGroup;
+			children = (
+				C088CA70211B561C009ED9DB /* trueaudiofile.cpp */,
+				C088CA71211B561C009ED9DB /* trueaudiofile.h */,
+				C088CA72211B561C009ED9DB /* trueaudioproperties.cpp */,
+				C088CA73211B561C009ED9DB /* trueaudioproperties.h */,
+			);
+			path = trueaudio;
+			sourceTree = "<group>";
+		};
+		C088CA74211B561C009ED9DB /* wavpack */ = {
+			isa = PBXGroup;
+			children = (
+				C088CA75211B561C009ED9DB /* wavpackfile.cpp */,
+				C088CA76211B561C009ED9DB /* wavpackfile.h */,
+				C088CA77211B561C009ED9DB /* wavpackproperties.cpp */,
+				C088CA78211B561C009ED9DB /* wavpackproperties.h */,
+			);
+			path = wavpack;
+			sourceTree = "<group>";
+		};
+		C088CA79211B561C009ED9DB /* xm */ = {
+			isa = PBXGroup;
+			children = (
+				C088CA7A211B561C009ED9DB /* xmfile.cpp */,
+				C088CA7B211B561C009ED9DB /* xmfile.h */,
+				C088CA7C211B561C009ED9DB /* xmproperties.cpp */,
+				C088CA7D211B561C009ED9DB /* xmproperties.h */,
+			);
+			path = xm;
+			sourceTree = "<group>";
+		};
 		C0B559FD211B27D0007817F6 /* internal */ = {
 			isa = PBXGroup;
 			children = (
+				C088C618211B54C3009ED9DB /* taglib_config.h */,
 				C0B559FE211B27D0007817F6 /* audioloader_ios.cpp */,
 				C0B559FF211B27D0007817F6 /* audioloader_ios.h */,
 				C0B55A00211B27D0007817F6 /* essentia_algorithms_reg.cpp */,
@@ -2200,9 +3093,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				C0E7A21D211A30FE00711656 /* ESExtractor.h in Headers */,
+				C088CB5D211B561D009ED9DB /* modfileprivate.h in Headers */,
+				C088CB8D211B561D009ED9DB /* tableofcontentsframe.h in Headers */,
 				C0138403211A06BD0046020A /* ESMusicExtractor.h in Headers */,
 				C01380A8211A060C0046020A /* pitchyin.h in Headers */,
+				C088CBD9211B561D009ED9DB /* s3mproperties.h in Headers */,
 				C0137EB3211A060B0046020A /* kiss_fft.h in Headers */,
+				C088CBC0211B561D009ED9DB /* speexfile.h in Headers */,
 				C01380B6211A060C0046020A /* algorithm.h in Headers */,
 				C0137F7A211A060B0046020A /* tempotapdegara.h in Headers */,
 				C01380DE211A060C0046020A /* ringbufferinput.h in Headers */,
@@ -2211,10 +3108,15 @@
 				C0138048211A060B0046020A /* rawmoments.h in Headers */,
 				C0137EEC211A060B0046020A /* magnitude.h in Headers */,
 				C0137F04211A060B0046020A /* musicextractorsvm.h in Headers */,
+				C088CBB6211B561D009ED9DB /* oggfile.h in Headers */,
 				C0138022211A060B0046020A /* unaryoperator.h in Headers */,
+				C088CC07211B561D009ED9DB /* wavpackfile.h in Headers */,
 				C01380F9211A060C0046020A /* threading.h in Headers */,
+				C088CBE8211B561D009ED9DB /* tbytevectorstream.h in Headers */,
+				C088CBFF211B561D009ED9DB /* tutils.h in Headers */,
 				C01380CD211A060C0046020A /* roguevector.h in Headers */,
 				C0137F86211A060B0046020A /* logattacktime.h in Headers */,
+				C088CB10211B561C009ED9DB /* checked.h in Headers */,
 				C013808E211A060B0046020A /* key.h in Headers */,
 				C013812F211A060C0046020A /* tnt_array3d_utils.h in Headers */,
 				C0137F68211A060B0046020A /* rhythmextractor.h in Headers */,
@@ -2225,10 +3127,13 @@
 				C0138034211A060B0046020A /* distributionshape.h in Headers */,
 				C0138121211A060C0046020A /* synth_utils.h in Headers */,
 				C013811D211A060C0046020A /* output.h in Headers */,
+				C088CBEE211B561D009ED9DB /* tfile.h in Headers */,
 				C013809A211A060C0046020A /* pitchcontoursmelody.h in Headers */,
 				C013801C211A060B0046020A /* stereomuxer.h in Headers */,
 				C0138010211A060B0046020A /* slicer.h in Headers */,
+				C088CB8B211B561D009ED9DB /* synchronizedlyricsframe.h in Headers */,
 				C0137F64211A060B0046020A /* percivalenhanceharmonics.h in Headers */,
+				C088CB91211B561D009ED9DB /* uniquefileidentifierframe.h in Headers */,
 				C0138064211A060B0046020A /* spsmodelanal.h in Headers */,
 				C013800E211A060B0046020A /* silencerate.h in Headers */,
 				C0137FEA211A060B0046020A /* iffta.h in Headers */,
@@ -2238,8 +3143,10 @@
 				C0137FB8211A060B0046020A /* spectralpeaks.h in Headers */,
 				C01380C5211A060C0046020A /* iotypewrappers.h in Headers */,
 				C0137F00211A060B0046020A /* lowlevelspectralextractor.h in Headers */,
+				C088CC09211B561D009ED9DB /* wavpackproperties.h in Headers */,
 				C0137EFA211A060B0046020A /* keyextractor.h in Headers */,
 				C0137F18211A060B0046020A /* iir.h in Headers */,
+				C088CBE1211B561D009ED9DB /* tagutils.h in Headers */,
 				C01380B8211A060C0046020A /* algorithmfactory_impl.h in Headers */,
 				C0138020211A060B0046020A /* trimmer.h in Headers */,
 				C0137FE6211A060B0046020A /* frametoreal.h in Headers */,
@@ -2249,11 +3156,17 @@
 				C0B55A0C211B27D0007817F6 /* extractor_utils.h in Headers */,
 				C0B55A08211B27D0007817F6 /* audioloader_ios.h in Headers */,
 				C0137FA6211A060B0046020A /* hpcp.h in Headers */,
+				C088CBCF211B561D009ED9DB /* riffutils.h in Headers */,
 				C0137F0A211A060B0046020A /* tuningfrequencyextractor.h in Headers */,
 				C013807C211A060B0046020A /* lpc.h in Headers */,
 				C01380EA211A060C0046020A /* sinkbase.h in Headers */,
 				C0138124211A060C0046020A /* jama_lu.h in Headers */,
 				C013801A211A060B0046020A /* stereodemuxer.h in Headers */,
+				C088CB42211B561C009ED9DB /* asfproperties.h in Headers */,
+				C088CB67211B561D009ED9DB /* mp4file.h in Headers */,
+				C088CB7F211B561D009ED9DB /* generalencapsulatedobjectframe.h in Headers */,
+				C088CBD7211B561D009ED9DB /* s3mfile.h in Headers */,
+				C088CB6D211B561D009ED9DB /* mp4tag.h in Headers */,
 				C0138092211A060C0046020A /* multipitchmelodia.h in Headers */,
 				C0137FCE211A060B0046020A /* clipper.h in Headers */,
 				C0137FFE211A060B0046020A /* nsgiconstantq.h in Headers */,
@@ -2263,30 +3176,40 @@
 				C0138122211A060C0046020A /* jama_cholesky.h in Headers */,
 				C0138056211A060B0046020A /* hpsmodelanal.h in Headers */,
 				C013813D211A060C0046020A /* tnt_version.h in Headers */,
+				C088CBC2211B561D009ED9DB /* speexproperties.h in Headers */,
+				C088CBF5211B561D009ED9DB /* tmap.h in Headers */,
 				C0137FDC211A060B0046020A /* ffta.h in Headers */,
+				C088CB38211B561C009ED9DB /* apeproperties.h in Headers */,
 				C0138078211A060B0046020A /* loudnessebur128filter.h in Headers */,
 				C013810F211A060C0046020A /* extractor_version.h in Headers */,
 				C0137F16211A060B0046020A /* highpass.h in Headers */,
+				C088CB11211B561C009ED9DB /* core.h in Headers */,
 				C0137FF8211A060B0046020A /* noiseadder.h in Headers */,
 				C0137FA8211A060B0046020A /* maxmagfreq.h in Headers */,
 				C0137F92211A060B0046020A /* barkbands.h in Headers */,
 				C0137F24211A060B0046020A /* fadedetection.h in Headers */,
+				C088CB7B211B561D009ED9DB /* commentsframe.h in Headers */,
 				C0138082211A060B0046020A /* chordsdetection.h in Headers */,
 				C0138135211A060C0046020A /* tnt_fortran_array3d.h in Headers */,
 				C0137FC6211A060B0046020A /* binaryoperator.h in Headers */,
 				C0137EFE211A060B0046020A /* lowlevelspectraleqloudextractor.h in Headers */,
 				C01380BB211A060C0046020A /* configurable.h in Headers */,
 				C0137EF4211A060B0046020A /* barkextractor.h in Headers */,
+				C088CBDD211B561D009ED9DB /* taglib_export.h in Headers */,
 				C0138084211A060B0046020A /* chordsdetectionbeats.h in Headers */,
 				C0138030211A060B0046020A /* crest.h in Headers */,
 				C0138125211A060C0046020A /* jama_qr.h in Headers */,
+				C088CB63211B561D009ED9DB /* mp4atom.h in Headers */,
 				C013812D211A060C0046020A /* tnt_array2d_utils.h in Headers */,
 				C0137FD6211A060B0046020A /* dct.h in Headers */,
 				C0137FAA211A060B0046020A /* melbands.h in Headers */,
 				C0138070211A060B0046020A /* larm.h in Headers */,
 				C01380CA211A060C0046020A /* pool.h in Headers */,
+				C088CBFA211B561D009ED9DB /* trefcounter.h in Headers */,
 				C0137F46211A060B0046020A /* beattrackerdegara.h in Headers */,
+				C088CB5A211B561D009ED9DB /* modfile.h in Headers */,
 				C0137EAF211A060B0046020A /* _kiss_fft_guts.h in Headers */,
+				C088CBEA211B561D009ED9DB /* tdebug.h in Headers */,
 				C0137F1C211A060B0046020A /* movingaverage.h in Headers */,
 				C0137F5E211A060B0046020A /* onsetrate.h in Headers */,
 				C0137EEA211A060B0046020A /* cartesiantopolar.h in Headers */,
@@ -2294,28 +3217,38 @@
 				C01380AE211A060C0046020A /* tonicindianartmusic.h in Headers */,
 				C013809C211A060C0046020A /* pitchcontoursmonomelody.h in Headers */,
 				C0137F06211A060B0046020A /* rhythmdescriptors.h in Headers */,
+				C088CBF3211B561D009ED9DB /* tlist.h in Headers */,
 				C0137FA2211A060B0046020A /* gfcc.h in Headers */,
+				C088CC0B211B561D009ED9DB /* xmfile.h in Headers */,
+				C088CB58211B561C009ED9DB /* itproperties.h in Headers */,
 				C0B55A0D211B27D0007817F6 /* streaming_extractor_music.h in Headers */,
 				C0137F42211A060B0046020A /* yamloutput.h in Headers */,
+				C088CC03211B561D009ED9DB /* trueaudiofile.h in Headers */,
 				C0138016211A060B0046020A /* spline.h in Headers */,
 				C0137F96211A060B0046020A /* energyband.h in Headers */,
+				C088CB6F211B561D009ED9DB /* mpcfile.h in Headers */,
 				C0137F38211A060B0046020A /* fileoutputproxy.h in Headers */,
 				C0137FDA211A060B0046020A /* envelope.h in Headers */,
 				C01380E6211A060C0046020A /* phantombuffer.h in Headers */,
 				C013805E211A060B0046020A /* sinesubtraction.h in Headers */,
 				C0138038211A060B0046020A /* entropy.h in Headers */,
+				C088CBCE211B561D009ED9DB /* rifffile.h in Headers */,
 				C0138132211A060C0046020A /* tnt_fortran_array1d_utils.h in Headers */,
 				C0B55A0A211B27D0007817F6 /* ffmpegapi.h in Headers */,
+				C088CB93211B561D009ED9DB /* unknownframe.h in Headers */,
 				C013811C211A060C0046020A /* metadatautils.h in Headers */,
 				C013813C211A060C0046020A /* tnt_vec.h in Headers */,
 				C0137F1A211A060B0046020A /* lowpass.h in Headers */,
 				C0138042211A060B0046020A /* median.h in Headers */,
 				C0138106211A060C0046020A /* FreesoundDescriptorsSet.h in Headers */,
+				C088CB8F211B561D009ED9DB /* textidentificationframe.h in Headers */,
 				C0137F74211A060B0046020A /* superfluxpeaks.h in Headers */,
 				C0138036211A060B0046020A /* energy.h in Headers */,
+				C088CBB8211B561D009ED9DB /* oggpage.h in Headers */,
 				C0137FC0211A060B0046020A /* triangularbands.h in Headers */,
 				C01380F1211A060C0046020A /* streamingalgorithm.h in Headers */,
 				C01380D9211A060C0046020A /* diskwriter.h in Headers */,
+				C088CB3C211B561C009ED9DB /* asfattribute.h in Headers */,
 				C01380F8211A060C0046020A /* stringutil.h in Headers */,
 				C0137F62211A060B0046020A /* percivalbpmestimator.h in Headers */,
 				C0137EF0211A060B0046020A /* beatogram.h in Headers */,
@@ -2324,6 +3257,7 @@
 				C0137F72211A060B0046020A /* superfluxnovelty.h in Headers */,
 				C01380B7211A060C0046020A /* algorithmfactory.h in Headers */,
 				C0138000211A060B0046020A /* overlapadd.h in Headers */,
+				C088CBCA211B561D009ED9DB /* aifffile.h in Headers */,
 				C013806C211A060B0046020A /* duration.h in Headers */,
 				C01380F6211A060C0046020A /* streamutil.h in Headers */,
 				C0137FBC211A060B0046020A /* spectrumtocent.h in Headers */,
@@ -2332,9 +3266,14 @@
 				C0137F84211A060B0046020A /* flatnesssfx.h in Headers */,
 				C0137FDE211A060B0046020A /* fftk.h in Headers */,
 				C0137F60211A060B0046020A /* onsets.h in Headers */,
+				C088CB97211B561D009ED9DB /* urllinkframe.h in Headers */,
 				C013811E211A060C0046020A /* peak.h in Headers */,
+				C088CC01211B561D009ED9DB /* tzlib.h in Headers */,
+				C088CB81211B561D009ED9DB /* ownershipframe.h in Headers */,
+				C088CBEC211B561D009ED9DB /* tdebuglistener.h in Headers */,
 				C0137F9A211A060B0046020A /* erbbands.h in Headers */,
 				C0138130211A060C0046020A /* tnt_cmat.h in Headers */,
+				C088CB54211B561C009ED9DB /* flacunknownmetadatablock.h in Headers */,
 				C0138128211A060C0046020A /* tnt2essentiautils.h in Headers */,
 				C0138028211A060B0046020A /* warpedautocorrelation.h in Headers */,
 				C0138116211A060C0046020A /* MusicTonalDescriptors.h in Headers */,
@@ -2345,29 +3284,49 @@
 				C0138133211A060C0046020A /* tnt_fortran_array2d.h in Headers */,
 				C01380F3211A060C0046020A /* streamingalgorithmcomposite.h in Headers */,
 				C0138139211A060C0046020A /* tnt_sparse_matrix_csr.h in Headers */,
+				C088CB5F211B561D009ED9DB /* modproperties.h in Headers */,
 				C0138062211A060B0046020A /* sprmodelsynth.h in Headers */,
+				C088CB32211B561C009ED9DB /* apefile.h in Headers */,
+				C088CBB0211B561D009ED9DB /* mpegutils.h in Headers */,
 				C0137EF6211A060B0046020A /* extractor.h in Headers */,
 				C0137F6C211A060B0046020A /* rhythmtransform.h in Headers */,
 				C0138072211A060B0046020A /* leq.h in Headers */,
 				C013802A211A060B0046020A /* windowing.h in Headers */,
 				C0137FC2211A060B0046020A /* triangularbarkbands.h in Headers */,
+				C088CB44211B561C009ED9DB /* asftag.h in Headers */,
 				C0138018211A060B0046020A /* startstopsilence.h in Headers */,
 				C0137FF4211A060B0046020A /* monomixer.h in Headers */,
 				C01380E4211A060C0046020A /* vectoroutput.h in Headers */,
 				C0137F4C211A060B0046020A /* bpmhistogramdescriptors.h in Headers */,
+				C088CBA1211B561D009ED9DB /* id3v2frame.h in Headers */,
 				C013809E211A060C0046020A /* pitchcontoursmultimelody.h in Headers */,
 				C0137F3C211A060B0046020A /* monoloader.h in Headers */,
 				C0138098211A060C0046020A /* pitchcontoursegmentation.h in Headers */,
+				C088CB85211B561D009ED9DB /* popularimeterframe.h in Headers */,
 				C0B55A0E211B27D0007817F6 /* version.h in Headers */,
+				C088CB45211B561C009ED9DB /* asfutils.h in Headers */,
 				C0137F2C211A060B0046020A /* sbic.h in Headers */,
+				C088CBD5211B561D009ED9DB /* wavproperties.h in Headers */,
 				C0137ED0211A060B0046020A /* kiss_fftndr.h in Headers */,
+				C088CBF2211B561D009ED9DB /* tiostream.h in Headers */,
+				C088CBFC211B561D009ED9DB /* tstring.h in Headers */,
+				C088CC9C211B57F1009ED9DB /* metadatareader.h in Headers */,
 				C0137F6A211A060B0046020A /* rhythmextractor2013.h in Headers */,
 				C0137FA4211A060B0046020A /* hfc.h in Headers */,
+				C088CB4A211B561C009ED9DB /* fileref.h in Headers */,
+				C088CB83211B561D009ED9DB /* podcastframe.h in Headers */,
+				C088CBB2211B561D009ED9DB /* xingheader.h in Headers */,
+				C088CBD3211B561D009ED9DB /* wavfile.h in Headers */,
 				C0137EF2211A060B0046020A /* meter.h in Headers */,
+				C088CBBE211B561D009ED9DB /* opusproperties.h in Headers */,
 				C0137F58211A060B0046020A /* noveltycurvefixedbpmestimator.h in Headers */,
+				C088CBC8211B561D009ED9DB /* xiphcomment.h in Headers */,
+				C088CB52211B561C009ED9DB /* flacproperties.h in Headers */,
+				C088CBDF211B561D009ED9DB /* tagunion.h in Headers */,
 				C0137FD8211A060B0046020A /* derivative.h in Headers */,
 				C0138123211A060C0046020A /* jama_eig.h in Headers */,
 				C0137F88211A060B0046020A /* maxtototal.h in Headers */,
+				C088CBE6211B561D009ED9DB /* tbytevectorlist.h in Headers */,
 				C013808A211A060B0046020A /* highresolutionfeatures.h in Headers */,
 				C013801E211A060B0046020A /* stereotrimmer.h in Headers */,
 				C01380EC211A060C0046020A /* source.h in Headers */,
@@ -2375,9 +3334,13 @@
 				C0137FE8211A060B0046020A /* idct.h in Headers */,
 				C01380E3211A060C0046020A /* vectorinput.h in Headers */,
 				C0138134211A060C0046020A /* tnt_fortran_array2d_utils.h in Headers */,
+				C088CB5C211B561D009ED9DB /* modfilebase.h in Headers */,
+				C088CB56211B561C009ED9DB /* itfile.h in Headers */,
 				C0138024211A060B0046020A /* unaryoperatorstream.h in Headers */,
 				C0138112211A060C0046020A /* MusicLowlevelDescriptors.h in Headers */,
+				C088CBCC211B561D009ED9DB /* aiffproperties.h in Headers */,
 				C0138114211A060C0046020A /* MusicRhythmDescriptors.h in Headers */,
+				C088CB3E211B561C009ED9DB /* asffile.h in Headers */,
 				C013803A211A060B0046020A /* flatness.h in Headers */,
 				C0138068211A060B0046020A /* stochasticmodelanal.h in Headers */,
 				C0137F82211A060B0046020A /* derivativesfx.h in Headers */,
@@ -2387,6 +3350,7 @@
 				C0138060211A060B0046020A /* sprmodelanal.h in Headers */,
 				C0137F4A211A060B0046020A /* bpmhistogram.h in Headers */,
 				C0138088211A060B0046020A /* harmonicpeaks.h in Headers */,
+				C088CBBA211B561D009ED9DB /* oggpageheader.h in Headers */,
 				C0137ECE211A060B0046020A /* kiss_fftnd.h in Headers */,
 				C0137F90211A060B0046020A /* tctototal.h in Headers */,
 				C01380CE211A060C0046020A /* graphutils.h in Headers */,
@@ -2398,15 +3362,21 @@
 				C0137F10211A060B0046020A /* bandreject.h in Headers */,
 				C0138012211A060B0046020A /* spectrum.h in Headers */,
 				C0137F02211A060B0046020A /* musicextractor.h in Headers */,
+				C088CB3A211B561C009ED9DB /* apetag.h in Headers */,
+				C088CB69211B561D009ED9DB /* mp4item.h in Headers */,
 				C0138074211A060B0046020A /* loudness.h in Headers */,
 				C0138131211A060C0046020A /* tnt_fortran_array1d.h in Headers */,
 				C0137ED6211A060B0046020A /* splineutil.h in Headers */,
 				C0137F80211A060B0046020A /* aftermaxtobeforemaxenergyratio.h in Headers */,
 				C0138032211A060B0046020A /* decrease.h in Headers */,
 				C01380A0211A060C0046020A /* pitchfilter.h in Headers */,
+				C088CC0D211B561D009ED9DB /* xmproperties.h in Headers */,
 				C01380D2211A060C0046020A /* networkparser.h in Headers */,
+				C088CBF0211B561D009ED9DB /* tfilestream.h in Headers */,
+				C088CB89211B561D009ED9DB /* relativevolumeframe.h in Headers */,
 				C013811F211A060C0046020A /* ringbufferimpl.h in Headers */,
 				C01380B2211A060C0046020A /* tuningfrequency.h in Headers */,
+				C088CB36211B561C009ED9DB /* apeitem.h in Headers */,
 				C0137F7E211A060B0046020A /* tempotapticks.h in Headers */,
 				C01380BD211A060C0046020A /* connector.h in Headers */,
 				C0138137211A060C0046020A /* tnt_i_refvec.h in Headers */,
@@ -2420,13 +3390,19 @@
 				C01380EB211A060C0046020A /* sinkproxy.h in Headers */,
 				C0137FCA211A060B0046020A /* bpf.h in Headers */,
 				C0137F9E211A060B0046020A /* flux.h in Headers */,
+				C088CB9D211B561D009ED9DB /* id3v2extendedheader.h in Headers */,
 				C01380D8211A060C0046020A /* devnull.h in Headers */,
 				C01380A4211A060C0046020A /* pitchsaliencefunction.h in Headers */,
 				C0137EF8211A060B0046020A /* freesoundextractor.h in Headers */,
+				C088CB47211B561C009ED9DB /* audioproperties.h in Headers */,
+				C088CB50211B561C009ED9DB /* flacpicture.h in Headers */,
 				C013812A211A060C0046020A /* tnt_array1d.h in Headers */,
 				C01380EF211A060C0046020A /* sourceproxy.h in Headers */,
+				C088CB65211B561D009ED9DB /* mp4coverart.h in Headers */,
 				C0137F48211A060B0046020A /* beattrackermultifeature.h in Headers */,
+				C088CB4C211B561C009ED9DB /* flacfile.h in Headers */,
 				C0137F0E211A060B0046020A /* bandpass.h in Headers */,
+				C088CC05211B561D009ED9DB /* trueaudioproperties.h in Headers */,
 				C013812C211A060C0046020A /* tnt_array2d.h in Headers */,
 				C01380E8211A060C0046020A /* sink.h in Headers */,
 				C013804A211A060B0046020A /* rms.h in Headers */,
@@ -2435,29 +3411,41 @@
 				C0137FB0211A060B0046020A /* rolloff.h in Headers */,
 				C0137FCC211A060B0046020A /* chromagram.h in Headers */,
 				C0138008211A060B0046020A /* replaygain.h in Headers */,
+				C088CB73211B561D009ED9DB /* id3v1genres.h in Headers */,
 				C0137F8E211A060B0046020A /* strongdecay.h in Headers */,
 				C01380C4211A060C0046020A /* essentiautil.h in Headers */,
 				C0138102211A060C0046020A /* betools.h in Headers */,
 				C0137FBA211A060B0046020A /* spectralwhitening.h in Headers */,
+				C088CB34211B561C009ED9DB /* apefooter.h in Headers */,
 				C0137FE4211A060B0046020A /* framecutter.h in Headers */,
+				C088CB9F211B561D009ED9DB /* id3v2footer.h in Headers */,
 				C0138014211A060B0046020A /* spectrumCQ.h in Headers */,
+				C088CBC6211B561D009ED9DB /* vorbisproperties.h in Headers */,
 				C0137FEC211A060B0046020A /* ifftk.h in Headers */,
 				C0137F50211A060B0046020A /* harmonicbpm.h in Headers */,
 				C0137FB6211A060B0046020A /* spectralcontrast.h in Headers */,
 				C0138094211A060C0046020A /* oddtoevenharmonicenergyratio.h in Headers */,
 				C013804C211A060B0046020A /* singlegaussian.h in Headers */,
+				C088CB7D211B561D009ED9DB /* eventtimingcodesframe.h in Headers */,
 				C0138138211A060C0046020A /* tnt_math_utils.h in Headers */,
 				C0137FB4211A060B0046020A /* spectralcomplexity.h in Headers */,
+				C088CBDB211B561D009ED9DB /* tag.h in Headers */,
 				C013804E211A060B0046020A /* variance.h in Headers */,
 				C0138002211A060B0046020A /* peakdetection.h in Headers */,
+				C088CB4E211B561C009ED9DB /* flacmetadatablock.h in Headers */,
 				C013811B211A060C0046020A /* MersenneTwister.h in Headers */,
 				C01380DA211A060C0046020A /* fileoutput.h in Headers */,
 				C0137ED2211A060B0046020A /* kiss_fftr.h in Headers */,
+				C088CBE2211B561D009ED9DB /* taglib.h in Headers */,
 				C0138046211A060B0046020A /* powermean.h in Headers */,
 				C013803E211A060B0046020A /* instantpower.h in Headers */,
 				C0137F36211A060B0046020A /* eqloudloader.h in Headers */,
 				C013806A211A060B0046020A /* stochasticmodelsynth.h in Headers */,
+				C088CB75211B561D009ED9DB /* id3v1tag.h in Headers */,
 				C01380B9211A060C0046020A /* config.h in Headers */,
+				C088CB95211B561D009ED9DB /* unsynchronizedlyricsframe.h in Headers */,
+				C088CBF8211B561D009ED9DB /* tpropertymap.h in Headers */,
+				C088CBB4211B561D009ED9DB /* oggflacfile.h in Headers */,
 				C013800C211A060B0046020A /* scale.h in Headers */,
 				C0137FFC211A060B0046020A /* nsgconstantqstreaming.h in Headers */,
 				C0138104211A060C0046020A /* bpmutil.h in Headers */,
@@ -2470,19 +3458,26 @@
 				C01380C6211A060C0046020A /* iotypewrappers_impl.h in Headers */,
 				C013805A211A060B0046020A /* sinemodelanal.h in Headers */,
 				C0137F5A211A060B0046020A /* onsetdetection.h in Headers */,
+				C088CBE4211B561D009ED9DB /* tbytevector.h in Headers */,
 				C0138105211A060C0046020A /* extractor_version.h in Headers */,
 				C0137F78211A060B0046020A /* tempotap.h in Headers */,
 				C0137FC4211A060B0046020A /* autocorrelation.h in Headers */,
 				C013803C211A060B0046020A /* geometricmean.h in Headers */,
+				C088CBAF211B561D009ED9DB /* mpegproperties.h in Headers */,
 				C013805C211A060B0046020A /* sinemodelsynth.h in Headers */,
 				C0138096211A060C0046020A /* pitchcontours.h in Headers */,
+				C088CBA9211B561D009ED9DB /* id3v2tag.h in Headers */,
 				C01380B0211A060C0046020A /* tristimulus.h in Headers */,
+				C088CBBC211B561D009ED9DB /* opusfile.h in Headers */,
+				C088CB71211B561D009ED9DB /* mpcproperties.h in Headers */,
 				C0138076211A060B0046020A /* loudnessebur128.h in Headers */,
 				C0138026211A060B0046020A /* vectorrealaccumulator.h in Headers */,
 				C0137F52211A060B0046020A /* loopbpmconfidence.h in Headers */,
 				C0137F70211A060B0046020A /* superfluxextractor.h in Headers */,
+				C088CB6B211B561D009ED9DB /* mp4properties.h in Headers */,
 				C01380AC211A060C0046020A /* predominantpitchmelodia.h in Headers */,
 				C0137F14211A060B0046020A /* equalloudness.h in Headers */,
+				C088CB61211B561D009ED9DB /* modtag.h in Headers */,
 				C0137F9C211A060B0046020A /* flatnessdb.h in Headers */,
 				C01380D0211A060C0046020A /* network.h in Headers */,
 				C013812E211A060C0046020A /* tnt_array3d.h in Headers */,
@@ -2491,13 +3486,17 @@
 				C013802E211A060B0046020A /* centroid.h in Headers */,
 				C0138052211A060B0046020A /* harmonicmodelanal.h in Headers */,
 				C0138103211A060C0046020A /* bpfutil.h in Headers */,
+				C088CBFE211B561D009ED9DB /* tstringlist.h in Headers */,
 				C0137FA0211A060B0046020A /* frequencybands.h in Headers */,
 				C0137FF2211A060B0046020A /* maxfilter.h in Headers */,
+				C088CB87211B561D009ED9DB /* privateframe.h in Headers */,
 				C0137F5C211A060B0046020A /* onsetdetectionglobal.h in Headers */,
 				C01380E2211A060C0046020A /* ringbuffervectoroutput.h in Headers */,
 				C01380C2211A060C0046020A /* essentiamath.h in Headers */,
 				C013810E211A060C0046020A /* FreesoundTonalDescriptors.h in Headers */,
 				C0137F12211A060B0046020A /* dcremoval.h in Headers */,
+				C088CB79211B561D009ED9DB /* chapterframe.h in Headers */,
+				C088CBA7211B561D009ED9DB /* id3v2synchdata.h in Headers */,
 				C01380CC211A060C0046020A /* range.h in Headers */,
 				C0138110211A060C0046020A /* MusicDescriptorsSet.h in Headers */,
 				C0137F8C211A060B0046020A /* pitchsalience.h in Headers */,
@@ -2507,15 +3506,19 @@
 				C01380C1211A060C0046020A /* essentia.h in Headers */,
 				C013807A211A060B0046020A /* loudnessvickers.h in Headers */,
 				C01380A2211A060C0046020A /* pitchmelodia.h in Headers */,
+				C088CB77211B561D009ED9DB /* attachedpictureframe.h in Headers */,
 				C0137F8A211A060B0046020A /* mintototal.h in Headers */,
 				C01380D6211A060C0046020A /* copy.h in Headers */,
 				C0138044211A060B0046020A /* poolaggregator.h in Headers */,
+				C088CBA5211B561D009ED9DB /* id3v2header.h in Headers */,
 				C0137ECB211A060B0046020A /* kfc.h in Headers */,
 				C01380BF211A060C0046020A /* debugging.h in Headers */,
+				C088CBA3211B561D009ED9DB /* id3v2framefactory.h in Headers */,
 				C0137FAE211A060B0046020A /* panning.h in Headers */,
 				C0137F54211A060B0046020A /* loopbpmestimator.h in Headers */,
 				C0138129211A060C0046020A /* tnt2vector.h in Headers */,
 				C013807E211A060B0046020A /* zerocrossingrate.h in Headers */,
+				C088CBC4211B561D009ED9DB /* vorbisfile.h in Headers */,
 				C01380F5211A060C0046020A /* streamingalgorithmwrapper.h in Headers */,
 				C0138108211A060C0046020A /* FreesoundLowlevelDescriptors.h in Headers */,
 				C0138058211A060B0046020A /* resamplefft.h in Headers */,
@@ -2526,11 +3529,16 @@
 				C01380E0211A060C0046020A /* ringbufferoutput.h in Headers */,
 				C0137F28211A060B0046020A /* intensity.h in Headers */,
 				C0B559FB211B2451007817F6 /* polartocartesian.h in Headers */,
+				C088CB40211B561C009ED9DB /* asfpicture.h in Headers */,
+				C088CBD1211B561D009ED9DB /* infotag.h in Headers */,
 				C01380E5211A060C0046020A /* multiratebuffer.h in Headers */,
 				C013802C211A060B0046020A /* centralmoments.h in Headers */,
 				C0137F20211A060B0046020A /* danceability.h in Headers */,
+				C088CBAD211B561D009ED9DB /* mpegheader.h in Headers */,
+				C088C619211B54C3009ED9DB /* taglib_config.h in Headers */,
 				C0138040211A060B0046020A /* mean.h in Headers */,
 				C0138117211A060C0046020A /* tagwhitelist.h in Headers */,
+				C088CBAB211B561D009ED9DB /* mpegfile.h in Headers */,
 				C01380FE211A060C0046020A /* asciidagparser.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2615,6 +3623,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C088CB99211B561D009ED9DB /* id3v2.3.0.txt in Resources */,
+				C088CB30211B561C009ED9DB /* ape-tag-format.txt in Resources */,
+				C088CB98211B561D009ED9DB /* id3v2.2.0.txt in Resources */,
+				C088CB9B211B561D009ED9DB /* id3v2.4.0-structure.txt in Resources */,
+				C088CB9A211B561D009ED9DB /* id3v2.4.0-frames.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2625,11 +3638,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C088CBEF211B561D009ED9DB /* tfilestream.cpp in Sources */,
+				C088CC9D211B57F1009ED9DB /* metadatareader.cpp in Sources */,
 				C01380A3211A060C0046020A /* pitchsaliencefunction.cpp in Sources */,
 				C013801B211A060B0046020A /* stereomuxer.cpp in Sources */,
 				C0138075211A060B0046020A /* loudnessebur128.cpp in Sources */,
+				C088CB33211B561C009ED9DB /* apefooter.cpp in Sources */,
 				C0137FEB211A060B0046020A /* ifftk.cpp in Sources */,
 				C01380D7211A060C0046020A /* devnull.cpp in Sources */,
+				C088CBE9211B561D009ED9DB /* tdebug.cpp in Sources */,
 				C0138029211A060B0046020A /* windowing.cpp in Sources */,
 				C0137EF1211A060B0046020A /* meter.cpp in Sources */,
 				C0137F4B211A060B0046020A /* bpmhistogramdescriptors.cpp in Sources */,
@@ -2637,13 +3654,21 @@
 				C0137F69211A060B0046020A /* rhythmextractor2013.cpp in Sources */,
 				C0138107211A060C0046020A /* FreesoundLowlevelDescriptors.cpp in Sources */,
 				C0137F0B211A060B0046020A /* allpass.cpp in Sources */,
+				C088CBE3211B561D009ED9DB /* tbytevector.cpp in Sources */,
 				C0138095211A060C0046020A /* pitchcontours.cpp in Sources */,
+				C088CBD0211B561D009ED9DB /* infotag.cpp in Sources */,
 				C013809F211A060C0046020A /* pitchfilter.cpp in Sources */,
+				C088CBB5211B561D009ED9DB /* oggfile.cpp in Sources */,
 				C0137FD5211A060B0046020A /* dct.cpp in Sources */,
+				C088CB4B211B561C009ED9DB /* flacfile.cpp in Sources */,
 				C0138079211A060B0046020A /* loudnessvickers.cpp in Sources */,
 				C0137F9D211A060B0046020A /* flux.cpp in Sources */,
+				C088CB57211B561C009ED9DB /* itproperties.cpp in Sources */,
 				C0138033211A060B0046020A /* distributionshape.cpp in Sources */,
+				C088CBA2211B561D009ED9DB /* id3v2framefactory.cpp in Sources */,
 				C0138037211A060B0046020A /* entropy.cpp in Sources */,
+				C088CBD4211B561D009ED9DB /* wavproperties.cpp in Sources */,
+				C088CB94211B561D009ED9DB /* unsynchronizedlyricsframe.cpp in Sources */,
 				C0137F67211A060B0046020A /* rhythmextractor.cpp in Sources */,
 				C0137EB2211A060B0046020A /* kiss_fft.c in Sources */,
 				C0137F81211A060B0046020A /* derivativesfx.cpp in Sources */,
@@ -2651,10 +3676,16 @@
 				C0137FA3211A060B0046020A /* hfc.cpp in Sources */,
 				C0137EF7211A060B0046020A /* freesoundextractor.cpp in Sources */,
 				C0137F11211A060B0046020A /* dcremoval.cpp in Sources */,
+				C088CB7A211B561D009ED9DB /* commentsframe.cpp in Sources */,
+				C088CB66211B561D009ED9DB /* mp4file.cpp in Sources */,
+				C088CB76211B561D009ED9DB /* attachedpictureframe.cpp in Sources */,
 				C0137FFF211A060B0046020A /* overlapadd.cpp in Sources */,
+				C088CB31211B561C009ED9DB /* apefile.cpp in Sources */,
 				C0138111211A060C0046020A /* MusicLowlevelDescriptors.cpp in Sources */,
 				C0138097211A060C0046020A /* pitchcontoursegmentation.cpp in Sources */,
+				C088CB59211B561D009ED9DB /* modfile.cpp in Sources */,
 				C013804D211A060B0046020A /* variance.cpp in Sources */,
+				C088CB74211B561D009ED9DB /* id3v1tag.cpp in Sources */,
 				C0137F4D211A060B0046020A /* bpmrubato.cpp in Sources */,
 				C0138071211A060B0046020A /* leq.cpp in Sources */,
 				C0138099211A060C0046020A /* pitchcontoursmelody.cpp in Sources */,
@@ -2664,6 +3695,7 @@
 				C0137F35211A060B0046020A /* eqloudloader.cpp in Sources */,
 				C0137F59211A060B0046020A /* onsetdetection.cpp in Sources */,
 				C0137EEB211A060B0046020A /* magnitude.cpp in Sources */,
+				C088CC04211B561D009ED9DB /* trueaudioproperties.cpp in Sources */,
 				C0137FD7211A060B0046020A /* derivative.cpp in Sources */,
 				C0B559FC211B2451007817F6 /* polartocartesian.cpp in Sources */,
 				C0137FE3211A060B0046020A /* framecutter.cpp in Sources */,
@@ -2673,74 +3705,113 @@
 				C013802B211A060B0046020A /* centralmoments.cpp in Sources */,
 				C0137FBB211A060B0046020A /* spectrumtocent.cpp in Sources */,
 				C0138109211A060C0046020A /* FreesoundRhythmDescriptors.cpp in Sources */,
+				C088CC02211B561D009ED9DB /* trueaudiofile.cpp in Sources */,
+				C088CC08211B561D009ED9DB /* wavpackproperties.cpp in Sources */,
 				C0138011211A060B0046020A /* spectrum.cpp in Sources */,
 				C0138009211A060B0046020A /* resample.cpp in Sources */,
 				C01380E1211A060C0046020A /* ringbuffervectoroutput.cpp in Sources */,
+				C088CBDE211B561D009ED9DB /* tagunion.cpp in Sources */,
+				C088CBED211B561D009ED9DB /* tfile.cpp in Sources */,
 				C013809B211A060C0046020A /* pitchcontoursmonomelody.cpp in Sources */,
+				C088CB55211B561C009ED9DB /* itfile.cpp in Sources */,
 				C0138083211A060B0046020A /* chordsdetectionbeats.cpp in Sources */,
 				C0137F8D211A060B0046020A /* strongdecay.cpp in Sources */,
 				C01380F4211A060C0046020A /* streamingalgorithmwrapper.cpp in Sources */,
 				C0137F6D211A060B0046020A /* singlebeatloudness.cpp in Sources */,
 				C0137F51211A060B0046020A /* loopbpmconfidence.cpp in Sources */,
+				C088CB35211B561C009ED9DB /* apeitem.cpp in Sources */,
+				C088CC00211B561D009ED9DB /* tzlib.cpp in Sources */,
+				C088CB53211B561C009ED9DB /* flacunknownmetadatablock.cpp in Sources */,
+				C088CBD6211B561D009ED9DB /* s3mfile.cpp in Sources */,
 				C01380C3211A060C0046020A /* essentiautil.cpp in Sources */,
+				C088CBEB211B561D009ED9DB /* tdebuglistener.cpp in Sources */,
 				C0137FF5211A060B0046020A /* multiplexer.cpp in Sources */,
 				C0137EEF211A060B0046020A /* beatogram.cpp in Sources */,
 				C01380AB211A060C0046020A /* predominantpitchmelodia.cpp in Sources */,
+				C088CB82211B561D009ED9DB /* podcastframe.cpp in Sources */,
+				C088CBCB211B561D009ED9DB /* aiffproperties.cpp in Sources */,
 				C0137F29211A060B0046020A /* pca.cpp in Sources */,
 				C0137F65211A060B0046020A /* percivalevaluatepulsetrains.cpp in Sources */,
 				C0137FBD211A060B0046020A /* strongpeak.cpp in Sources */,
+				C088CBF7211B561D009ED9DB /* tpropertymap.cpp in Sources */,
 				C0137F89211A060B0046020A /* mintototal.cpp in Sources */,
+				C088CBA6211B561D009ED9DB /* id3v2synchdata.cpp in Sources */,
 				C0137F87211A060B0046020A /* maxtototal.cpp in Sources */,
 				C0137EE9211A060B0046020A /* cartesiantopolar.cpp in Sources */,
 				C013803F211A060B0046020A /* mean.cpp in Sources */,
+				C088CBB1211B561D009ED9DB /* xingheader.cpp in Sources */,
 				C01380BE211A060C0046020A /* debugging.cpp in Sources */,
 				C013805D211A060B0046020A /* sinesubtraction.cpp in Sources */,
 				C0B55A07211B27D0007817F6 /* audioloader_ios.cpp in Sources */,
 				C0137ECD211A060B0046020A /* kiss_fftnd.c in Sources */,
+				C088CB88211B561D009ED9DB /* relativevolumeframe.cpp in Sources */,
+				C088CB49211B561C009ED9DB /* fileref.cpp in Sources */,
 				C0138043211A060B0046020A /* poolaggregator.cpp in Sources */,
 				C0137FA5211A060B0046020A /* hpcp.cpp in Sources */,
 				C0E7A21E211A30FE00711656 /* ESExtractor.mm in Sources */,
 				C013807B211A060B0046020A /* lpc.cpp in Sources */,
 				C0137ECC211A060B0046020A /* kiss_fastfir.c in Sources */,
 				C0138051211A060B0046020A /* harmonicmodelanal.cpp in Sources */,
+				C088CB3B211B561C009ED9DB /* asfattribute.cpp in Sources */,
+				C088CBC5211B561D009ED9DB /* vorbisproperties.cpp in Sources */,
 				C0137FD1211A060B0046020A /* crosscorrelation.cpp in Sources */,
 				C0137FB3211A060B0046020A /* spectralcomplexity.cpp in Sources */,
 				C0137FF1211A060B0046020A /* maxfilter.cpp in Sources */,
+				C088CBCD211B561D009ED9DB /* rifffile.cpp in Sources */,
 				C0137F8B211A060B0046020A /* pitchsalience.cpp in Sources */,
 				C0137FBF211A060B0046020A /* triangularbands.cpp in Sources */,
 				C0137FB7211A060B0046020A /* spectralpeaks.cpp in Sources */,
 				C0137F01211A060B0046020A /* musicextractor.cpp in Sources */,
 				C0137F49211A060B0046020A /* bpmhistogram.cpp in Sources */,
+				C088CBAE211B561D009ED9DB /* mpegproperties.cpp in Sources */,
+				C088CB62211B561D009ED9DB /* mp4atom.cpp in Sources */,
 				C0137F45211A060B0046020A /* beattrackerdegara.cpp in Sources */,
+				C088CB80211B561D009ED9DB /* ownershipframe.cpp in Sources */,
 				C013803D211A060B0046020A /* instantpower.cpp in Sources */,
 				C01380DB211A060C0046020A /* poolstorage.cpp in Sources */,
+				C088CBA0211B561D009ED9DB /* id3v2frame.cpp in Sources */,
 				C0137FCB211A060B0046020A /* chromagram.cpp in Sources */,
+				C088CBC9211B561D009ED9DB /* aifffile.cpp in Sources */,
 				C0137F43211A060B0046020A /* beatsloudness.cpp in Sources */,
+				C088CB8A211B561D009ED9DB /* synchronizedlyricsframe.cpp in Sources */,
 				C0137F07211A060B0046020A /* tonalextractor.cpp in Sources */,
+				C088CB37211B561C009ED9DB /* apeproperties.cpp in Sources */,
 				C01380A1211A060C0046020A /* pitchmelodia.cpp in Sources */,
 				C0137F21211A060B0046020A /* dynamiccomplexity.cpp in Sources */,
+				C088CB7E211B561D009ED9DB /* generalencapsulatedobjectframe.cpp in Sources */,
+				C088CB68211B561D009ED9DB /* mp4item.cpp in Sources */,
 				C0137FA9211A060B0046020A /* melbands.cpp in Sources */,
+				C088CB51211B561C009ED9DB /* flacproperties.cpp in Sources */,
 				C0138057211A060B0046020A /* resamplefft.cpp in Sources */,
 				C0137FFD211A060B0046020A /* nsgiconstantq.cpp in Sources */,
 				C0137FFB211A060B0046020A /* nsgconstantqstreaming.cpp in Sources */,
+				C088CB43211B561C009ED9DB /* asftag.cpp in Sources */,
+				C088CB39211B561C009ED9DB /* apetag.cpp in Sources */,
 				C0138003211A060B0046020A /* powerspectrum.cpp in Sources */,
+				C088CB3F211B561C009ED9DB /* asfpicture.cpp in Sources */,
 				C0137F15211A060B0046020A /* highpass.cpp in Sources */,
+				C088CBD8211B561D009ED9DB /* s3mproperties.cpp in Sources */,
 				C0137F37211A060B0046020A /* fileoutputproxy.cpp in Sources */,
 				C013806F211A060B0046020A /* larm.cpp in Sources */,
 				C0137F13211A060B0046020A /* equalloudness.cpp in Sources */,
 				C0137FA1211A060B0046020A /* gfcc.cpp in Sources */,
 				C0138015211A060B0046020A /* spline.cpp in Sources */,
 				C0137F71211A060B0046020A /* superfluxnovelty.cpp in Sources */,
+				C088CBE5211B561D009ED9DB /* tbytevectorlist.cpp in Sources */,
 				C013804F211A060B0046020A /* harmonicmask.cpp in Sources */,
 				C0138049211A060B0046020A /* rms.cpp in Sources */,
 				C0137F79211A060B0046020A /* tempotapdegara.cpp in Sources */,
+				C088CB8C211B561D009ED9DB /* tableofcontentsframe.cpp in Sources */,
 				C01380CB211A060C0046020A /* range.cpp in Sources */,
 				C0137F97211A060B0046020A /* energybandratio.cpp in Sources */,
+				C088CB96211B561D009ED9DB /* urllinkframe.cpp in Sources */,
 				C013807D211A060B0046020A /* zerocrossingrate.cpp in Sources */,
 				C0137FCF211A060B0046020A /* constantq.cpp in Sources */,
 				C0138047211A060B0046020A /* rawmoments.cpp in Sources */,
 				C0138113211A060C0046020A /* MusicRhythmDescriptors.cpp in Sources */,
 				C01380AF211A060C0046020A /* tristimulus.cpp in Sources */,
+				C088CBA8211B561D009ED9DB /* id3v2tag.cpp in Sources */,
+				C088CBB7211B561D009ED9DB /* oggpage.cpp in Sources */,
 				C0137F3B211A060B0046020A /* monoloader.cpp in Sources */,
 				C0138055211A060B0046020A /* hpsmodelanal.cpp in Sources */,
 				C0137FD9211A060B0046020A /* envelope.cpp in Sources */,
@@ -2753,13 +3824,16 @@
 				C0137F2B211A060B0046020A /* sbic.cpp in Sources */,
 				C01380FD211A060C0046020A /* asciidagparser.cpp in Sources */,
 				C013800F211A060B0046020A /* slicer.cpp in Sources */,
+				C088CB5B211B561D009ED9DB /* modfilebase.cpp in Sources */,
 				C0138005211A060B0046020A /* realaccumulator.cpp in Sources */,
 				C0138059211A060B0046020A /* sinemodelanal.cpp in Sources */,
 				C0137EC9211A060B0046020A /* fftutil.c in Sources */,
+				C088CB4D211B561C009ED9DB /* flacmetadatablock.cpp in Sources */,
 				C0137F63211A060B0046020A /* percivalenhanceharmonics.cpp in Sources */,
 				C01380B3211A060C0046020A /* vibrato.cpp in Sources */,
 				C0137F9F211A060B0046020A /* frequencybands.cpp in Sources */,
 				C0137FAF211A060B0046020A /* rolloff.cpp in Sources */,
+				C088CB5E211B561D009ED9DB /* modproperties.cpp in Sources */,
 				C01380AD211A060C0046020A /* tonicindianartmusic.cpp in Sources */,
 				C0137F95211A060B0046020A /* energyband.cpp in Sources */,
 				C0137FC5211A060B0046020A /* binaryoperator.cpp in Sources */,
@@ -2769,57 +3843,81 @@
 				C0138039211A060B0046020A /* flatness.cpp in Sources */,
 				C0137F23211A060B0046020A /* fadedetection.cpp in Sources */,
 				C01380A7211A060C0046020A /* pitchyin.cpp in Sources */,
+				C088CB64211B561D009ED9DB /* mp4coverart.cpp in Sources */,
+				C088CB92211B561D009ED9DB /* unknownframe.cpp in Sources */,
 				C0138087211A060B0046020A /* harmonicpeaks.cpp in Sources */,
 				C0137F7B211A060B0046020A /* tempotapmaxagreement.cpp in Sources */,
 				C013808D211A060B0046020A /* key.cpp in Sources */,
 				C0137FDB211A060B0046020A /* ffta.cpp in Sources */,
+				C088CBDA211B561D009ED9DB /* tag.cpp in Sources */,
+				C088CB70211B561D009ED9DB /* mpcproperties.cpp in Sources */,
 				C0137F91211A060B0046020A /* barkbands.cpp in Sources */,
 				C01380FB211A060C0046020A /* asciidag.cpp in Sources */,
+				C088CBBB211B561D009ED9DB /* opusfile.cpp in Sources */,
 				C0137F0F211A060B0046020A /* bandreject.cpp in Sources */,
 				C0137F47211A060B0046020A /* beattrackermultifeature.cpp in Sources */,
 				C0137F73211A060B0046020A /* superfluxpeaks.cpp in Sources */,
 				C013806D211A060B0046020A /* effectiveduration.cpp in Sources */,
 				C013801D211A060B0046020A /* stereotrimmer.cpp in Sources */,
+				C088CB6E211B561D009ED9DB /* mpcfile.cpp in Sources */,
 				C0137F05211A060B0046020A /* rhythmdescriptors.cpp in Sources */,
 				C0138089211A060B0046020A /* highresolutionfeatures.cpp in Sources */,
+				C088CBE7211B561D009ED9DB /* tbytevectorstream.cpp in Sources */,
 				C0137F8F211A060B0046020A /* tctototal.cpp in Sources */,
 				C0138077211A060B0046020A /* loudnessebur128filter.cpp in Sources */,
 				C0138007211A060B0046020A /* replaygain.cpp in Sources */,
+				C088CBF9211B561D009ED9DB /* trefcounter.cpp in Sources */,
 				C0138073211A060B0046020A /* loudness.cpp in Sources */,
 				C0137F77211A060B0046020A /* tempotap.cpp in Sources */,
 				C0138081211A060B0046020A /* chordsdetection.cpp in Sources */,
 				C0137F33211A060B0046020A /* easyloader.cpp in Sources */,
 				C0137F57211A060B0046020A /* noveltycurvefixedbpmestimator.cpp in Sources */,
 				C0138061211A060B0046020A /* sprmodelsynth.cpp in Sources */,
+				C088CB60211B561D009ED9DB /* modtag.cpp in Sources */,
 				C0137FC7211A060B0046020A /* binaryoperatorstream.cpp in Sources */,
 				C0137F9B211A060B0046020A /* flatnessdb.cpp in Sources */,
+				C088CB6A211B561D009ED9DB /* mp4properties.cpp in Sources */,
+				C088CBFB211B561D009ED9DB /* tstring.cpp in Sources */,
 				C0138093211A060C0046020A /* oddtoevenharmonicenergyratio.cpp in Sources */,
+				C088CB7C211B561D009ED9DB /* eventtimingcodesframe.cpp in Sources */,
 				C01380C7211A060C0046020A /* parameter.cpp in Sources */,
 				C01380A5211A060C0046020A /* pitchsaliencefunctionpeaks.cpp in Sources */,
 				C013810B211A060C0046020A /* FreesoundSfxDescriptors.cpp in Sources */,
 				C0137F75211A060B0046020A /* temposcalebands.cpp in Sources */,
 				C01380DD211A060C0046020A /* ringbufferinput.cpp in Sources */,
 				C0137F85211A060B0046020A /* logattacktime.cpp in Sources */,
+				C088CB84211B561D009ED9DB /* popularimeterframe.cpp in Sources */,
 				C013803B211A060B0046020A /* geometricmean.cpp in Sources */,
 				C0137F09211A060B0046020A /* tuningfrequencyextractor.cpp in Sources */,
 				C0137FF7211A060B0046020A /* noiseadder.cpp in Sources */,
 				C0137FAB211A060B0046020A /* mfcc.cpp in Sources */,
+				C088CBFD211B561D009ED9DB /* tstringlist.cpp in Sources */,
 				C0137EFD211A060B0046020A /* lowlevelspectraleqloudextractor.cpp in Sources */,
 				C0138001211A060B0046020A /* peakdetection.cpp in Sources */,
+				C088CB78211B561D009ED9DB /* chapterframe.cpp in Sources */,
+				C088CBB3211B561D009ED9DB /* oggflacfile.cpp in Sources */,
+				C088CBC7211B561D009ED9DB /* xiphcomment.cpp in Sources */,
 				C0137ED5211A060B0046020A /* splineutil.cpp in Sources */,
 				C0137FDD211A060B0046020A /* fftk.cpp in Sources */,
 				C0138019211A060B0046020A /* stereodemuxer.cpp in Sources */,
 				C0137FC3211A060B0046020A /* autocorrelation.cpp in Sources */,
+				C088CC0C211B561D009ED9DB /* xmproperties.cpp in Sources */,
 				C01380D4211A060C0046020A /* accumulatoralgorithm.cpp in Sources */,
 				C0138063211A060B0046020A /* spsmodelanal.cpp in Sources */,
 				C0137FD3211A060B0046020A /* cubicspline.cpp in Sources */,
 				C0138041211A060B0046020A /* median.cpp in Sources */,
 				C013805F211A060B0046020A /* sprmodelanal.cpp in Sources */,
+				C088CB9C211B561D009ED9DB /* id3v2extendedheader.cpp in Sources */,
 				C0137FF3211A060B0046020A /* monomixer.cpp in Sources */,
+				C088CBE0211B561D009ED9DB /* tagutils.cpp in Sources */,
 				C0137F2F211A060B0046020A /* audioonsetsmarker.cpp in Sources */,
 				C01380DF211A060C0046020A /* ringbufferoutput.cpp in Sources */,
+				C088CB86211B561D009ED9DB /* privateframe.cpp in Sources */,
 				C0138021211A060B0046020A /* unaryoperator.cpp in Sources */,
+				C088CB6C211B561D009ED9DB /* mp4tag.cpp in Sources */,
+				C088CB4F211B561C009ED9DB /* flacpicture.cpp in Sources */,
 				C0137F5B211A060B0046020A /* onsetdetectionglobal.cpp in Sources */,
+				C088CBBD211B561D009ED9DB /* opusproperties.cpp in Sources */,
 				C0137FB1211A060B0046020A /* spectralcentroidtime.cpp in Sources */,
 				C013804B211A060B0046020A /* singlegaussian.cpp in Sources */,
 				C0137F53211A060B0046020A /* loopbpmestimator.cpp in Sources */,
@@ -2829,18 +3927,27 @@
 				C0137FC9211A060B0046020A /* bpf.cpp in Sources */,
 				C0138025211A060B0046020A /* vectorrealaccumulator.cpp in Sources */,
 				C0138069211A060B0046020A /* stochasticmodelsynth.cpp in Sources */,
+				C088CBC3211B561D009ED9DB /* vorbisfile.cpp in Sources */,
 				C01380CF211A060C0046020A /* network.cpp in Sources */,
 				C0137F5D211A060B0046020A /* onsetrate.cpp in Sources */,
+				C088CB41211B561C009ED9DB /* asfproperties.cpp in Sources */,
+				C088CBAC211B561D009ED9DB /* mpegheader.cpp in Sources */,
 				C013802D211A060B0046020A /* centroid.cpp in Sources */,
 				C0137EF3211A060B0046020A /* barkextractor.cpp in Sources */,
+				C088CB46211B561C009ED9DB /* audioproperties.cpp in Sources */,
 				C013802F211A060B0046020A /* crest.cpp in Sources */,
+				C088CBF1211B561D009ED9DB /* tiostream.cpp in Sources */,
+				C088CBB9211B561D009ED9DB /* oggpageheader.cpp in Sources */,
 				C0138035211A060B0046020A /* energy.cpp in Sources */,
 				C01380F7211A060C0046020A /* stringutil.cpp in Sources */,
+				C088CBBF211B561D009ED9DB /* speexfile.cpp in Sources */,
 				C0137F19211A060B0046020A /* lowpass.cpp in Sources */,
 				C0137F7D211A060B0046020A /* tempotapticks.cpp in Sources */,
 				C0137F03211A060B0046020A /* musicextractorsvm.cpp in Sources */,
 				C0138065211A060B0046020A /* spsmodelsynth.cpp in Sources */,
+				C088CBAA211B561D009ED9DB /* mpegfile.cpp in Sources */,
 				C0137FAD211A060B0046020A /* panning.cpp in Sources */,
+				C088CBD2211B561D009ED9DB /* wavfile.cpp in Sources */,
 				C0138091211A060C0046020A /* multipitchmelodia.cpp in Sources */,
 				C013808F211A060C0046020A /* multipitchklapuri.cpp in Sources */,
 				C01380F0211A060C0046020A /* streamingalgorithm.cpp in Sources */,
@@ -2850,18 +3957,24 @@
 				C0137F1F211A060B0046020A /* danceability.cpp in Sources */,
 				C0137FF9211A060B0046020A /* nsgconstantq.cpp in Sources */,
 				C01380E9211A060C0046020A /* sinkbase.cpp in Sources */,
+				C088CB8E211B561D009ED9DB /* textidentificationframe.cpp in Sources */,
 				C0138067211A060B0046020A /* stochasticmodelanal.cpp in Sources */,
+				C088CC0A211B561D009ED9DB /* xmfile.cpp in Sources */,
 				C0138115211A060C0046020A /* MusicTonalDescriptors.cpp in Sources */,
 				C0137F6B211A060B0046020A /* rhythmtransform.cpp in Sources */,
 				C0137F83211A060B0046020A /* flatnesssfx.cpp in Sources */,
+				C088CC06211B561D009ED9DB /* wavpackfile.cpp in Sources */,
 				C01380B1211A060C0046020A /* tuningfrequency.cpp in Sources */,
 				C01380F2211A060C0046020A /* streamingalgorithmcomposite.cpp in Sources */,
+				C088CB72211B561D009ED9DB /* id3v1genres.cpp in Sources */,
 				C0137F7F211A060B0046020A /* aftermaxtobeforemaxenergyratio.cpp in Sources */,
 				C0137F27211A060B0046020A /* intensity.cpp in Sources */,
+				C088CBA4211B561D009ED9DB /* id3v2header.cpp in Sources */,
 				C0137F0D211A060B0046020A /* bandpass.cpp in Sources */,
 				C0137FE9211A060B0046020A /* iffta.cpp in Sources */,
 				C013801F211A060B0046020A /* trimmer.cpp in Sources */,
 				C0138027211A060B0046020A /* warpedautocorrelation.cpp in Sources */,
+				C088CBC1211B561D009ED9DB /* speexproperties.cpp in Sources */,
 				C0137F41211A060B0046020A /* yamloutput.cpp in Sources */,
 				C013808B211A060B0046020A /* inharmonicity.cpp in Sources */,
 				C0137F17211A060B0046020A /* iir.cpp in Sources */,
@@ -2881,11 +3994,14 @@
 				C0138031211A060B0046020A /* decrease.cpp in Sources */,
 				C0137F1B211A060B0046020A /* movingaverage.cpp in Sources */,
 				C0137ECA211A060B0046020A /* kfc.c in Sources */,
+				C088CB9E211B561D009ED9DB /* id3v2footer.cpp in Sources */,
 				C0137F99211A060B0046020A /* erbbands.cpp in Sources */,
 				C013800B211A060B0046020A /* scale.cpp in Sources */,
+				C088CB3D211B561C009ED9DB /* asffile.cpp in Sources */,
 				C0137ECF211A060B0046020A /* kiss_fftndr.c in Sources */,
 				C0137FB9211A060B0046020A /* spectralwhitening.cpp in Sources */,
 				C0137F5F211A060B0046020A /* onsets.cpp in Sources */,
+				C088CB90211B561D009ED9DB /* uniquefileidentifierframe.cpp in Sources */,
 				C0137ED1211A060B0046020A /* kiss_fftr.c in Sources */,
 				C0138017211A060B0046020A /* startstopsilence.cpp in Sources */,
 				C0138013211A060B0046020A /* spectrumCQ.cpp in Sources */,
@@ -3029,6 +4145,7 @@
 					"$(SRCROOT)/libs/ffmpeg-ios-static-libs/include",
 					"$(SRCROOT)/libs/essentia/src/essentia/utils",
 					"$(SRCROOT)/libs/essentia/src/",
+					"$(SRCROOT)/libs/taglib/3rdparty",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
@@ -3070,6 +4187,7 @@
 					"$(SRCROOT)/libs/ffmpeg-ios-static-libs/include",
 					"$(SRCROOT)/libs/essentia/src/essentia/utils",
 					"$(SRCROOT)/libs/essentia/src/",
+					"$(SRCROOT)/libs/taglib/3rdparty",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";

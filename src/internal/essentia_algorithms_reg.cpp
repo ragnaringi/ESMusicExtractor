@@ -209,6 +209,7 @@
 #include "algorithms/io/easyloader.h"
 #include "algorithms/io/eqloudloader.h"
 #include "algorithms/io/monoloader.h"
+#include "algorithms/io/metadatareader.h"
 #include "algorithms/io/yamloutput.h"
 #include "algorithms/standard/resample.h"
 
@@ -420,6 +421,7 @@ ESSENTIA_API void registerAlgorithm() {
     AlgorithmFactory::Registrar<EasyLoader> regEasyLoader;
     AlgorithmFactory::Registrar<EqloudLoader> regEqloudLoader;
     AlgorithmFactory::Registrar<MonoLoader> regMonoLoader;
+    AlgorithmFactory::Registrar<MetadataReader> regMetaDataReader;
     AlgorithmFactory::Registrar<Resample> regResample;
     AlgorithmFactory::Registrar<YamlOutput> regYamlOutput;
 }}}
@@ -631,5 +633,6 @@ ESSENTIA_API void registerAlgorithm() {
     AlgorithmFactory::Registrar<EasyLoader, essentia::standard::EasyLoader> regEasyLoader;
     AlgorithmFactory::Registrar<EqloudLoader, essentia::standard::EqloudLoader> regEqloudLoader;
     AlgorithmFactory::Registrar<MonoLoader, essentia::standard::MonoLoader> regMonoLoader;
+    AlgorithmFactory::Registrar<MetadataReader, essentia::standard::MetadataReader> regMetaDataReader;
     AlgorithmFactory::Registrar<Resample, essentia::standard::Resample> regResample;
 }}}

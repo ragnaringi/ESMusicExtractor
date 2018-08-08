@@ -13,14 +13,18 @@
 
 - (NSDictionary *)analyseTrack:(NSURL *)url {
   essentia_main(url.path.UTF8String, [self tempFile].path.UTF8String, "");
-  return [NSDictionary dictionaryWithContentsOfURL:[self tempFile]];
+  return ({
+    NSData* data = [NSData dataWithContentsOfURL:[self tempFile]];
+    [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil];
+  });
 }
 
 - (NSURL *)tempFile {
-  return ({
-    NSURL *tempDirectory = [NSURL fileURLWithPath:NSTemporaryDirectory()];
-    [tempDirectory URLByAppendingPathComponent:@"Output.json"];
-  });
+  return [[self tempDirectory] URLByAppendingPathComponent:@"Output.json"];
+}
+
+- (NSURL *)tempDirectory {
+  return [NSURL fileURLWithPath:NSTemporaryDirectory()];
 }
 
 @end
