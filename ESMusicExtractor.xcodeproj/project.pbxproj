@@ -591,7 +591,7 @@
 		C013813B211A060C0046020A /* tnt_subscript.h in Headers */ = {isa = PBXBuildFile; fileRef = C0137A34211A06090046020A /* tnt_subscript.h */; };
 		C013813C211A060C0046020A /* tnt_vec.h in Headers */ = {isa = PBXBuildFile; fileRef = C0137A35211A06090046020A /* tnt_vec.h */; };
 		C013813D211A060C0046020A /* tnt_version.h in Headers */ = {isa = PBXBuildFile; fileRef = C0137A36211A06090046020A /* tnt_version.h */; };
-		C0138403211A06BD0046020A /* ESMusicExtractor.h in Headers */ = {isa = PBXBuildFile; fileRef = C0138401211A06BD0046020A /* ESMusicExtractor.h */; };
+		C0138403211A06BD0046020A /* ESMusicExtractor.h in Headers */ = {isa = PBXBuildFile; fileRef = C0138401211A06BD0046020A /* ESMusicExtractor.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C0B559EB211B2079007817F6 /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = C0B559EA211B2079007817F6 /* libiconv.tbd */; };
 		C0B559ED211B20A2007817F6 /* libbz2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = C0B559EC211B20A2007817F6 /* libbz2.tbd */; };
 		C0B559EF211B20A9007817F6 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = C0B559EE211B20A9007817F6 /* libz.tbd */; };
@@ -613,7 +613,7 @@
 		C0E7A20F211A2F6700711656 /* libavformat.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C0E7A1A6211A2F6600711656 /* libavformat.a */; };
 		C0E7A210211A2F6700711656 /* libavutil.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C0E7A1A7211A2F6600711656 /* libavutil.a */; };
 		C0E7A211211A2F6700711656 /* libswresample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C0E7A1A8211A2F6600711656 /* libswresample.a */; };
-		C0E7A21D211A30FE00711656 /* ESExtractor.h in Headers */ = {isa = PBXBuildFile; fileRef = C0E7A21A211A30FE00711656 /* ESExtractor.h */; };
+		C0E7A21D211A30FE00711656 /* ESExtractor.h in Headers */ = {isa = PBXBuildFile; fileRef = C0E7A21A211A30FE00711656 /* ESExtractor.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C0E7A21E211A30FE00711656 /* ESExtractor.mm in Sources */ = {isa = PBXBuildFile; fileRef = C0E7A21B211A30FE00711656 /* ESExtractor.mm */; };
 /* End PBXBuildFile section */
 
@@ -2199,6 +2199,8 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C0E7A21D211A30FE00711656 /* ESExtractor.h in Headers */,
+				C0138403211A06BD0046020A /* ESMusicExtractor.h in Headers */,
 				C01380A8211A060C0046020A /* pitchyin.h in Headers */,
 				C0137EB3211A060B0046020A /* kiss_fft.h in Headers */,
 				C01380B6211A060C0046020A /* algorithm.h in Headers */,
@@ -2493,7 +2495,6 @@
 				C0137FF2211A060B0046020A /* maxfilter.h in Headers */,
 				C0137F5C211A060B0046020A /* onsetdetectionglobal.h in Headers */,
 				C01380E2211A060C0046020A /* ringbuffervectoroutput.h in Headers */,
-				C0138403211A06BD0046020A /* ESMusicExtractor.h in Headers */,
 				C01380C2211A060C0046020A /* essentiamath.h in Headers */,
 				C013810E211A060C0046020A /* FreesoundTonalDescriptors.h in Headers */,
 				C0137F12211A060B0046020A /* dcremoval.h in Headers */,
@@ -2511,7 +2512,6 @@
 				C0138044211A060B0046020A /* poolaggregator.h in Headers */,
 				C0137ECB211A060B0046020A /* kfc.h in Headers */,
 				C01380BF211A060C0046020A /* debugging.h in Headers */,
-				C0E7A21D211A30FE00711656 /* ESExtractor.h in Headers */,
 				C0137FAE211A060B0046020A /* panning.h in Headers */,
 				C0137F54211A060B0046020A /* loopbpmestimator.h in Headers */,
 				C0138129211A060C0046020A /* tnt2vector.h in Headers */,
