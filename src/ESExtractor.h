@@ -10,4 +10,6 @@
 
 @interface ESExtractor : NSObject
 
+- (NSDictionary *)analyseTrack:(NSURL *)url;
+
 @end
