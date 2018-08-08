@@ -1237,6 +1237,7 @@
 		C0B55A04211B27D0007817F6 /* extractor_utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = extractor_utils.h; sourceTree = "<group>"; };
 		C0B55A05211B27D0007817F6 /* streaming_extractor_music.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = streaming_extractor_music.h; sourceTree = "<group>"; };
 		C0B55A06211B27D0007817F6 /* version.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = version.h; sourceTree = "<group>"; };
+		C0B55A0F211B2E0F007817F6 /* ESMusicExtractor.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = ESMusicExtractor.xcconfig; sourceTree = "<group>"; };
 		C0BA3B8D211A31E90038D19F /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 		C0E7A1A3211A2F6600711656 /* libavcodec.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libavcodec.a; sourceTree = "<group>"; };
 		C0E7A1A6211A2F6600711656 /* libavformat.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libavformat.a; sourceTree = "<group>"; };
@@ -1272,6 +1273,7 @@
 		C01375EF211A03270046020A = {
 			isa = PBXGroup;
 			children = (
+				C0B55A0F211B2E0F007817F6 /* ESMusicExtractor.xcconfig */,
 				C0138401211A06BD0046020A /* ESMusicExtractor.h */,
 				C0138400211A06BD0046020A /* Info.plist */,
 				C0137604211A06080046020A /* libs */,
@@ -2895,6 +2897,7 @@
 /* Begin XCBuildConfiguration section */
 		C01375FF211A03280046020A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C0B55A0F211B2E0F007817F6 /* ESMusicExtractor.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -2956,6 +2959,7 @@
 		};
 		C0137600211A03280046020A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C0B55A0F211B2E0F007817F6 /* ESMusicExtractor.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -3011,6 +3015,7 @@
 		};
 		C0137602211A03280046020A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C0B55A0F211B2E0F007817F6 /* ESMusicExtractor.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
@@ -3051,6 +3056,7 @@
 		};
 		C0137603211A03280046020A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C0B55A0F211B2E0F007817F6 /* ESMusicExtractor.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
