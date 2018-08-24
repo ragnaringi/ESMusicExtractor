@@ -28,6 +28,8 @@
 #include "audioloader_ios.h"
 #include "algorithmfactory.h"
 #include <iomanip>  //  setw()
+// Cryptography
+#include <CommonCrypto/CommonDigest.h>
 
 using namespace std;
 
@@ -61,7 +63,9 @@ namespace essentia {
         throw EssentiaException("AudioLoader: Could not open file \"", filename, "\", error = ", result);
       }
       
-//      av_md5_init(_md5Encoded); // TODO
+      if ( !CC_MD5_Init(&hashObject) ) {
+        throw EssentiaException("Error allocating the MD5 context");
+      }
     }
     
     
@@ -176,15 +180,21 @@ namespace essentia {
       
       vector<StereoSample>& audio = *((vector<StereoSample>*)_audio.getTokens());
       
+      float interleaved[nsamples * _nChannels];
+      
       if (_nChannels == 1) {
         for (int i=0; i<nsamples; i++) {
           audio[i].left() = ((float *)bufferList->mBuffers[0].mData)[i];
+          interleaved[i] = audio[i].left();
         }
       }
       else { // _nChannels == 2
         for (int i=0; i<nsamples; i++) {
           audio[i].left() = ((float *)bufferList->mBuffers[0].mData)[i];
           audio[i].right() = ((float *)bufferList->mBuffers[1].mData)[i];
+          
+          interleaved[2*i] = audio[i].left();
+          interleaved[2*i+1] = audio[i].right();
         }
       }
       
@@ -197,8 +207,25 @@ namespace essentia {
       }
       free(bufferList);
       
+      // compute md5 first
+      if (_computeMD5) {
+        CC_MD5_Update(&hashObject,
+                     (const void *)interleaved,
+                     (CC_LONG)nsamples*_nChannels);
+      }
+      
       if ( eof ) {
         closeAudioFile();
+        if (_computeMD5) {
+          // Compute the hash digest
+          unsigned char digest[CC_MD5_DIGEST_LENGTH];
+          CC_MD5_Final(digest, &hashObject);
+          _md5.push(uint8_t_to_hex(digest, 16));
+        }
+        else {
+          string md5 = "";
+          _md5.push(md5);
+        }
       }
 
       return OK;

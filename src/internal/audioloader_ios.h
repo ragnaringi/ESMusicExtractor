@@ -19,11 +19,12 @@
 
 #pragma once
 
+#include <CommonCrypto/CommonDigest.h>
+#include <AudioToolbox/AudioToolbox.h>
+
 #include "streamingalgorithm.h"
 #include "network.h"
 #include "poolstorage.h"
-
-#include <AudioToolbox/AudioToolbox.h>
 
 namespace essentia {
 namespace streaming {
@@ -41,8 +42,7 @@ class AudioLoader : public Algorithm {
 
   ExtAudioFileRef _file;
 
-//  AVMD5 *_md5Encoded;
-  uint8_t _checksum[16];
+  CC_MD5_CTX hashObject;
   bool _computeMD5;
 
   void openAudioFile(const std::string& filename);
@@ -62,11 +62,6 @@ class AudioLoader : public Algorithm {
     declareOutput(_codec, 0, "codec", "the codec that is used to decode the input audio");
 
     _audio.setBufferType(BufferUsage::forLargeAudioStream);
-
-//    _md5Encoded = av_md5_alloc();
-//    if (!_md5Encoded) {
-//        throw EssentiaException("Error allocating the MD5 context");
-//    }
   }
 
   ~AudioLoader();
