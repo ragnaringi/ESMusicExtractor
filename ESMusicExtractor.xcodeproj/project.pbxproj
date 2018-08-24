@@ -2914,14 +2914,12 @@
 			isa = PBXGroup;
 			children = (
 				C0B55A02211B27D0007817F6 /* music_extractor */,
-				C088C618211B54C3009ED9DB /* taglib_config.h */,
+				C0B9C2672130A4140029DA6F /* 3rdparty */,
 				C0B559FE211B27D0007817F6 /* audioloader_ios.cpp */,
 				C037276321304F4C00E9C15C /* audioloader_ios_native.cpp */,
 				C037276421304F4C00E9C15C /* audioloader_ios.h */,
 				C0B55A00211B27D0007817F6 /* essentia_algorithms_reg.cpp */,
-				C0B55A01211B27D0007817F6 /* ffmpegapi.h */,
 				C0B55A05211B27D0007817F6 /* streaming_extractor_music.h */,
-				C0B55A06211B27D0007817F6 /* version.h */,
 			);
 			path = internal;
 			sourceTree = "<group>";
@@ -2933,6 +2931,16 @@
 				C0B55A04211B27D0007817F6 /* extractor_utils.h */,
 			);
 			path = music_extractor;
+			sourceTree = "<group>";
+		};
+		C0B9C2672130A4140029DA6F /* 3rdparty */ = {
+			isa = PBXGroup;
+			children = (
+				C0B55A01211B27D0007817F6 /* ffmpegapi.h */,
+				C088C618211B54C3009ED9DB /* taglib_config.h */,
+				C0B55A06211B27D0007817F6 /* version.h */,
+			);
+			path = 3rdparty;
 			sourceTree = "<group>";
 		};
 		C0BA3B8C211A31E90038D19F /* Frameworks */ = {
