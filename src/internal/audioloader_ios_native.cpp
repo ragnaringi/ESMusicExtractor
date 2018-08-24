@@ -38,18 +38,25 @@ namespace essentia {
     const char* AudioLoader::category = essentia::standard::AudioLoader::category;
     const char* AudioLoader::description = essentia::standard::AudioLoader::description;
     
+    
     AudioLoader::~AudioLoader() {
       closeAudioFile();
-      
+#if defined(USE_ACCELERATE)
+//      free(_buffer);
+#else
       av_freep(&_buffer);
       av_freep(&_md5Encoded);
       av_freep(&_decodedFrame);
+#endif
     }
     
     void AudioLoader::configure() {
       // set ffmpeg to be silent by default, so we don't have these annoying
       // "invalid new backstep" messages anymore, when everything is actually fine
+#if defined(USE_ACCELERATE)
+#else
       av_log_set_level(AV_LOG_QUIET);
+#endif
       //av_log_set_level(AV_LOG_VERBOSE);
       _computeMD5 = parameter("computeMD5").toBool();
       _selectedStream = parameter("audioStream").toInt();
@@ -59,7 +66,15 @@ namespace essentia {
     
     void AudioLoader::openAudioFile(const string& filename) {
       E_DEBUG(EAlgorithm, "AudioLoader: opening file: " << filename);
-      
+#if defined(USE_ACCELERATE)
+      auto path =
+      CFStringCreateWithCString(kCFAllocatorDefault, filename.c_str(),kCFStringEncodingUTF8);
+      auto url = CFURLCreateWithFileSystemPath(kCFAllocatorDefault, path, kCFURLPOSIXPathStyle, false);
+      OSStatus result = ExtAudioFileOpenURL(url, &_file);
+      if ( result != noErr ) {
+        throw EssentiaException("AudioLoader: Could not open file \"", filename, "\", error = ", result);
+      }
+#else
       // Open file
       int errnum;
       if ((errnum = avformat_open_input(&_demuxCtx, filename.c_str(), NULL, NULL)) != 0) {
@@ -128,7 +143,11 @@ namespace essentia {
       
       E_DEBUG(EAlgorithm, "AudioLoader: using sample format conversion from libavresample");
       
+#ifndef TARGET_IOS
+      _convertCtxAv = avresample_alloc();
+#else
       _convertCtxAv = swr_alloc();
+#endif
       
       av_opt_set_int(_convertCtxAv, "in_channel_layout", layout, 0);
       av_opt_set_int(_convertCtxAv, "out_channel_layout", layout, 0);
@@ -137,12 +156,21 @@ namespace essentia {
       av_opt_set_int(_convertCtxAv, "in_sample_fmt", _audioCtx->sample_fmt, 0);
       av_opt_set_int(_convertCtxAv, "out_sample_fmt", AV_SAMPLE_FMT_FLT, 0);
       
+#ifndef TARGET_IOS
+      if (avresample_open(_convertCtxAv) < 0) {
+        throw EssentiaException("AudioLoader: Could not initialize avresample context");
+      }
+#else
+  #if defined(USE_ACCELERATE)
+#warning TODO
+  #else
       swr_init(_convertCtxAv);
       
       if (swr_is_initialized(_convertCtxAv) == 0) {
         throw EssentiaException("AudioLoader: Could not initialize swresample context");
       }
-      
+  #endif
+#endif
       av_init_packet(&_packet);
       
       _decodedFrame = av_frame_alloc();
@@ -150,20 +178,41 @@ namespace essentia {
         throw EssentiaException("AudioLoader: Could not allocate audio frame");
       }
       
-      av_md5_init(_md5Encoded);
+      av_md5_init(_md5Encoded); // TODO
+#endif
+#warning TODO
     }
     
     
     void AudioLoader::closeAudioFile() {
+#if defined(USE_ACCELERATE)
+#else
       if (!_demuxCtx) {
         return;
       }
+#endif
       
+#ifndef TARGET_IOS
+      if (_convertCtxAv) {
+        avresample_close(_convertCtxAv);
+        avresample_free(&_convertCtxAv);
+      }
+#else
+  #if defined(USE_ACCELERATE)
+  #else
       if (_convertCtxAv) {
         swr_close(_convertCtxAv);
         swr_free(&_convertCtxAv);
       }
+  #endif
+#endif
       
+#if defined(USE_ACCELERATE)
+      if ( _file != NULL ) {
+        ExtAudioFileDispose( _file );
+        _file = NULL;
+      }
+#else
       // Close the codec
       if (_audioCtx) avcodec_close(_audioCtx);
       // Close the audio file
@@ -174,7 +223,9 @@ namespace essentia {
       av_free_packet(&_packet);
       _demuxCtx = 0;
       _audioCtx = 0;
+      
       _streams.clear();
+#endif
     }
     
     
@@ -213,6 +264,115 @@ namespace essentia {
         throw EssentiaException("AudioLoader: Trying to call process() on an AudioLoader algo which hasn't been correctly configured.");
       }
       
+#if defined(USE_ACCELERATE)
+      auto audioFormat = ({
+        AudioStreamBasicDescription audioDescription;
+        memset(&audioDescription, 0, sizeof(audioDescription));
+        audioDescription.mFormatID          = kAudioFormatLinearPCM;
+        audioDescription.mFormatFlags       = kAudioFormatFlagIsFloat | kAudioFormatFlagIsPacked | kAudioFormatFlagIsNonInterleaved;
+        audioDescription.mChannelsPerFrame  = 2;
+        audioDescription.mBytesPerPacket    = sizeof(float);
+        audioDescription.mFramesPerPacket   = 1;
+        audioDescription.mBytesPerFrame     = sizeof(float);
+        audioDescription.mBitsPerChannel    = 8 * sizeof(float);
+        audioDescription.mSampleRate        = 44100.0;
+        audioDescription;
+      });
+      
+      SInt64 frameCount = FFMPEG_BUFFER_SIZE / (audioFormat.mBytesPerFrame * audioFormat.mChannelsPerFrame);
+//      UInt32 propertySize = sizeof(frameCount);
+//      if ( ExtAudioFileGetProperty(_file, kExtAudioFileProperty_FileLengthFrames, &propertySize, &frameCount) != noErr ) {
+//        throw EssentiaException("AudioLoader: Error getting file size");
+//      }
+      
+      // Create temporary audio bufferlist
+      int numberOfBuffers = audioFormat.mFormatFlags & kAudioFormatFlagIsNonInterleaved ? audioFormat.mChannelsPerFrame : 1;
+      int channelsPerBuffer = audioFormat.mFormatFlags & kAudioFormatFlagIsNonInterleaved ? 1 : audioFormat.mChannelsPerFrame;
+      int bytesPerBuffer = audioFormat.mBytesPerFrame * frameCount;
+      
+      AudioBufferList *bufferList = (AudioBufferList *)malloc(sizeof(AudioBufferList) + (numberOfBuffers-1)*sizeof(AudioBuffer));
+      if ( !bufferList ) {
+        throw EssentiaException("AudioLoader: Error creating AudioBufferList");
+      }
+      bufferList->mNumberBuffers = numberOfBuffers;
+      for ( int i=0; i<numberOfBuffers; i++ ) {
+        if ( bytesPerBuffer > 0 ) {
+          bufferList->mBuffers[i].mData = calloc(bytesPerBuffer, 1);
+          if ( !bufferList->mBuffers[i].mData ) {
+            for ( int j=0; j<i; j++ ) free(bufferList->mBuffers[j].mData);
+            free(bufferList);
+            throw EssentiaException("AudioLoader: Error allocating data for AudioBufferList");
+          }
+        } else {
+          bufferList->mBuffers[i].mData = NULL;
+        }
+        bufferList->mBuffers[i].mDataByteSize = bytesPerBuffer;
+        bufferList->mBuffers[i].mNumberChannels = channelsPerBuffer;
+      }
+      
+      // Set destination format
+      if ( ExtAudioFileSetProperty(_file, kExtAudioFileProperty_ClientDataFormat, sizeof(audioFormat), &audioFormat) != noErr ) {
+        throw EssentiaException("AudioLoader: Error setting client data format");
+      }
+      
+      // Read audio
+      // TODO: Read in chunks instead of whole file at once
+      UInt32 readFrames = frameCount;
+      if ( ExtAudioFileRead(_file, &readFrames, bufferList) != noErr ) {
+        throw EssentiaException("AudioLoader: Error reading file" );
+      }
+      // assert( readFrames == frameCount && "Read frames don't match file size" );
+      bool eof = readFrames < frameCount;
+      if ( eof ) { // EOF
+        shouldStop(true);
+      }
+      
+      int nsamples = readFrames;
+      
+      // acquire necessary data
+      bool ok = _audio.acquire(nsamples);
+      if (!ok) {
+        throw EssentiaException("AudioLoader: could not acquire output for audio");
+      }
+      
+      vector<StereoSample>& audio = *((vector<StereoSample>*)_audio.getTokens());
+      
+      if (_nChannels == 1) {
+        for (int i=0; i<nsamples; i++) {
+          audio[i].left() = ((float *)bufferList->mBuffers[0].mData)[i];
+          //audio[i].left() = scale(_buffer[i]);
+        }
+      }
+      else { // _nChannels == 2
+        // The output format is always AV_SAMPLE_FMT_FLT, which is interleaved
+        for (int i=0; i<nsamples; i++) {
+          audio[i].left() = ((float *)bufferList->mBuffers[0].mData)[i];
+          audio[i].right() = ((float *)bufferList->mBuffers[1].mData)[i];
+          //audio[i].left() = scale(_buffer[2*i]);
+          //audio[i].right() = scale(_buffer[2*i+1]);
+        }
+        /*
+         // planar
+         for (int i=0; i<nsamples; i++) {
+         audio[i].left() = scale(_buffer[i]);
+         audio[i].right() = scale(_buffer[nsamples+i]);
+         }
+         */
+      }
+      
+      // release data
+      _audio.release(nsamples);
+      
+      // Free bufferlist
+      for ( int i=0; i<bufferList->mNumberBuffers; i++ ) {
+        if ( bufferList->mBuffers[i].mData ) free(bufferList->mBuffers[i].mData);
+      }
+      free(bufferList);
+      
+      if ( eof ) {
+        closeAudioFile();
+      }
+#else
       // read frames until we get a good one
       do {
         int result = av_read_frame(_demuxCtx, &_packet);
@@ -256,10 +416,14 @@ namespace essentia {
       // neds to be freed !!
       av_free_packet(&_packet);
       
+#endif
       return OK;
     }
     
     
+#if defined(USE_ACCELERATE)
+#warning TODO
+#else
     int AudioLoader::decode_audio_frame(AVCodecContext* audioCtx,
                                         float* output,
                                         int* outputSize,
@@ -296,14 +460,22 @@ namespace essentia {
           memcpy(output, _decodedFrame->data[0], inputPlaneSize);
         }
         else {
-
-          int samplesWritten = swr_convert(_convertCtxAv,
+#ifndef TARGET_IOS
+          int samplesWrittern = avresample_convert(_convertCtxAv,
+                                                   (uint8_t**) &output,
+                                                   outputPlaneSize,
+                                                   outputBufferSamples,
+                                                   (uint8_t**)_decodedFrame->data,
+                                                   inputPlaneSize,
+                                                   inputSamples);
+#else
+          int samplesWrittern = swr_convert(_convertCtxAv,
                                             (uint8_t**)&output,
                                             outputBufferSamples,
                                             (const uint8_t**)_decodedFrame->data,
                                             inputSamples);
-          
-          if (samplesWritten < inputSamples) {
+#endif
+          if (samplesWrittern < inputSamples) {
             // TODO: there may be data remaining in the internal FIFO buffer
             // to get this data: call avresample_convert() with NULL input
             // Test if this happens in practice
@@ -323,9 +495,13 @@ namespace essentia {
       
       return len;
     }
+#endif
     
     
     void AudioLoader::flushPacket() {
+#if defined(USE_ACCELERATE)
+#warning TODO
+#else
       AVPacket empty;
       av_init_packet(&empty);
       do {
@@ -344,6 +520,7 @@ namespace essentia {
         copyFFmpegOutput();
         
       } while (_dataSize > 0);
+#endif
     }
     
     
@@ -360,6 +537,9 @@ namespace essentia {
        E_DEBUG(EAlgorithm, "duration: " << _packet.duration);
        */
       int len = 0;
+#if defined(USE_ACCELERATE)
+#warning TODO
+#else
       
       // buff is an offset in our output buffer, it points to where we should start
       // writing the next decoded samples
@@ -420,12 +600,12 @@ namespace essentia {
       _packet.size -= len;
       _packet.data += len;
       
-      
       if (_dataSize <= 0) {
         // No data yet, get more frames
         // cout << "no data yet, get more frames" << endl;
         _dataSize = 0;
       }
+#endif
       
       return len;
     }
@@ -437,7 +617,10 @@ namespace essentia {
      */
     
     void AudioLoader::copyFFmpegOutput() {
+#if defined(USE_ACCELERATE)
+#else
       int nsamples = _dataSize / (av_get_bytes_per_sample(AV_SAMPLE_FMT_FLT)  * _nChannels);
+
       if (nsamples == 0) return;
       
       // acquire necessary data
@@ -473,6 +656,7 @@ namespace essentia {
       
       // release data
       _audio.release(nsamples);
+#endif
     }
     
     void AudioLoader::reset() {
@@ -485,8 +669,33 @@ namespace essentia {
       closeAudioFile();
       openAudioFile(filename);
       
+#if defined(USE_ACCELERATE)
+      AudioStreamBasicDescription asbd;
+      UInt32 propertySize = sizeof(asbd);
+      if ( ExtAudioFileGetProperty(_file, kExtAudioFileProperty_FileDataFormat, &propertySize, &asbd) != noErr ) {
+        throw EssentiaException("AudioLoader: Error getting audio file channel and sample rate info");
+      }
+      pushChannelsSampleRateInfo(asbd.mChannelsPerFrame, asbd.mSampleRate);
+      
+      OSStatus status = noErr;
+      AudioFileID audioFileId = NULL;
+      
+      UInt32 size = sizeof(audioFileId);
+      status = ExtAudioFileGetProperty(_file, kExtAudioFileProperty_AudioFile, &size, &audioFileId);
+      assert(status == noErr);
+      
+      UInt32 bitRate = 0;
+      size = sizeof(bitRate);
+      if ( AudioFileGetProperty(audioFileId, kAudioFilePropertyBitRate, &size, &bitRate) != noErr ) {
+        throw EssentiaException("AudioLoader: Error getting audio file bitRate");
+      }
+      
+      E_DEBUG(EAlgorithm, "AudioLoader: TODO: get audio codec");
+      pushCodecInfo("pcm_s16le", bitRate);
+#else
       pushChannelsSampleRateInfo(_audioCtx->channels, _audioCtx->sample_rate);
       pushCodecInfo(_audioCodec->name, _audioCtx->bit_rate);
+#endif
     }
     
   } // namespace streaming

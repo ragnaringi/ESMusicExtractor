@@ -20,13 +20,25 @@
 #ifndef ESSENTIA_STREAMING_AUDIOLOADER_H
 #define ESSENTIA_STREAMING_AUDIOLOADER_H
 
+#if __APPLE__
+#import "TargetConditionals.h"
+#endif
+
+#if (TARGET_OS_IPHONE_SIMULATOR) || (TARGET_OS_IPHONE) || (TARGET_IPHONE)
+#define TARGET_IOS
+#endif
+
 #include "streamingalgorithm.h"
 #include "network.h"
 #include "poolstorage.h"
 
+#if defined(USE_ACCELERATE)
+#include <AudioToolbox/AudioToolbox.h>
+#else
 #include "ffmpegapi.h"
 
 extern AVInputFormat ff_wav_demuxer;
+#endif
 
 #define MAX_AUDIO_FRAME_SIZE 192000
 
@@ -50,24 +62,35 @@ class AudioLoader : public Algorithm {
   // each time we decode a frame we need to have at least a full buffer of free space.
   const static int FFMPEG_BUFFER_SIZE = MAX_AUDIO_FRAME_SIZE * 2;
 
-  float* _buffer;
-  int _dataSize;
+//  float* _buffer;
+//  int _dataSize;
 
+#if defined(USE_ACCELERATE)
+  ExtAudioFileRef _file;
+#else
   AVFormatContext* _demuxCtx;
   AVCodecContext* _audioCtx;
   AVCodec* _audioCodec;
   AVPacket _packet;
-  AVMD5 *_md5Encoded;
   AVFrame* _decodedFrame;
+  AVMD5 *_md5Encoded;
+#endif
   uint8_t _checksum[16];
   bool _computeMD5;
 
+#ifndef TARGET_IOS
+  struct AVAudioResampleContext* _convertCtxAv;
+#else
+#if defined(USE_ACCELERATE)
+#else
   struct SwrContext* _convertCtxAv;
-
+  
   int _streamIdx; // index of the audio stream among all the streams contained in the file
   std::vector<int> _streams;
-  int _selectedStream;
   bool _configured;
+#endif
+  int _selectedStream;
+#endif
 
   void openAudioFile(const std::string& filename);
   void closeAudioFile();
@@ -75,17 +98,32 @@ class AudioLoader : public Algorithm {
   void pushChannelsSampleRateInfo(int nChannels, Real sampleRate);
   void pushCodecInfo(std::string codec, int bit_rate);
 
+#if defined(USE_ACCELERATE)
+#else
   int decode_audio_frame(AVCodecContext* audioCtx, float* output,
                          int* outputSize, AVPacket* packet);
+#endif
 
   int decodePacket();
   void flushPacket();
   void copyFFmpegOutput();
 
+
  public:
-  AudioLoader() : Algorithm(), _buffer(0),  _demuxCtx(0),
-	          _audioCtx(0), _audioCodec(0), _decodedFrame(0),
-            _convertCtxAv(0), _configured(false) {
+  AudioLoader()
+    : Algorithm()
+#if defined(USE_ACCELERATE)
+#else
+    , _buffer(0)
+    , _demuxCtx(0),
+	    _audioCtx(0),
+      _audioCodec(0),
+      _decodedFrame(0),
+      _convertCtxAv(0),
+      _configured(false)
+#endif
+  
+  {
 
     declareOutput(_audio, 1, "audio", "the input audio signal");
     declareOutput(_sampleRate, 0, "sampleRate", "the sampling rate of the audio signal [Hz]");
@@ -96,6 +134,11 @@ class AudioLoader : public Algorithm {
 
     _audio.setBufferType(BufferUsage::forLargeAudioStream);
 
+#if defined(USE_ACCELERATE)
+    // TODO: (16 bit alignment)
+    
+    // TODO: MD5 encoding
+#else
     // Register all formats and codecs
     av_register_all();
 
@@ -106,6 +149,8 @@ class AudioLoader : public Algorithm {
     if (!_md5Encoded) {
         throw EssentiaException("Error allocating the MD5 context");
     }
+    
+    #endif
   }
 
   ~AudioLoader();
