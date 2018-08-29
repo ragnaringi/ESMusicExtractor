@@ -44,18 +44,28 @@ static std::vector<char> readAllBytes(char const* filename) {
   ifs.seekg(0, ios::beg);
   ifs.read(result.data(), pos);
   
-  string header(result.begin(), result.begin() + 4);
-  
-  if (header == "RIFF") { // WAVE file
+  auto header = string(result.begin(), result.begin() + 4);
+  if ( header == "RIFF" ) { // WAVE file
     return vector<char>( result.begin() + 44, result.end() );
-  } else if (header == "FORM") {
+  } else if ( header == "FORM" ) { // AIFF
     for ( int i = 4; i < result.size(); i++ ) {
-      if ( string(result.begin()+i, result.begin()+i+4) == "SSND" ) {
+      auto str = string(result.begin()+i, result.begin()+i+4);
+      if ( str == "SSND" ) {
         return vector<char>( result.begin()+i+16, result.end() );
       }
     }
+  } else {
+    auto str = string(result.begin()+4, result.begin()+11);
+    if ( str == "ftypM4A" ) { // m4a
+      for ( int i = 0; i < result.size()-4; i++ ) {
+        if ( result[i] == '!' && result[i+3] == '@' && result[i+4] == 'h' ) {
+          return vector<char>( result.begin()+i, result.end() );
+        }
+      }
+    } else {
+      cout << "File format not supported" << endl;
+    }
   }
-  // TODO: Handle other formats
   return result;
 }
 
@@ -99,9 +109,9 @@ namespace essentia { namespace streaming {
     }
 
     auto fileData = readAllBytes(filename.c_str());
-    for ( int i = 0; i < 100; i++ ) {
-      std::cout << i << " : " << fileData[i] << std::endl;
-    }
+//    for ( int i = 0; i < 100; i++ ) {
+//      std::cout << i << " : " << fileData[i] << std::endl;
+//    }
 
     // compute md5 first
     if (_computeMD5) {
