@@ -34,7 +34,7 @@
 #include "algorithmfactory.h"
 
 using namespace std;
-
+// https://codereview.stackexchange.com/a/22907
 static std::vector<char> readAllBytes(char const* filename) {
   ifstream ifs(filename, ios::binary|ios::ate);
   ifstream::pos_type pos = ifs.tellg();
@@ -55,8 +55,19 @@ static std::vector<char> readAllBytes(char const* filename) {
       }
     }
   } else {
-    auto str = string(result.begin()+4, result.begin()+11);
-    if ( str == "ftypM4A" ) { // m4a
+    auto str = string(result.begin(), result.begin()+11);
+    if ( str.substr(0,3) == "ID3" ) { // mp3
+      // Extract ID3 tag size from synchsafe integer
+      // https://stackoverflow.com/a/5652842
+      uint8_t* sync_safe = (uint8_t *)result.data()+6;
+      uint32_t byte0 = sync_safe[0];
+      uint32_t byte1 = sync_safe[1];
+      uint32_t byte2 = sync_safe[2];
+      uint32_t byte3 = sync_safe[3];
+      int len =  byte0 << 21 | byte1 << 14 | byte2 << 7 | byte3;
+      int tagSize = len + 10; //
+      return vector<char>( result.begin()+tagSize, result.end() );
+    } else if ( str.substr(4, 11) == "ftypM4A" ) { // m4a
       for ( int i = 0; i < result.size()-4; i++ ) {
         if ( result[i] == '!' && result[i+3] == '@' && result[i+4] == 'h' ) {
           return vector<char>( result.begin()+i, result.end() );
