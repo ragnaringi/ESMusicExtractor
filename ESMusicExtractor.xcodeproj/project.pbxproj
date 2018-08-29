@@ -717,9 +717,6 @@
 		C088CC0D211B561D009ED9DB /* xmproperties.h in Headers */ = {isa = PBXBuildFile; fileRef = C088CA7D211B561C009ED9DB /* xmproperties.h */; };
 		C088CC9C211B57F1009ED9DB /* metadatareader.h in Headers */ = {isa = PBXBuildFile; fileRef = C088CC9A211B57F0009ED9DB /* metadatareader.h */; };
 		C088CC9D211B57F1009ED9DB /* metadatareader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C088CC9B211B57F1009ED9DB /* metadatareader.cpp */; };
-		C0B559EB211B2079007817F6 /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = C0B559EA211B2079007817F6 /* libiconv.tbd */; };
-		C0B559ED211B20A2007817F6 /* libbz2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = C0B559EC211B20A2007817F6 /* libbz2.tbd */; };
-		C0B559EF211B20A9007817F6 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = C0B559EE211B20A9007817F6 /* libz.tbd */; };
 		C0B559F1211B20C5007817F6 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0B559F0211B20C4007817F6 /* AudioToolbox.framework */; };
 		C0B559F3211B20CB007817F6 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0B559F2211B20CB007817F6 /* Accelerate.framework */; };
 		C0B559F4211B23C4007817F6 /* libsamplerate.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C0F3BE8D211B0EED00073488 /* libsamplerate.a */; };
@@ -730,7 +727,6 @@
 		C0B55A0D211B27D0007817F6 /* streaming_extractor_music.h in Headers */ = {isa = PBXBuildFile; fileRef = C0B55A05211B27D0007817F6 /* streaming_extractor_music.h */; };
 		C0B55A0E211B27D0007817F6 /* version.h in Headers */ = {isa = PBXBuildFile; fileRef = C0B55A06211B27D0007817F6 /* version.h */; };
 		C0B9C2662130872E0029DA6F /* audioloader_ios_native.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C037276321304F4C00E9C15C /* audioloader_ios_native.cpp */; };
-		C0BA3B8E211A31E90038D19F /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = C0BA3B8D211A31E90038D19F /* libc++.tbd */; };
 		C0E7A21D211A30FE00711656 /* ESExtractor.h in Headers */ = {isa = PBXBuildFile; fileRef = C0E7A21A211A30FE00711656 /* ESExtractor.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C0E7A21E211A30FE00711656 /* ESExtractor.mm in Sources */ = {isa = PBXBuildFile; fileRef = C0E7A21B211A30FE00711656 /* ESExtractor.mm */; };
 /* End PBXBuildFile section */
@@ -1565,9 +1561,6 @@
 		C088CA7D211B561C009ED9DB /* xmproperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = xmproperties.h; sourceTree = "<group>"; };
 		C088CC9A211B57F0009ED9DB /* metadatareader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = metadatareader.h; sourceTree = "<group>"; };
 		C088CC9B211B57F1009ED9DB /* metadatareader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = metadatareader.cpp; sourceTree = "<group>"; };
-		C0B559EA211B2079007817F6 /* libiconv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.tbd; path = usr/lib/libiconv.tbd; sourceTree = SDKROOT; };
-		C0B559EC211B20A2007817F6 /* libbz2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libbz2.tbd; path = usr/lib/libbz2.tbd; sourceTree = SDKROOT; };
-		C0B559EE211B20A9007817F6 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		C0B559F0211B20C4007817F6 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		C0B559F2211B20CB007817F6 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
 		C0B559F9211B2451007817F6 /* polartocartesian.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = polartocartesian.h; sourceTree = "<group>"; };
@@ -1579,11 +1572,6 @@
 		C0B55A05211B27D0007817F6 /* streaming_extractor_music.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = streaming_extractor_music.h; sourceTree = "<group>"; };
 		C0B55A06211B27D0007817F6 /* version.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = version.h; sourceTree = "<group>"; };
 		C0B55A0F211B2E0F007817F6 /* ESMusicExtractor.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = ESMusicExtractor.xcconfig; sourceTree = "<group>"; };
-		C0BA3B8D211A31E90038D19F /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
-		C0E7A1A3211A2F6600711656 /* libavcodec.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libavcodec.a; sourceTree = "<group>"; };
-		C0E7A1A6211A2F6600711656 /* libavformat.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libavformat.a; sourceTree = "<group>"; };
-		C0E7A1A7211A2F6600711656 /* libavutil.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libavutil.a; sourceTree = "<group>"; };
-		C0E7A1A8211A2F6600711656 /* libswresample.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libswresample.a; sourceTree = "<group>"; };
 		C0E7A21A211A30FE00711656 /* ESExtractor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESExtractor.h; sourceTree = "<group>"; };
 		C0E7A21B211A30FE00711656 /* ESExtractor.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ESExtractor.mm; sourceTree = "<group>"; };
 		C0F3BE87211B0EED00073488 /* samplerate.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = samplerate.xcodeproj; path = samplerate/samplerate.xcodeproj; sourceTree = "<group>"; };
@@ -1597,10 +1585,6 @@
 				C0B559F4211B23C4007817F6 /* libsamplerate.a in Frameworks */,
 				C0B559F3211B20CB007817F6 /* Accelerate.framework in Frameworks */,
 				C0B559F1211B20C5007817F6 /* AudioToolbox.framework in Frameworks */,
-				C0B559EF211B20A9007817F6 /* libz.tbd in Frameworks */,
-				C0B559ED211B20A2007817F6 /* libbz2.tbd in Frameworks */,
-				C0B559EB211B2079007817F6 /* libiconv.tbd in Frameworks */,
-				C0BA3B8E211A31E90038D19F /* libc++.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1633,7 +1617,6 @@
 			children = (
 				C088C95A211B561C009ED9DB /* taglib */,
 				C0F3BE87211B0EED00073488 /* samplerate.xcodeproj */,
-				C0E7A139211A2F6600711656 /* ffmpeg-ios-static-libs */,
 				C0137605211A06080046020A /* essentia */,
 			);
 			path = libs;
@@ -2938,31 +2921,8 @@
 			children = (
 				C0B559F2211B20CB007817F6 /* Accelerate.framework */,
 				C0B559F0211B20C4007817F6 /* AudioToolbox.framework */,
-				C0B559EE211B20A9007817F6 /* libz.tbd */,
-				C0B559EC211B20A2007817F6 /* libbz2.tbd */,
-				C0B559EA211B2079007817F6 /* libiconv.tbd */,
-				C0BA3B8D211A31E90038D19F /* libc++.tbd */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		C0E7A139211A2F6600711656 /* ffmpeg-ios-static-libs */ = {
-			isa = PBXGroup;
-			children = (
-				C0E7A1A2211A2F6600711656 /* lib */,
-			);
-			path = "ffmpeg-ios-static-libs";
-			sourceTree = "<group>";
-		};
-		C0E7A1A2211A2F6600711656 /* lib */ = {
-			isa = PBXGroup;
-			children = (
-				C0E7A1A3211A2F6600711656 /* libavcodec.a */,
-				C0E7A1A6211A2F6600711656 /* libavformat.a */,
-				C0E7A1A7211A2F6600711656 /* libavutil.a */,
-				C0E7A1A8211A2F6600711656 /* libswresample.a */,
-			);
-			path = lib;
 			sourceTree = "<group>";
 		};
 		C0E7A219211A30FE00711656 /* src */ = {
