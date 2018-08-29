@@ -267,6 +267,8 @@ namespace essentia { namespace streaming {
     
     if ( eof ) {
       closeAudioFile();
+      
+      return FINISHED;
     }
 
     return OK;
