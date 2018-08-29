@@ -49,7 +49,11 @@ static std::vector<char> readAllBytes(char const* filename) {
   if (header == "RIFF") { // WAVE file
     return vector<char>( result.begin() + 44, result.end() );
   } else if (header == "FORM") {
-    return result;
+    for ( int i = 4; i < result.size(); i++ ) {
+      if ( string(result.begin()+i, result.begin()+i+4) == "SSND" ) {
+        return vector<char>( result.begin()+i+16, result.end() );
+      }
+    }
   }
   // TODO: Handle other formats
   return result;
