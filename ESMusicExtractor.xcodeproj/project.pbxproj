@@ -497,7 +497,6 @@
 		C088C619211B54C3009ED9DB /* taglib_config.h in Headers */ = {isa = PBXBuildFile; fileRef = C088C618211B54C3009ED9DB /* taglib_config.h */; };
 		C088CB10211B561C009ED9DB /* checked.h in Headers */ = {isa = PBXBuildFile; fileRef = C088C961211B561C009ED9DB /* checked.h */; };
 		C088CB11211B561C009ED9DB /* core.h in Headers */ = {isa = PBXBuildFile; fileRef = C088C962211B561C009ED9DB /* core.h */; };
-		C088CB30211B561C009ED9DB /* ape-tag-format.txt in Resources */ = {isa = PBXBuildFile; fileRef = C088C989211B561C009ED9DB /* ape-tag-format.txt */; };
 		C088CB31211B561C009ED9DB /* apefile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C088C98A211B561C009ED9DB /* apefile.cpp */; };
 		C088CB32211B561C009ED9DB /* apefile.h in Headers */ = {isa = PBXBuildFile; fileRef = C088C98B211B561C009ED9DB /* apefile.h */; };
 		C088CB33211B561C009ED9DB /* apefooter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C088C98C211B561C009ED9DB /* apefooter.cpp */; };
@@ -600,10 +599,6 @@
 		C088CB95211B561D009ED9DB /* unsynchronizedlyricsframe.h in Headers */ = {isa = PBXBuildFile; fileRef = C088C9F8211B561C009ED9DB /* unsynchronizedlyricsframe.h */; };
 		C088CB96211B561D009ED9DB /* urllinkframe.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C088C9F9211B561C009ED9DB /* urllinkframe.cpp */; };
 		C088CB97211B561D009ED9DB /* urllinkframe.h in Headers */ = {isa = PBXBuildFile; fileRef = C088C9FA211B561C009ED9DB /* urllinkframe.h */; };
-		C088CB98211B561D009ED9DB /* id3v2.2.0.txt in Resources */ = {isa = PBXBuildFile; fileRef = C088C9FB211B561C009ED9DB /* id3v2.2.0.txt */; };
-		C088CB99211B561D009ED9DB /* id3v2.3.0.txt in Resources */ = {isa = PBXBuildFile; fileRef = C088C9FC211B561C009ED9DB /* id3v2.3.0.txt */; };
-		C088CB9A211B561D009ED9DB /* id3v2.4.0-frames.txt in Resources */ = {isa = PBXBuildFile; fileRef = C088C9FD211B561C009ED9DB /* id3v2.4.0-frames.txt */; };
-		C088CB9B211B561D009ED9DB /* id3v2.4.0-structure.txt in Resources */ = {isa = PBXBuildFile; fileRef = C088C9FE211B561C009ED9DB /* id3v2.4.0-structure.txt */; };
 		C088CB9C211B561D009ED9DB /* id3v2extendedheader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C088C9FF211B561C009ED9DB /* id3v2extendedheader.cpp */; };
 		C088CB9D211B561D009ED9DB /* id3v2extendedheader.h in Headers */ = {isa = PBXBuildFile; fileRef = C088CA00211B561C009ED9DB /* id3v2extendedheader.h */; };
 		C088CB9E211B561D009ED9DB /* id3v2footer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C088CA01211B561C009ED9DB /* id3v2footer.cpp */; };
@@ -1341,7 +1336,6 @@
 		C088C618211B54C3009ED9DB /* taglib_config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = taglib_config.h; sourceTree = "<group>"; };
 		C088C961211B561C009ED9DB /* checked.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = checked.h; sourceTree = "<group>"; };
 		C088C962211B561C009ED9DB /* core.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = core.h; sourceTree = "<group>"; };
-		C088C989211B561C009ED9DB /* ape-tag-format.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "ape-tag-format.txt"; sourceTree = "<group>"; };
 		C088C98A211B561C009ED9DB /* apefile.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = apefile.cpp; sourceTree = "<group>"; };
 		C088C98B211B561C009ED9DB /* apefile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = apefile.h; sourceTree = "<group>"; };
 		C088C98C211B561C009ED9DB /* apefooter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = apefooter.cpp; sourceTree = "<group>"; };
@@ -1444,10 +1438,6 @@
 		C088C9F8211B561C009ED9DB /* unsynchronizedlyricsframe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = unsynchronizedlyricsframe.h; sourceTree = "<group>"; };
 		C088C9F9211B561C009ED9DB /* urllinkframe.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = urllinkframe.cpp; sourceTree = "<group>"; };
 		C088C9FA211B561C009ED9DB /* urllinkframe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = urllinkframe.h; sourceTree = "<group>"; };
-		C088C9FB211B561C009ED9DB /* id3v2.2.0.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = id3v2.2.0.txt; sourceTree = "<group>"; };
-		C088C9FC211B561C009ED9DB /* id3v2.3.0.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = id3v2.3.0.txt; sourceTree = "<group>"; };
-		C088C9FD211B561C009ED9DB /* id3v2.4.0-frames.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "id3v2.4.0-frames.txt"; sourceTree = "<group>"; };
-		C088C9FE211B561C009ED9DB /* id3v2.4.0-structure.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "id3v2.4.0-structure.txt"; sourceTree = "<group>"; };
 		C088C9FF211B561C009ED9DB /* id3v2extendedheader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = id3v2extendedheader.cpp; sourceTree = "<group>"; };
 		C088CA00211B561C009ED9DB /* id3v2extendedheader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = id3v2extendedheader.h; sourceTree = "<group>"; };
 		C088CA01211B561C009ED9DB /* id3v2footer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = id3v2footer.cpp; sourceTree = "<group>"; };
@@ -2503,7 +2493,6 @@
 		C088C988211B561C009ED9DB /* ape */ = {
 			isa = PBXGroup;
 			children = (
-				C088C989211B561C009ED9DB /* ape-tag-format.txt */,
 				C088C98A211B561C009ED9DB /* apefile.cpp */,
 				C088C98B211B561C009ED9DB /* apefile.h */,
 				C088C98C211B561C009ED9DB /* apefooter.cpp */,
@@ -2643,10 +2632,6 @@
 			isa = PBXGroup;
 			children = (
 				C088C9D8211B561C009ED9DB /* frames */,
-				C088C9FB211B561C009ED9DB /* id3v2.2.0.txt */,
-				C088C9FC211B561C009ED9DB /* id3v2.3.0.txt */,
-				C088C9FD211B561C009ED9DB /* id3v2.4.0-frames.txt */,
-				C088C9FE211B561C009ED9DB /* id3v2.4.0-structure.txt */,
 				C088C9FF211B561C009ED9DB /* id3v2extendedheader.cpp */,
 				C088CA00211B561C009ED9DB /* id3v2extendedheader.h */,
 				C088CA01211B561C009ED9DB /* id3v2footer.cpp */,
@@ -3442,11 +3427,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C088CB99211B561D009ED9DB /* id3v2.3.0.txt in Resources */,
-				C088CB30211B561C009ED9DB /* ape-tag-format.txt in Resources */,
-				C088CB98211B561D009ED9DB /* id3v2.2.0.txt in Resources */,
-				C088CB9B211B561D009ED9DB /* id3v2.4.0-structure.txt in Resources */,
-				C088CB9A211B561D009ED9DB /* id3v2.4.0-frames.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
