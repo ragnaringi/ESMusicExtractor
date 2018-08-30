@@ -720,7 +720,7 @@
 		C0B55A0C211B27D0007817F6 /* extractor_utils.h in Headers */ = {isa = PBXBuildFile; fileRef = C0B55A04211B27D0007817F6 /* extractor_utils.h */; };
 		C0B55A0D211B27D0007817F6 /* streaming_extractor_music.h in Headers */ = {isa = PBXBuildFile; fileRef = C0B55A05211B27D0007817F6 /* streaming_extractor_music.h */; };
 		C0B55A0E211B27D0007817F6 /* version.h in Headers */ = {isa = PBXBuildFile; fileRef = C0B55A06211B27D0007817F6 /* version.h */; };
-		C0B9C2662130872E0029DA6F /* audioloader_ios_native.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C037276321304F4C00E9C15C /* audioloader_ios_native.cpp */; };
+		C0B9C2662130872E0029DA6F /* audioloader_ios.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C037276321304F4C00E9C15C /* audioloader_ios.cpp */; };
 		C0E7A21D211A30FE00711656 /* ESExtractor.h in Headers */ = {isa = PBXBuildFile; fileRef = C0E7A21A211A30FE00711656 /* ESExtractor.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C0E7A21E211A30FE00711656 /* ESExtractor.mm in Sources */ = {isa = PBXBuildFile; fileRef = C0E7A21B211A30FE00711656 /* ESExtractor.mm */; };
 /* End PBXBuildFile section */
@@ -1330,7 +1330,7 @@
 		C0137A36211A06090046020A /* tnt_version.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tnt_version.h; sourceTree = "<group>"; };
 		C0138400211A06BD0046020A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C0138401211A06BD0046020A /* ESMusicExtractor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESMusicExtractor.h; sourceTree = "<group>"; };
-		C037276321304F4C00E9C15C /* audioloader_ios_native.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = audioloader_ios_native.cpp; sourceTree = "<group>"; };
+		C037276321304F4C00E9C15C /* audioloader_ios.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = audioloader_ios.cpp; sourceTree = "<group>"; };
 		C037276421304F4C00E9C15C /* audioloader_ios.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = audioloader_ios.h; sourceTree = "<group>"; };
 		C088C618211B54C3009ED9DB /* taglib_config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = taglib_config.h; sourceTree = "<group>"; };
 		C088C961211B561C009ED9DB /* checked.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = checked.h; sourceTree = "<group>"; };
@@ -2872,7 +2872,7 @@
 			children = (
 				C0B55A02211B27D0007817F6 /* music_extractor */,
 				C0B9C2672130A4140029DA6F /* 3rdparty */,
-				C037276321304F4C00E9C15C /* audioloader_ios_native.cpp */,
+				C037276321304F4C00E9C15C /* audioloader_ios.cpp */,
 				C037276421304F4C00E9C15C /* audioloader_ios.h */,
 				C0B55A00211B27D0007817F6 /* essentia_algorithms_reg.cpp */,
 				C0B55A05211B27D0007817F6 /* streaming_extractor_music.h */,
@@ -3691,7 +3691,7 @@
 				C0137F7D211A060B0046020A /* tempotapticks.cpp in Sources */,
 				C088CBAA211B561D009ED9DB /* mpegfile.cpp in Sources */,
 				C0137FAD211A060B0046020A /* panning.cpp in Sources */,
-				C0B9C2662130872E0029DA6F /* audioloader_ios_native.cpp in Sources */,
+				C0B9C2662130872E0029DA6F /* audioloader_ios.cpp in Sources */,
 				C088CBD2211B561D009ED9DB /* wavfile.cpp in Sources */,
 				C01380F0211A060C0046020A /* streamingalgorithm.cpp in Sources */,
 				C0137F4F211A060B0046020A /* harmonicbpm.cpp in Sources */,
