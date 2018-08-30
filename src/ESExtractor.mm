@@ -13,10 +13,12 @@
 
 - (NSDictionary *)analyseTrack:(NSURL *)url {
   essentia_main(url.path.UTF8String, [self tempFile].path.UTF8String, "");
-  return ({
-    NSData* data = [NSData dataWithContentsOfURL:[self tempFile]];
-    [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil];
-  });
+  NSData* data = [NSData dataWithContentsOfURL:[self tempFile]];
+  @try {
+    return [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil];
+  } @catch (NSException *exception) {
+    return nil;
+  }
 }
 
 - (NSURL *)tempFile {

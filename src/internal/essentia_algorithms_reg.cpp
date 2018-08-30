@@ -148,13 +148,13 @@
 #include "algorithms/temporal/duration.h"
 #include "algorithms/standard/cubicspline.h"
 #include "algorithms/extractor/musicextractor.h"
-#include "algorithms/io/audioloader.h"
 #include "algorithms/io/easyloader.h"
 #include "algorithms/io/eqloudloader.h"
 #include "algorithms/io/monoloader.h"
 #include "algorithms/io/metadatareader.h"
 #include "algorithms/io/yamloutput.h"
 #include "algorithms/standard/resample.h"
+#include "audioloader_ios.h"
 
 namespace essentia {
 namespace standard {
