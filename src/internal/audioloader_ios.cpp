@@ -34,51 +34,6 @@
 #include "algorithmfactory.h"
 
 using namespace std;
-// https://codereview.stackexchange.com/a/22907
-static std::vector<char> readAllBytes(char const* filename) {
-  ifstream ifs(filename, ios::binary|ios::ate);
-  ifstream::pos_type pos = ifs.tellg();
-  
-  vector<char> result(pos);
-  
-  ifs.seekg(0, ios::beg);
-  ifs.read(result.data(), pos);
-  
-  auto header = string(result.begin(), result.begin() + 4);
-  if ( header == "RIFF" ) { // WAVE file
-    return vector<char>( result.begin() + 44, result.end() );
-  } else if ( header == "FORM" ) { // AIFF
-    for ( int i = 4; i < result.size(); i++ ) {
-      auto str = string(result.begin()+i, result.begin()+i+4);
-      if ( str == "SSND" ) {
-        return vector<char>( result.begin()+i+16, result.end() );
-      }
-    }
-  } else {
-    auto str = string(result.begin(), result.begin()+11);
-    if ( str.substr(0,3) == "ID3" ) { // mp3
-      // Extract ID3 tag size from synchsafe integer
-      // https://stackoverflow.com/a/5652842
-      uint8_t* sync_safe = (uint8_t *)result.data()+6;
-      uint32_t byte0 = sync_safe[0];
-      uint32_t byte1 = sync_safe[1];
-      uint32_t byte2 = sync_safe[2];
-      uint32_t byte3 = sync_safe[3];
-      int len =  byte0 << 21 | byte1 << 14 | byte2 << 7 | byte3;
-      int tagSize = len + 10; //
-      return vector<char>( result.begin()+tagSize, result.end() );
-    } else if ( str.substr(4, 11) == "ftypM4A" ) { // m4a
-      for ( int i = 0; i < result.size()-4; i++ ) {
-        if ( result[i] == '!' && result[i+3] == '@' && result[i+4] == 'h' ) {
-          return vector<char>( result.begin()+i, result.end() );
-        }
-      }
-    } else {
-      cout << "File format not supported" << endl;
-    }
-  }
-  return result;
-}
 
 string uint8_t_to_hex(uint8_t* input, int size) {
   ostringstream result;
@@ -113,25 +68,28 @@ namespace essentia { namespace streaming {
       throw EssentiaException("AudioLoader: Could not open file \"", filename, "\", error = ", result);
     }
 
-    auto fileData = readAllBytes(filename.c_str());
-//    for ( int i = 0; i < 100; i++ ) {
-//      std::cout << i << " : " << fileData[i] << std::endl;
-//    }
-
-    // compute md5 first
+    // Compute md5 first
     if ( parameter("computeMD5").toBool() ) {
       CC_MD5_CTX hashObject;
       
       if ( !CC_MD5_Init(&hashObject) ) {
-        throw EssentiaException("Error allocating the MD5 context");
+        throw EssentiaException("AudioLoader: Error allocating the MD5 context");
       }
       
-      size_t chunkSize = 4096;
-      for ( size_t i = 0; i < fileData.size(); i += chunkSize ) {
-        auto len = std::min(fileData.size()-i, chunkSize);
+      AudioFileID file;
+      if ( AudioFileOpenURL(url, kAudioFileReadPermission, 0, &file) != noErr ) {
+        throw EssentiaException("AudioLoader: Error reading file for MD5 hash");
+      }
+
+      SInt64 readPos = 0;
+      UInt32 chunkSize = 4096;
+      while ( chunkSize == 4096 ) {
+        void *buffer[chunkSize];
+        AudioFileReadBytes(file, false, readPos, &chunkSize, buffer);
         CC_MD5_Update(&hashObject,
-                      fileData.data()+i,
-                      (CC_LONG)len);
+                      buffer,
+                      (CC_LONG)chunkSize);
+        readPos += chunkSize;
       }
       
       // Compute the hash digest
@@ -245,7 +203,7 @@ namespace essentia { namespace streaming {
   void AudioLoader::reset() {
     Algorithm::reset();
     
-    if (!parameter("filename").isConfigured()) return;
+    if ( !parameter("filename").isConfigured() ) return;
     
     string filename = parameter("filename").toString();
     
@@ -253,7 +211,7 @@ namespace essentia { namespace streaming {
     openAudioFile(filename);
     
     // Get audio file data format
-    AudioStreamBasicDescription asbd;
+    AudioStreamBasicDescription asbd = {0};
     UInt32 propertySize = sizeof(asbd);
     if ( ExtAudioFileGetProperty(_file, kExtAudioFileProperty_FileDataFormat, &propertySize, &asbd) != noErr ) {
       throw EssentiaException("AudioLoader: Error getting audio file channel and sample rate info");
@@ -261,12 +219,11 @@ namespace essentia { namespace streaming {
     pushChannelsSampleRateInfo(asbd.mChannelsPerFrame, asbd.mSampleRate);
     
     // Get bit rate
-    OSStatus status = noErr;
     AudioFileID audioFileId = NULL;
-    
     UInt32 size = sizeof(audioFileId);
-    status = ExtAudioFileGetProperty(_file, kExtAudioFileProperty_AudioFile, &size, &audioFileId);
-    assert(status == noErr);
+    if ( ExtAudioFileGetProperty(_file, kExtAudioFileProperty_AudioFile, &size, &audioFileId) != noErr ) {
+      throw EssentiaException("AudioLoader: Error getting audiofile id for bitrate calculation");
+    }
     
     UInt32 bitRate = 0;
     size = sizeof(bitRate);
