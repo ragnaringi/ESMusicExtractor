@@ -716,7 +716,6 @@
 		C0B559F3211B20CB007817F6 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0B559F2211B20CB007817F6 /* Accelerate.framework */; };
 		C0B559F4211B23C4007817F6 /* libsamplerate.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C0F3BE8D211B0EED00073488 /* libsamplerate.a */; };
 		C0B55A09211B27D0007817F6 /* essentia_algorithms_reg.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C0B55A00211B27D0007817F6 /* essentia_algorithms_reg.cpp */; };
-		C0B55A0A211B27D0007817F6 /* ffmpegapi.h in Headers */ = {isa = PBXBuildFile; fileRef = C0B55A01211B27D0007817F6 /* ffmpegapi.h */; };
 		C0B55A0B211B27D0007817F6 /* extractor_utils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C0B55A03211B27D0007817F6 /* extractor_utils.cpp */; };
 		C0B55A0C211B27D0007817F6 /* extractor_utils.h in Headers */ = {isa = PBXBuildFile; fileRef = C0B55A04211B27D0007817F6 /* extractor_utils.h */; };
 		C0B55A0D211B27D0007817F6 /* streaming_extractor_music.h in Headers */ = {isa = PBXBuildFile; fileRef = C0B55A05211B27D0007817F6 /* streaming_extractor_music.h */; };
@@ -1556,7 +1555,6 @@
 		C0B559F9211B2451007817F6 /* polartocartesian.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = polartocartesian.h; sourceTree = "<group>"; };
 		C0B559FA211B2451007817F6 /* polartocartesian.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = polartocartesian.cpp; sourceTree = "<group>"; };
 		C0B55A00211B27D0007817F6 /* essentia_algorithms_reg.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = essentia_algorithms_reg.cpp; sourceTree = "<group>"; };
-		C0B55A01211B27D0007817F6 /* ffmpegapi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ffmpegapi.h; sourceTree = "<group>"; };
 		C0B55A03211B27D0007817F6 /* extractor_utils.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = extractor_utils.cpp; sourceTree = "<group>"; };
 		C0B55A04211B27D0007817F6 /* extractor_utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = extractor_utils.h; sourceTree = "<group>"; };
 		C0B55A05211B27D0007817F6 /* streaming_extractor_music.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = streaming_extractor_music.h; sourceTree = "<group>"; };
@@ -2894,7 +2892,6 @@
 		C0B9C2672130A4140029DA6F /* 3rdparty */ = {
 			isa = PBXGroup;
 			children = (
-				C0B55A01211B27D0007817F6 /* ffmpegapi.h */,
 				C088C618211B54C3009ED9DB /* taglib_config.h */,
 				C0B55A06211B27D0007817F6 /* version.h */,
 			);
@@ -3068,7 +3065,6 @@
 				C01380E6211A060C0046020A /* phantombuffer.h in Headers */,
 				C088CBCE211B561D009ED9DB /* rifffile.h in Headers */,
 				C0138132211A060C0046020A /* tnt_fortran_array1d_utils.h in Headers */,
-				C0B55A0A211B27D0007817F6 /* ffmpegapi.h in Headers */,
 				C017D4B6212DD556003009FE /* crest.h in Headers */,
 				C088CB93211B561D009ED9DB /* unknownframe.h in Headers */,
 				C013811C211A060C0046020A /* metadatautils.h in Headers */,
