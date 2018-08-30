@@ -42,9 +42,6 @@ class AudioLoader : public Algorithm {
 
   ExtAudioFileRef _file;
 
-  CC_MD5_CTX hashObject;
-  bool _computeMD5;
-
   void openAudioFile(const std::string& filename);
   void closeAudioFile();
 

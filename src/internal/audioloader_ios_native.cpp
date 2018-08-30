@@ -99,7 +99,6 @@ namespace essentia { namespace streaming {
   }
   
   void AudioLoader::configure() {
-    _computeMD5 = parameter("computeMD5").toBool();
     // _selectedStream = parameter("audioStream").toInt();
     reset();
   }
@@ -114,10 +113,6 @@ namespace essentia { namespace streaming {
     if ( result != noErr ) {
       throw EssentiaException("AudioLoader: Could not open file \"", filename, "\", error = ", result);
     }
-    
-    if ( !CC_MD5_Init(&hashObject) ) {
-      throw EssentiaException("Error allocating the MD5 context");
-    }
 
     auto fileData = readAllBytes(filename.c_str());
 //    for ( int i = 0; i < 100; i++ ) {
@@ -125,7 +120,13 @@ namespace essentia { namespace streaming {
 //    }
 
     // compute md5 first
-    if (_computeMD5) {
+    if ( parameter("computeMD5").toBool() ) {
+      CC_MD5_CTX hashObject;
+      
+      if ( !CC_MD5_Init(&hashObject) ) {
+        throw EssentiaException("Error allocating the MD5 context");
+      }
+      
       size_t chunkSize = 4096;
       for ( size_t i = 0; i < fileData.size(); i += chunkSize ) {
         auto len = std::min(fileData.size()-i, chunkSize);
