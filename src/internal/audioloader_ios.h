@@ -19,7 +19,6 @@
 
 #pragma once
 
-#include <CommonCrypto/CommonDigest.h>
 #include <AudioToolbox/AudioToolbox.h>
 
 #include "streamingalgorithm.h"
@@ -37,8 +36,6 @@ class AudioLoader : public Algorithm {
   AbsoluteSource<std::string> _md5;
   AbsoluteSource<int> _bit_rate;
   AbsoluteSource<std::string> _codec;
-
-  int _nChannels;
 
   ExtAudioFileRef _file;
 

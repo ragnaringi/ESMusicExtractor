@@ -99,7 +99,6 @@ namespace essentia { namespace streaming {
   }
   
   void AudioLoader::configure() {
-    // _selectedStream = parameter("audioStream").toInt();
     reset();
   }
   
@@ -162,8 +161,6 @@ namespace essentia { namespace streaming {
       throw EssentiaException("AudioLoader: could not load audio. Audio sampling rate must be greater than 0.");
     }
     
-    _nChannels = nChannels;
-    
     _channels.push(nChannels);
     _sampleRate.push(sampleRate);
   }
@@ -174,49 +171,31 @@ namespace essentia { namespace streaming {
   }
   
   AlgorithmStatus AudioLoader::process() {
-    if (!parameter("filename").isConfigured()) {
+    if ( !parameter("filename").isConfigured() ) {
       throw EssentiaException("AudioLoader: Trying to call process() on an AudioLoader algo which hasn't been correctly configured.");
     }
     
-    auto audioFormat = ({
-      AudioStreamBasicDescription audioDescription;
-      memset(&audioDescription, 0, sizeof(audioDescription));
-      audioDescription.mFormatID          = kAudioFormatLinearPCM;
-      audioDescription.mFormatFlags       = kAudioFormatFlagIsFloat | kAudioFormatFlagIsPacked | kAudioFormatFlagIsNonInterleaved;
-      audioDescription.mChannelsPerFrame  = 2;
-      audioDescription.mBytesPerPacket    = sizeof(float);
-      audioDescription.mFramesPerPacket   = 1;
-      audioDescription.mBytesPerFrame     = sizeof(float);
-      audioDescription.mBitsPerChannel    = 8 * sizeof(float);
-      audioDescription.mSampleRate        = 44100.0;
-      audioDescription;
-    });
+    AudioStreamBasicDescription audioFormat = {0};
+    audioFormat.mFormatID          = kAudioFormatLinearPCM;
+    audioFormat.mFormatFlags       = kAudioFormatFlagIsFloat | kAudioFormatFlagIsPacked | kAudioFormatFlagIsNonInterleaved;
+    audioFormat.mChannelsPerFrame  = lastTokenProduced<int>(_channels);
+    audioFormat.mBytesPerPacket    = sizeof(float);
+    audioFormat.mFramesPerPacket   = 1;
+    audioFormat.mBytesPerFrame     = sizeof(float);
+    audioFormat.mBitsPerChannel    = 8 * sizeof(float);
+    audioFormat.mSampleRate        = 44100.0;
     
     const SInt64 frameCount = 4096;
+    const UInt32 channels = audioFormat.mChannelsPerFrame;
+    const UInt32 bytesPerBuffer = audioFormat.mBytesPerFrame * frameCount;
     
     // Create temporary audio bufferlist
-    int numberOfBuffers = audioFormat.mFormatFlags & kAudioFormatFlagIsNonInterleaved ? audioFormat.mChannelsPerFrame : 1;
-    int channelsPerBuffer = audioFormat.mFormatFlags & kAudioFormatFlagIsNonInterleaved ? 1 : audioFormat.mChannelsPerFrame;
-    int bytesPerBuffer = audioFormat.mBytesPerFrame * frameCount;
-    
-    AudioBufferList *bufferList = (AudioBufferList *)malloc(sizeof(AudioBufferList) + (numberOfBuffers-1)*sizeof(AudioBuffer));
-    if ( !bufferList ) {
-      throw EssentiaException("AudioLoader: Error creating AudioBufferList");
-    }
-    bufferList->mNumberBuffers = numberOfBuffers;
-    for ( int i=0; i<numberOfBuffers; i++ ) {
-      if ( bytesPerBuffer > 0 ) {
-        bufferList->mBuffers[i].mData = calloc(bytesPerBuffer, 1);
-        if ( !bufferList->mBuffers[i].mData ) {
-          for ( int j=0; j<i; j++ ) free(bufferList->mBuffers[j].mData);
-          free(bufferList);
-          throw EssentiaException("AudioLoader: Error allocating data for AudioBufferList");
-        }
-      } else {
-        bufferList->mBuffers[i].mData = NULL;
-      }
-      bufferList->mBuffers[i].mDataByteSize = bytesPerBuffer;
-      bufferList->mBuffers[i].mNumberChannels = channelsPerBuffer;
+    auto bufferList = (AudioBufferList *)malloc(sizeof(AudioBufferList) * channels);
+    bufferList->mNumberBuffers = channels;
+    for ( auto i = 0; i < bufferList->mNumberBuffers; i++ ) {
+      bufferList->mBuffers[i].mNumberChannels = 1;
+      bufferList->mBuffers[i].mDataByteSize = frameCount * audioFormat.mBytesPerFrame;
+      bufferList->mBuffers[i].mData = calloc(bytesPerBuffer, 1);
     }
     
     // Set destination format
@@ -229,45 +208,33 @@ namespace essentia { namespace streaming {
     if ( ExtAudioFileRead(_file, &readFrames, bufferList) != noErr ) {
       throw EssentiaException("AudioLoader: Error reading file" );
     }
-
-    bool eof = readFrames < frameCount;
-    if ( eof ) { // EOF
-      shouldStop(true);
-    }
     
-    int nsamples = readFrames;
-    
-    // acquire necessary data
-    bool ok = _audio.acquire(nsamples);
-    if (!ok) {
+    // Acquire necessary data
+    if ( !_audio.acquire(readFrames) ) {
       throw EssentiaException("AudioLoader: could not acquire output for audio");
     }
     
-    vector<StereoSample>& audio = *((vector<StereoSample>*)_audio.getTokens());
+    auto& audio = *((vector<StereoSample>*)_audio.getTokens());
     
-    if (_nChannels == 1) {
-      for (int i=0; i<nsamples; i++) {
-        audio[i].left() = ((float *)bufferList->mBuffers[0].mData)[i];
-      }
-    }
-    else { // _nChannels == 2
-      for (int i=0; i<nsamples; i++) {
-        audio[i].left() = ((float *)bufferList->mBuffers[0].mData)[i];
-        audio[i].right() = ((float *)bufferList->mBuffers[1].mData)[i];
+    for ( auto i = 0; i < readFrames; i++ ) {
+      switch (channels) {
+        case 2:
+          audio[i].right() = ((float *)bufferList->mBuffers[1].mData)[i];
+        default:
+          audio[i].left()  = ((float *)bufferList->mBuffers[0].mData)[i];
       }
     }
     
-    // release data
-    _audio.release(nsamples);
+    _audio.release(readFrames);
     
     // Free bufferlist
-    for ( int i=0; i<bufferList->mNumberBuffers; i++ ) {
-      if ( bufferList->mBuffers[i].mData ) free(bufferList->mBuffers[i].mData);
+    for ( auto i = 0; i < bufferList->mNumberBuffers; i++ ) {
+      free(bufferList->mBuffers[i].mData);
     }
     free(bufferList);
     
-    if ( eof ) {
-      closeAudioFile();
+    if ( readFrames < frameCount /* EOF */ ) {
+      shouldStop(true);
       
       return FINISHED;
     }
